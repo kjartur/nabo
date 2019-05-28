@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :offers, only: [ :index, :show ] do
     resources :reviews, only: [ :new, :create, :edit, :update, :destroy ]
   end
+  resources :tasks, only: [:new, :index]
 end
 
 
