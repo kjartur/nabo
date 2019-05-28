@@ -1,5 +1,4 @@
 class ReviewsController < ApplicationController
-
   def new
     @user = current_user
     @offer = Offer.find(params[:offer_id])
