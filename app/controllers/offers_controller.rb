@@ -1,10 +1,12 @@
 class OffersController < ApplicationController
   def index
-    @tasks = Task.where(user: current_user)
-    @offers = current_user.offers
+    # @tasks = Task.where(user: current_user)
+    # @offers = current_user.offers
+    @offers = Offer.all
   end
 
   def show
+    @offer = Offer.find(offer_params)
   end
 
   def new
