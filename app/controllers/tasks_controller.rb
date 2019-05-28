@@ -9,7 +9,7 @@ class TasksController < ApplicationController
   end
 
   def show
-    @task = Task.find(task_params)
+    @task = Task.find(params[:id])
   end
 
   def edit
@@ -31,6 +31,6 @@ class TasksController < ApplicationController
   private
 
   def task_params
-    params.require(:task).permit(:address, :date, :description, :amount_coins)
+    params.require(:task).permit(:address, :date, :description, :amount_coins, :title, :post_code)
   end
 end
