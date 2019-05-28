@@ -9,12 +9,20 @@ class TasksController < ApplicationController
   end
 
   def show
-    @task = Task.find(task_params)
+    @task = Task.find(params[:id])
   end
 
   def edit
-    @task = Task.find(task_params)
+    @task = Task.find(params[:id])
   end
+
+  def update
+    @task = Task.find(params[:id])
+    @task.update(task_params)
+    redirect_to root_path
+  end
+
+
 
   def create
     # Task.create(task_params)
@@ -31,6 +39,6 @@ class TasksController < ApplicationController
   private
 
   def task_params
-    params.require(:task).permit(:address, :date, :description, :amount_coins)
+    params.require(:task).permit(:address, :date, :description, :amount_coins, :title, :post_code)
   end
 end
