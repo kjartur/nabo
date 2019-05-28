@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class TasksControllerTest < ActionDispatch::IntegrationTest
+<<<<<<< HEAD
   test "should get index" do
     get tasks_index_url
     assert_response :success
@@ -26,4 +27,9 @@ class TasksControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+=======
+  # test "the truth" do
+  #   assert true
+  # end
+>>>>>>> master
 end
