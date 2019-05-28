@@ -4,8 +4,8 @@ class User < ApplicationRecord
   has_many :tasks, dependent: :destroy
   has_many :offers
   has_many :reviews
-  
-  mount_uploader :photo, PhotoUploader
+
+  mount_uploader :avatar, AvatarUploader
 
   # consider adding this function at a later point in production:
   # https://stackoverflow.com/questions/15655005/rails-dependent-destroy-with-conditions
