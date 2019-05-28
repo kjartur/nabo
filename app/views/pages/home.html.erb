@@ -8,9 +8,12 @@
   <%end%>
 </ul>
 
+
 <%= link_to('Register', new_user_registration_path) %> <!-- new user registration path -->
 
 <%= cl_image_tag("yvo5p4pkxytmfcb0yplg",
 width: 400, height: 300, crop: :fill) %>
 
 <%= render 'pages/shared/photoUploadForm', user: @user %>
+
+<%= link_to "New task", task_new_path, class: 'button' %>
