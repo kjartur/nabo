@@ -1,13 +1,5 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
-<<<<<<< HEAD
- <%= link_to('Register', new_user_registration_path) %> <!-- new user registration path -->
-
- <%= cl_image_tag("yvo5p4pkxytmfcb0yplg",
-       width: 400, height: 300, crop: :fill) %>
-
-<%= render 'pages/shared/photoUploadForm', user: @user %>
-=======
    <h1>Tasks</h1>
 
 <ul>
@@ -15,4 +7,10 @@
   <li><%=task.description%></li>
   <%end%>
 </ul>
->>>>>>> master
+
+<%= link_to('Register', new_user_registration_path) %> <!-- new user registration path -->
+
+<%= cl_image_tag("yvo5p4pkxytmfcb0yplg",
+width: 400, height: 300, crop: :fill) %>
+
+<%= render 'pages/shared/photoUploadForm', user: @user %>
