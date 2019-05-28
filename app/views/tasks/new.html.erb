@@ -1,0 +1,13 @@
+<div style="height: calc(100vh - 75px); width: 100vw; overflow: scroll; z-index: 20; padding-bottom: 100px;">
+<div class='container'>
+<h1>Add a new task</h1>
+<%= simple_form_for @task do |f| %>
+  <%= f.input :address, label: 'Address:', placeholder: 'Checkpoint Charlie, Berlin, Germany'%>
+  <%= f.input :date, placeholder: 'When will the event start?'%>
+  <%= f.input :description, placeholder: 'Enter a simple description' %>
+  <%= f.input :amount_coins, placeholder: '1 credit = 15 min'%>
+  <%= f.button :submit, class: "btn btn-book" %>
+  <br>
+<% end %>
+</div>
+</div>
