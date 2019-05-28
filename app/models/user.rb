@@ -12,7 +12,6 @@ class User < ApplicationRecord
   # dog.destroy unless dog.owner
   # end
 
-  validates :first_name, :last_name, :address, presence: true
   validates :email, presence: true, uniqueness: true
 
   devise :database_authenticatable, :registerable,
