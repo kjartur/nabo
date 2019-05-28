@@ -8,12 +8,10 @@
   <%end%>
 </ul>
 
-
-<%= link_to('Register', new_user_registration_path) %>                  <!-- new user registration path -->
-                                                                        <!-- this is render for image on cloudinary -->
 <%= cl_image_tag("yvo5p4pkxytmfcb0yplg",
 width: 400, height: 300, crop: :fill) %>
 
-<%= render 'pages/shared/photoUploadForm', user: @user %>               <!-- this is the render for photo upload form -->
+<%= link_to('Login', new_user_session_path) %>
+<%= link_to('Register', new_user_registration_path) %>
 
-<%= link_to "New task", task_new_path, class: 'button' %>               <!-- this is the link to create new user account -->
+<% raise %>
