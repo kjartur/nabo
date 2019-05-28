@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'profiles/edit'
+  get 'profiles/update'
   get 'task/new'
   devise_for :users
   root to: 'pages#home'
