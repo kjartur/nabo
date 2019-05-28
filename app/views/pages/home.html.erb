@@ -10,8 +10,8 @@
 
 
 <%= link_to('Register', new_user_registration_path) %>                  <!-- new user registration path -->
-
-<%= cl_image_tag("yvo5p4pkxytmfcb0yplg",                                <!-- this is render for image on cloudinary -->
+                                                                        <!-- this is render for image on cloudinary -->
+<%= cl_image_tag("yvo5p4pkxytmfcb0yplg",
 width: 400, height: 300, crop: :fill) %>
 
 <%= render 'pages/shared/photoUploadForm', user: @user %>               <!-- this is the render for photo upload form -->
