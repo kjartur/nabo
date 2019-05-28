@@ -5,7 +5,7 @@
         <%= render 'shared/searchbar', task: @tasks %>
    </div>
   <br>
-  <h1>Tasks</h1>
+  <h1>My tasks</h1>
 
 <table>
   <thead>
@@ -26,7 +26,10 @@
       </tr>
       <%end%>
   </tbody>
-</body>
+</table>
+
+  <%= link_to 'Add a task', new_task_path %>
+
 
 
 
