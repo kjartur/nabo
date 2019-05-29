@@ -1,12 +1,10 @@
 <h1><%= @task[:title] %></h1>
 
-
 <h3>Date:</h3> <%= @task[:date] %>
 <h3>Address:</h2> <%= @task[:address] %>
 <h3>Post code:</h3><%= @task[:post_code] %>
 <h3>Credits:</h3> <%= @task[:ammount_coins] %>
 <p><%= @task[:description] %></p>
-
 
 <div class="btn btn-book">
   <%= link_to 'Offer to help', new_task_offer_path(@task), :class => "btn" %>
