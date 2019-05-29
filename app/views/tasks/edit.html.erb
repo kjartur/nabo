@@ -1,2 +1,17 @@
-<h1>Tasks#edit</h1>
-<p>Find me in app/views/tasks/edit.html.erb</p>
+<div style="height: calc(100vh - 75px); width: 100vw; overflow: scroll; z-index: 20; padding-bottom: 100px;">
+  <div class='container'>
+    <h1>Edit a task</h1>
+    <%= simple_form_for @task do |f| %>
+    <%= f.input :title, placeholder: 'Enter a simple title, max 4 words'%>
+    <%= f.input :address, label: 'Address:', placeholder: 'Checkpoint Charlie, Berlin, Germany'%>
+    <%= f.input :post_code, placeholder: 'Post code'%>
+    <%= f.input :date, placeholder: 'When will the event start?'%>
+    <%= f.input :description, placeholder: 'Enter a simple description' %>
+    <%= f.input :amount_coins, placeholder: '1 credit = 15 min'%>
+    <%= f.button :submit, class: "btn btn-book" %>
+    <br>
+    <br>
+
+    <% end %>
+  </div>
+</div>

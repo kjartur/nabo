@@ -1,11 +1,23 @@
 class TasksController < ApplicationController
   def index
+    @tasks = Task.all
+  end
+
+  def new
+    @task = Task.new
   end
 
   def show
   end
 
   def edit
+    @task = Task.find(params[:id])
+  end
+
+  def update
+    @task = Task.find(params[:id])
+    @task.update(task_params)
+    redirect_to root_path
   end
 
   def create
@@ -18,6 +30,12 @@ class TasksController < ApplicationController
     else
       render 'tasks/new'
     end
+  end
+
+  def destroy
+    @task = Task.find(params[:id])
+    @task.destroy
+    redirect_to root_path
   end
 
   private

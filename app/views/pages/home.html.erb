@@ -5,15 +5,28 @@
         <%= render 'shared/searchbar', task: @tasks %>
    </div>
   <br>
-  <h1>Tasks</h1>
+  <h1>All tasks</h1>
 
-  <ul>
-    <%@tasks.each do |task|%>
-    <!-- <li><%=task.title%></li> -->
-    <li><%= link_to task.title, task_path(task) %></li>
-    <%end%>
-  </ul>
-</dir>
+<table>
+  <thead>
+    <tr>
+      <th>Title:</th>
+      <th></th>
+      <th></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <%@tasks.each do |task|%>
+      <tr>
+        <td><%= link_to task.title, task_path(task) %></td>
+        <td><%= link_to 'Edit', edit_task_path(task) %></td>
+        <td><%= link_to 'Remove', task_path(task), method: :delete %></td>
+      </tr>
+      <%end%>
+  </tbody>
+</table>
 
 <%= cl_image_tag("yvo5p4pkxytmfcb0yplg",
 width: 400, height: 300, crop: :fill) %>

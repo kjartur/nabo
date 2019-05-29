@@ -6,7 +6,8 @@ get 'task/new'
 
   devise_for :users
   root to: 'pages#home'
-  resources :tasks, only: [ :new, :index, :create, :show ] do
+
+  resources :tasks do
     resources :offers, only: [ :new, :create ]
   end
   resources :offers, only: [ :index, :show ] do
