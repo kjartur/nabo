@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
+  devise_for :users
+  root to: 'pages#home'
+
 get 'pages/show'
 get 'profiles/edit'
 get 'profiles/update'
 get 'task/new'
 
-  devise_for :users
-  root to: 'pages#home'
+
 
   resources :tasks do
     resources :offers, only: [ :new, :create ]
