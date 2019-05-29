@@ -1,6 +1,11 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-   <h1>Tasks</h1>
+<dir class="container">
+  <h1>Home</h1>
+  <br>
+   <div class="container">
+        <%= render 'shared/searchbar', task: @tasks %>
+   </div>
+  <br>
+  <h1>Tasks</h1>
 
 <table>
   <thead>
@@ -19,11 +24,9 @@
       </tr>
       <%end%>
   </tbody>
-</body>
+  </table>
 
 
-
-<%= link_to "New task", new_task_path, class: 'button' %>
 
 
 

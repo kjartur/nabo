@@ -1,0 +1,11 @@
+<div class='container'>
+ <h1>My Offers:</h1>
+
+  <div class="row">
+    <% @offers.each do |offer| %>
+          <div>
+            <h2><%= offer.task.title %>:</h2>
+          </div>
+  </div>
+  <% end %>
+</div>

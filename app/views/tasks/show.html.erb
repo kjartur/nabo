@@ -7,3 +7,7 @@
 <h3>Credits:</h3> <%= @task[:ammount_coins] %>
 <p><%= @task[:description] %></p>
 
+
+<div class="btn btn-book">
+  <%= link_to 'Offer to help', new_task_offer_path(@task), :class => "btn" %>
+</div>
