@@ -1,6 +1,8 @@
 <div class='container'>
   <h1>Do you want to offer your help on this task?</h1>
-  <div>
-    <%= link_to 'Offer help', new_task_offer_path(@task) %>
-  </div>
+    <form method="post" action="/offers/create" class="button_to" data-remote="true" data-type="json">
+       <input value="Create" type="submit" />
+       <input name="authenticity_token" type="hidden" value="10f2163b45388899ad4d5ae948988266befcb6c3d1b2451cf657a0c293d605a6"/>
+    </form>
 </div>
+

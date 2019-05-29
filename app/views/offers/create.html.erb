@@ -1,0 +1,19 @@
+<div class='container'>
+  <h1>New offer created:</h1>
+  <br>
+  <h1><%= @offer.task[:title] %></h1>
+  <br>
+  <p><%= @offer.task[:description] %></p>
+  <br>
+
+  <p><h5>Date:</h5> <%= @offer.task[:date] %></p>
+  <p><h5>Address:</h5> <%= @offer.task[:address] %></p>
+  <p><h5>Post code:</h5><%= @offer.task[:post_code] %></p>
+  <p><h5>Credits:</h5> <%= @offer.task[:amount_coins] %></p>
+
+  <div class="btn btn-primary">
+    <%= link_to 'See all my offers', offers_path(@task), :class => "btn" %>
+  </div>
+</div>
+
+
