@@ -1,12 +1,19 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-   <h1>Tasks</h1>
+<dir class="container">
+  <h1>Home</h1>
+  <br>
+   <div class="container">
+        <%= render 'shared/searchbar', task: @tasks %>
+   </div>
+  <br>
+  <h1>Tasks</h1>
 
-<ul>
-  <%@tasks.each do |task|%>
-  <li><%=task.title%></li>
-  <%end%>
-</ul>
+  <ul>
+    <%@tasks.each do |task|%>
+    <!-- <li><%=task.title%></li> -->
+    <li><%= link_to task.title, task_path(task) %></li>
+    <%end%>
+  </ul>
+</dir>
 
 <%= cl_image_tag("yvo5p4pkxytmfcb0yplg",
 width: 400, height: 300, crop: :fill) %>

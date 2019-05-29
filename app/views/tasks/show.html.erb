@@ -1,2 +1,12 @@
-<h1>Tasks#show</h1>
-<p>Find me in app/views/tasks/show.html.erb</p>
+</h1>Task details:</h1>
+
+<h2><%= @task[:title] %></h2>
+<h2><%= @task[:date] %></h2>
+<h2><%= @task[:address] %></h2>
+<h2><%= @task[:post_code] %></h2>
+<h3><%= @task[:ammount_coins] %></h3>
+<p><%= @task[:description] %></p>
+
+<div class="btn btn-book">
+  <%= link_to 'Offer to help', new_task_offer_path(@task), :class => "btn" %>
+</div>

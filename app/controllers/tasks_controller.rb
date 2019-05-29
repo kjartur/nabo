@@ -20,6 +20,9 @@ class TasksController < ApplicationController
     end
   end
 
-  def delete
+  private
+
+  def task_params
+    params.require(:task).permit(:address, :date, :description, :amount_coins, :title, :post_code)
   end
 end

@@ -5,6 +5,7 @@ class OffersController < ApplicationController
   end
 
   def show
+    @offer = Offer.find(offer_params)
   end
 
   def new
