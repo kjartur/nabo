@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+get 'pages/show'
 get 'profiles/edit'
 get 'profiles/update'
 get 'task/new'
