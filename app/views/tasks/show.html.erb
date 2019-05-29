@@ -14,4 +14,8 @@
   <div class="btn btn-primary">
     <%= link_to 'Offer to help', new_task_offer_path(@task), :class => "btn" %>
   </div>
+
+   <div class="btn btn-primary">
+    <%= link_to 'Complete task', complete_task_path(@task), method: "patch", :class => "btn" %>
+  </div>
 </div>
