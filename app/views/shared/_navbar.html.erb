@@ -27,7 +27,7 @@
         <span class="email_color">&nbsp;&nbsp;|&nbsp;&nbsp;
         <strong><%= current_user.email %></strong>
         &nbsp;</span>
-        <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+        <%= cl_image_tag @user.avatar, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
         <div class="dropdown-menu dropd own-menu-right" aria-labelledby="navbarDropdown">
           <%= link_to "My Profile", pages_show_path(current_user), class: "dropdown-item" %>
           <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
