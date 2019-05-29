@@ -41,6 +41,10 @@ skip_before_action :authenticate_user!, only: [:index, :show]
     redirect_to root_path
   end
 
+  def completed?
+
+  end
+
   private
 
   def task_params
