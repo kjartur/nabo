@@ -16,5 +16,9 @@ get 'task/new'
     resources :reviews, only: [ :new, :create, :edit, :update, :destroy ]
   end
 
+
+  resources :complete_tasks, only: [ :update ]
+
   resource :dashboard, only: [:show]
+
 end

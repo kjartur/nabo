@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_29_101553) do
+ActiveRecord::Schema.define(version: 2019_05_29_142103) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(version: 2019_05_29_101553) do
     t.bigint "task_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "completed_by_owner"
+    t.boolean "completed_by_helper"
     t.index ["task_id"], name: "index_offers_on_task_id"
     t.index ["user_id"], name: "index_offers_on_user_id"
   end
@@ -46,12 +48,18 @@ ActiveRecord::Schema.define(version: 2019_05_29_101553) do
     t.datetime "updated_at", null: false
     t.text "title"
     t.integer "post_code"
+    t.boolean "completed"
     t.index ["user_id"], name: "index_tasks_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
+    t.string "first_name", default: ""
+    t.string "last_name"
+    t.integer "rating"
+    t.integer "coins", default: 5
+    t.string "address"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
