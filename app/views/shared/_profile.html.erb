@@ -1,7 +1,6 @@
-<div class="container">
-  <h1><%= @user.first_name %> <%= @user.last_name %>'s Profile</h1>
-  email: <%= @user.email %><br>
-  address: <%= @user.city %><br>
-  bio: <%= @user.bio %><br>
-  raiting: <%= @user.rating %><br>
-</div>
+<h1><%= @user.first_name %> <%= @user.last_name %>'s Profile</h1>
+email: <%= @user.email %><br>
+address: <%= @user.city %><br>
+bio: <%= @user.bio %><br>
+raiting: <%= @user.rating %><br>
+<%= link_to 'Edit your profile', edit_user_registration_path(@user) %>  
