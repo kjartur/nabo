@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+get 'pages/show'
+get 'profiles/edit'
+get 'profiles/update'
+get 'task/new'
+
   devise_for :users
   root to: 'pages#home'
 
@@ -9,5 +14,3 @@ Rails.application.routes.draw do
     resources :reviews, only: [ :new, :create, :edit, :update, :destroy ]
   end
 end
-
-

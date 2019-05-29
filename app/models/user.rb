@@ -5,6 +5,8 @@ class User < ApplicationRecord
   has_many :offers
   has_many :reviews
 
+  mount_uploader :avatar, AvatarUploader
+
   # consider adding this function at a later point in production:
   # https://stackoverflow.com/questions/15655005/rails-dependent-destroy-with-conditions
   # before_destroy :destroy_dog ###### before_destroy :method_call
