@@ -1,6 +1,7 @@
 <h1><%= @user.first_name %> <%= @user.last_name %>'s Profile</h1>
-email: <%= @user.email %><br>
-address: <%= @user.city %><br>
-bio: <%= @user.bio %><br>
-raiting: <%= @user.rating %><br>
+<br>
+<strong>Email: </strong><%= @user.email %><br>
+<strong>Address: </strong><%= @user.city %><br>
+<strong>Bio: </strong><%= @user.bio %><br>
+<strong>Rating: </strong><%= @user.rating %><br>
 <%= link_to 'Edit your profile', edit_user_registration_path(@user) %>  
