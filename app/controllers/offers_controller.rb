@@ -15,11 +15,13 @@ class OffersController < ApplicationController
   end
 
   def create
+    @task = Task.find(params[:task_id])
     @offer = Offer.new(offer_params)
     @offer.user = current_user
     @offer.task = @task
+    @offer.state = "pending"
     if @offer.save
-      redirect_to confirmed_path
+      redirect_to dashboard_path
     else
       render :new
     end
@@ -28,6 +30,6 @@ class OffersController < ApplicationController
   private
 
   def offer_params
-    params.require(:offer).permit(:state)
+    params.require(:offer).permit(:comments)
   end
 end
