@@ -7,7 +7,8 @@ skip_before_action :authenticate_user!, only: [:index, :show]
     @markers = @tasks.map do |task|
       {
         lat: task.latitude,
-        lng: task.longitude
+        lng: task.longitude,
+        infoWindow: render_to_string(partial: "shared/infowindow", locals: { task: task })
       }
     end
   end
