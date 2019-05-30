@@ -4,7 +4,8 @@
 
 <ul>
   <%@tasks.each do |task|%>
-  <li><%=task.title%></li>
+    <li><%=task.title%></li>
+  <%end%>
 
   <div
     id="map"
@@ -13,6 +14,5 @@
     data-markers="<%= @markers.to_json %>"
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
   ></div>
-  <%end%>
 </ul>
 </div>
