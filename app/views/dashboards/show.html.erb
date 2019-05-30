@@ -24,12 +24,13 @@
 
 <div class = "main-container">
 <div class = "tasks">
-<ul>
+<!-- <ul>
   <p>My tasks:</p>
   <% @tasks.each do |task| %>
     <li><%= task.title %></li>
   <% end %>
-</ul>
+</ul> -->
+  <%= render 'shared/task-card-small', tasks: @tasks %>
 </div>
 
 <div class = "offers">
