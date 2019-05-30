@@ -34,13 +34,9 @@
 </div>
 
 <div class = "offers">
-<ul>
-  <p>My offers:</p>
-  <% @offers.each do |offer| %>
-    <li><%= offer.state %></li>
-    <% end %>
-</ul>
+  <%= render 'shared/offer-card-small', offers: @offers %>
 </div>
+
 </div>
 </div>
 

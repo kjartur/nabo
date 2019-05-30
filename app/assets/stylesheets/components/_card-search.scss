@@ -61,6 +61,18 @@
   width: 114px;
 }
 
+.card-search-infos .card-search-state {
+  position: absolute;
+  background: #eb6a44;
+  text-align: center;
+  padding: -6px;
+  border-radius: -22px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  right: 227px;
+  top: -200px;
+  width: 162px;
+}
+
 .card-search-infos .card-search-completed {
   position: absolute;
   background: #e4e4e4;
