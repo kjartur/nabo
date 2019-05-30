@@ -1,3 +1,22 @@
+
+
+
+<div class = "dashboard_background">
+<div class = "avatar_dashboard_pos">
+  <img src="<%=current_user.avatar%>" class ="avatar-dashboard" >
+</div>
+
+</div>
+
+<div class ="coins_pos">
+  <div class = "coins">
+    <h2><%=current_user.coins%> coins</h2>
+  </div>
+</div>
+
+<div class ="bio_word_pos">
+  <h3>Bio:</h3>
+</div>
 <div class = "bio">
 <p><%=current_user.bio%></p>
 <%= link_to 'Edit your profile(bio)', edit_user_registration_path(@user) %>
@@ -22,6 +41,4 @@
 </ul>
 </div>
 </div>
-<div class = "favorite_tasks">
- Here schoud be my favorite tasks
-</div>
+
