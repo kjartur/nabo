@@ -11,3 +11,8 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+// remove padding on top of page (if you want padding, add it on individual pages)
+body {
+  padding: 0;
+}
