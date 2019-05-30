@@ -3,4 +3,7 @@ class Task < ApplicationRecord
   has_many :offers
 
   validates :address, :date, :description, :amount_coins, presence: true
+
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 end

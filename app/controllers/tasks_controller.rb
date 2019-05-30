@@ -2,7 +2,14 @@ class TasksController < ApplicationController
 skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @tasks = Task.all
+    @tasks = Task.where.not(latitude: nil, longitude: nil)
+
+    @markers = @tasks.map do |task|
+      {
+        lat: task.latitude,
+        lng: task.longitude
+      }
+    end
   end
 
   def new
