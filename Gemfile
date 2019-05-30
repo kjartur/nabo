@@ -18,6 +18,7 @@ gem 'webpacker'
 gem 'cloudinary'
 gem 'carrierwave', '~> 1.2'
 gem 'geocoder'
+gem 'seed_dump'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
