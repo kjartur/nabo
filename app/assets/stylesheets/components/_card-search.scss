@@ -9,9 +9,13 @@
   overflow: hidden;
   background: #d6d6d6;
   text-align: left;
-  padding: 20px;
-  border-radius: 18px;
+  padding: 6px;
+  border-radius: 7px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  &:hover {
+    opacity: 0.6;
+    transition: 0.5s;
+  }
 }
 
 .card-search > img {
