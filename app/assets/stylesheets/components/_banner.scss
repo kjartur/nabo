@@ -1,0 +1,36 @@
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+.banner {
+height: 100vh !important;
+display: flex;
+background-size: cover;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+
+
+
+ .fade-in {
+  -webkit-animation: fade-in 0.75s ease-in both;
+          animation: fade-in 0.75s ease-in both;
+}
+
+
