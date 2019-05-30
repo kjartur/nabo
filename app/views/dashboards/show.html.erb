@@ -1,11 +1,23 @@
+<div class = "bio">
+
+</div>
+
+<div class = "main-container">
+<div class = "tasks">
 <ul>
+  <d>My tasks:</d>
   <% @tasks.each do |task| %>
     <li><%= task.title %></li>
   <% end %>
 </ul>
+</div>
 
+<div class = "offers">
 <ul>
+  <d>My offers:</d>
   <% @offers.each do |offer| %>
     <li><%= offer.state %></li>
     <% end %>
 </ul>
+</div>
+</div>
