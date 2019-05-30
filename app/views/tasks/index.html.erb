@@ -1,15 +1,4 @@
-
-<div class="d-flex justify-content-between" style="width: 100%; position: fixed">
-
-
-  <div class="serch-results">
-    <h1>Search results:</h1>
-    <ul>
-      <%@tasks.each do |task|%>
-        <li><%=task.title%></li>
-      <%end%>
-    </ul>
-  </div>
+<%= render 'shared/task-card-small', tasks: @tasks %>
 
   <div
     id="map"
@@ -18,4 +7,3 @@
     data-markers="<%= @markers.to_json %>"
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
   ></div>
-</div>
