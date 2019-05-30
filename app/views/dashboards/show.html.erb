@@ -1,11 +1,12 @@
 <div class = "bio">
-
+<p><%=current_user.bio%></p>
+<%= link_to 'Edit your profile(bio)', edit_user_registration_path(@user) %>
 </div>
 
 <div class = "main-container">
 <div class = "tasks">
 <ul>
-  <d>My tasks:</d>
+  <p>My tasks:</p>
   <% @tasks.each do |task| %>
     <li><%= task.title %></li>
   <% end %>
@@ -14,10 +15,13 @@
 
 <div class = "offers">
 <ul>
-  <d>My offers:</d>
+  <p>My offers:</p>
   <% @offers.each do |offer| %>
     <li><%= offer.state %></li>
     <% end %>
 </ul>
 </div>
+</div>
+<div class = "favorite_tasks">
+ Here schoud be my favorite tasks
 </div>
