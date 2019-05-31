@@ -23,20 +23,36 @@
 </div> -->
 
 <div class = "main-container">
-<div class = "tasks">
-<!-- <ul>
-  <p>My tasks:</p>
-  <% @tasks.each do |task| %>
-    <li><%= task.title %></li>
-  <% end %>
-</ul> -->
-  <%= render 'shared/task-card-small', tasks: @tasks %>
-</div>
+  <div class = "tasks">
+    <h1>My tasks:</h1>
+    <% @tasks.each do |task| %>
+      <div class="card-product">
+        <img src="https://picsum.photos/200">
+        <div class="card-product-infos">
+          <h2><%= task.title %></h2>
 
-<div class = "offers">
-  <%= render 'shared/offer-card-small', offers: @offers %>
-</div>
-
-</div>
+          <p><%= task.date %></p>
+          <div>
+            <% task.users.each do |user| %>
+            <div id = "avatar_card"><%= cl_image_tag(user.avatar) %>
+            </div>
+            <%end%>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div class = "tasks">
+    <h1>My offers:</h1>
+    <% @offers.each do |offer| %>
+      <div class="card-product">
+        <img src="https://picsum.photos/200">
+        <div class="card-product-infos">
+          <h2><%= offer.task.title %></h2>
+          <p><%= offer.task.address %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
 
