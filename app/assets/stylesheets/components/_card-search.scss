@@ -35,7 +35,7 @@
   font-size: 20px;
   font-weight: bold;
   margin: 0;
-  padding: 10px 0;
+  padding: 0px 0;
 }
 
 .card-search p {
@@ -73,6 +73,36 @@
   width: 162px;
 }
 
+.card-search-infos .card-search-amount-coins {
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  height: 83px;
+  width: 83px;
+  margin: auto;
+  font-size: 0px;
+  background-color: #212842;
+  color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  border: 3px solid #fff;
+  box-shadow: 1px 1px 1px black;
+  padding: 12px 14px 16px;
+  text-align: center;
+  right: -119px;
+  top: -202px;
+}
+
+p{
+  font-family: 'Abel', sans-serif;
+  font-size: 24px;
+}
+
+h2{
+  font-family: 'Abel', sans-serif;
+  font-size: 64px;
+}
+
 .card-search-infos .card-search-completed {
   position: absolute;
   background: #e4e4e4;
@@ -87,5 +117,42 @@
 
 .card-search-text {
   color: black;
+}
+
+.card-product {
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  width: 600px;
+  height: 120px;
+  border-radius: 4px;
+}
+
+.card-product img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.card-product h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-product p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-product .card-product-infos {
+  padding: 16px;
 }
 
