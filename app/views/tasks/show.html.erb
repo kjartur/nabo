@@ -7,11 +7,11 @@
     <p><%= @task[:description] %></p>
     <br>
 
-  <p><h5>Date:</h5> <%= @task[:date] %></p>
-  <p><h5>Address:</h5> <%= @task[:address] %></p>
-  <p><h5>Post code:</h5><%= @task[:post_code] %></p>
-  <p><h5>Credits:</h5> <%= @task[:amount_coins] %></p>
-  <p><h5>Status: </h5><%= @task[:completed] %></p>
+    <p><h5>Date:</h5> <%= @task[:date].strftime("%A, %d %b %Y %l:%M %p") %></p>
+    <p><h5>Address:</h5> <%= @task[:address] %></p>
+    <p><h5>Post code:</h5><%= @task[:post_code] %></p>
+    <p><h5>Coins:</h5> <%= @task[:amount_coins] %></p>
+    <p><h5>Status: </h5><%= @task[:completed] %></p>
 
 
     <div class="btn btn-primary">
