@@ -9,6 +9,8 @@
   <p><h5>Address:</h5> <%= @task[:address] %></p>
   <p><h5>Post code:</h5><%= @task[:post_code] %></p>
   <p><h5>Credits:</h5> <%= @task[:amount_coins] %></p>
+  <p><h5>ID: </h5><%= @task[:id] %></p>
+  <p><h5>Status: </h5><%= @task[:completed] %></p>
 
 
   <div class="btn btn-primary">
@@ -16,6 +18,6 @@
   </div>
 
    <div class="btn btn-primary">
-    <%= link_to 'Complete task', complete_task_path(@task), method: "patch", :class => "btn" %>
+    <%= link_to 'Complete task', taskcomplete_path(@task), method: "patch", :class => "btn" %>
   </div>
 </div>

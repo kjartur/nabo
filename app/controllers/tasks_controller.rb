@@ -49,6 +49,13 @@ skip_before_action :authenticate_user!, only: [:index, :show]
     redirect_to root_path
   end
 
+  def complete
+    @task = Task.find(params[:id])
+    @task.update(completed: true)
+    redirect_to dashboard_path
+  end
+
+
   def completed?
 
   end
@@ -56,6 +63,6 @@ skip_before_action :authenticate_user!, only: [:index, :show]
   private
 
   def task_params
-    params.require(:task).permit(:address, :date, :description, :amount_coins, :title, :post_code)
+    params.require(:task).permit(:address, :date, :description, :amount_coins, :title, :post_code, :completed)
   end
 end
