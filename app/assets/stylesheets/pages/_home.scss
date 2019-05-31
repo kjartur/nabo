@@ -1,4 +1,13 @@
 // Specific CSS for your home-page
+
+.banner {
+height: 100vh !important;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+
 .search-form-control {
   position: relative;
 }
@@ -41,7 +50,7 @@
     width: 50%;
     max-width: 350px;
     position: absolute;
-    top: 9%;
+    top: 20%;
 
 }
 
