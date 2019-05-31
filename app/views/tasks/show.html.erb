@@ -1,21 +1,26 @@
-<div class="container">
-  <br>
-  <h1><%= @task[:title] %></h1>
-  <br>
-  <p><%= @task[:description] %></p>
-  <br>
+<div class="card-show-container">
+  <div class="task">
+    <div class="card-show">
+    </div>
+    <br>
+    <h1><%= @task[:title] %></h1>
+    <br>
+    <p><%= @task[:description] %></p>
+    <br>
 
-  <p><h5>Date:</h5> <%= @task[:date] %></p>
-  <p><h5>Address:</h5> <%= @task[:address] %></p>
-  <p><h5>Post code:</h5><%= @task[:post_code] %></p>
-  <p><h5>Credits:</h5> <%= @task[:amount_coins] %></p>
+    <p><h5>Date:</h5> <%= @task[:date] %></p>
+    <p><h5>Address:</h5> <%= @task[:address] %></p>
+    <p><h5>Post code:</h5><%= @task[:post_code] %></p>
+    <p><h5>Credits:</h5> <%= @task[:amount_coins] %></p>
 
 
-  <div class="btn btn-primary">
-    <%= link_to 'Offer to help', new_task_offer_path(@task), :class => "btn" %>
-  </div>
-
-   <div class="btn btn-primary">
-    <%= link_to 'Complete task', complete_task_path(@task), method: "patch", :class => "btn" %>
+    <div class="card-show-buttons">
+      <div class="btn btn-primary">
+        <%= link_to 'Offer to help', new_task_offer_path(@task), :class => "btn" %>
+      </div>
+       <div class="btn btn-primary">
+        <%= link_to 'Complete task', complete_task_path(@task), method: "patch", :class => "btn" %>
+      </div>
+    </div>
   </div>
 </div>
