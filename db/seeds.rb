@@ -1,4 +1,3 @@
-
 User.create!([
   {email: "david.nielsen@gmail.com", password: "123456789", first_name: "David", last_name: "Nielsen", rating: nil, coins: 15, address: "Berlin", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, avatar: "https://ak3.picdn.net/shutterstock/videos/4849793/thumb/1.jpg", bio: "Hi! I am David, and I am an engineer who's main passions in life are caligraphy and chess. I joined NABO to become more familiar with my neighbors, and to feel like I can make a small difference in this world", city: "Berlin"},
   {email: "sarah.larsson@gmail.com", password: "123456789", first_name: "Sarah", last_name: "Larsson", rating: nil, coins: 70, address: "Stockholm", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, avatar: "http://www.stefantell.se/blog/wp-content/uploads/2011/03/studio-portrait-of-swedish-female-model.jpg", bio: "Hi, I'm Sarah! I live in Stockholm and joined this site after a friend told me about it. It's been a great experience so far helping out my neighbors, and I just love how more connected I feel to my neighborhood!", city: "Stockholm"},
@@ -25,4 +24,3 @@ Offer.create!([
   {state: "pending", user_id: 5, task_id: 6, completed_by_owner: nil, completed_by_helper: nil, comments: "Hi, I would love to help you out!"},
   {state: "pending", user_id: 2, task_id: 1, completed_by_owner: nil, completed_by_helper: nil, comments: "Hi, I would be happy to feed your cat! I love cats so much. Do they like tuna? I fished a giant tuna the other day and would like to get rid of this fish stinking up my flat. So this would be a win-win situation!"}
 ])
-
