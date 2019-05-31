@@ -1,7 +1,6 @@
 <div class="card-show-container">
   <div class="task">
-    <div class="card-show">
-    </div>
+
     <br>
     <h1><%= @task[:title] %></h1>
     <br>
@@ -15,11 +14,12 @@
   <p><h5>Status: </h5><%= @task[:completed] %></p>
 
 
-  <div class="btn btn-primary">
-    <%= link_to 'Offer to help', new_task_offer_path(@task), :class => "btn" %>
-  </div>
+    <div class="btn btn-primary">
+      <%= link_to 'Offer to help', new_task_offer_path(@task), :class => "btn" %>
+    </div>
 
-   <div class="btn btn-primary">
-    <%= link_to 'Complete task', taskcomplete_path(@task), method: "patch", :class => "btn" %>
+     <div class="btn btn-primary">
+      <%= link_to 'Complete task', taskcomplete_path(@task), method: "patch", :class => "btn" %>
+    </div>
   </div>
 </div>
