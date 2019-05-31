@@ -1,0 +1,23 @@
+
+  <div class="offer-container">
+    <div class="column">
+      <% @task.offers.each do |offer| %>
+      <%# user = User.find(task.user_id) %>
+        <%= link_to offer_path(offer) do %>
+          <div class="card-search">
+            <img src="http://www.selfstoragespecialists.com/blog/wp-content/uploads/2016/03/bigstock-new-home-real-estate-moving-91410869.jpg">
+              <div class="card-search-infos">
+                <div class="card-search-text">
+                  <h1><%= offer.task.title %></h1>
+                  <h2><%= offer.task.address %></h2>
+                </div>
+                <div class="card-search-state">
+                  <h2><%= offer.state %></h2>
+                </div>
+                <%#= cl_image_tag current_user.avatar, class: "card-search-user avatar-bordered" %>
+              </div>
+            </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
