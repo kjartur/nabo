@@ -1,7 +1,11 @@
 <div class="card-show">
   <div class="card-show-top">
-    <div class = "avatar">
-      <img src="<%=current_user.avatar%>" class ="avatar-dashboard" >
+    <div>
+      <% @task.users.each do |user| %>
+      <div id = "avatar_card">
+        <%= cl_image_tag(user.avatar) %>
+      </div>
+      <%end%>
     </div>
 
     <h1><%= @task[:title] %></h1>
@@ -29,7 +33,7 @@
 
 
     <div class="card-show-details">
-      <h3><%= @task[:description] %></h3>
+      <h2><strong><%= @task[:description] %><strong></h2>
       <h3>Date: <%= @task[:date].strftime("%A, %d %b %Y %l:%M %p") %></h3>
       <h3>Address: <%= @task[:address] %></h3>
       <h3>Post code: <%= @task[:post_code] %></h3>
