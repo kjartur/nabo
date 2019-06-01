@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   patch 'task/:id/complete', to: 'tasks#complete', as: 'taskcomplete'
 
   resources :tasks do
-    resources :offers, only: [ :new, :create, :destroy, :index ]
+    resources :offers, only: [ :new, :create, :destroy, :index, :show]
   end
   resources :offers, only: [ :index, :show, :destroy ] do
     resources :reviews, only: [ :new, :create, :edit, :update, :destroy ]
