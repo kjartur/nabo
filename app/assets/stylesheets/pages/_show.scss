@@ -1,36 +1,58 @@
-.card-show-container{
+.card-show {
 display: flex;
-justify-content: center;
+flex-direction: column;
 margin: 30px auto;
 width: 100%;
-width: 919px;
+width: 1200px;
 text-align: center;
 background-color: red;
 margin-top: 110px;
-padding: 50px;
+padding: 15px;
 background: #fff;
-border-radius: 22px;
+border-radius: 15px;
 box-shadow: 0 1px 0 0 #d7d8db, 0 0 0 1px #e3e4e8;
 
 }
 
-h1{
-  font-size: 30px;
+.card-show .card-show-top {
+display: flex;
+text-align: center;
+flex-direction: column;
+border-color: black;
+padding: 10px;
 }
 
-.card-show-container > img {
-  height: 200px;
-  width: 100%;
+.card-show-top > img {
+  height: 400px;
   border-radius: 0px;
+  width: 100%;
+  border-radius: 5px;
   object-fit: cover;
 }
 
-.card-show-container .card-search-amount-coins {
+.card-show-top h1{
+  font-size: 40px;
+  padding: 30px;
+}
+
+.card-show-top h2{
+  font-size: 30px;
+}
+
+.card-show-top .avatar{
+  position: absolute;
+  right: -397px;
+  border: 3px solid #fff;
+  box-shadow: 1px 1px 1px black;
+  background-color: #212842;
+}
+
+.card-show-top .card-show-amount-coins {
   position: absolute;
   text-align: center;
   left: 50%;
-  height: 83px;
-  width: 83px;
+  height: 130px;
+  width: 130px;
   margin: auto;
   font-size: 0px;
   background-color: #212842;
@@ -41,8 +63,7 @@ h1{
   box-shadow: 1px 1px 1px black;
   padding: 12px 14px 16px;
   text-align: center;
-  right: -119px;
-  top: -202px;
+  right: -397px;
 }
 
 p{
@@ -55,8 +76,37 @@ h2{
   font-size: 64px;
 }
 
-.card-show-container .card-show-buttons{
+.card-show .card-show-buttons {
   display: flex;
-  padding-bottom: 5px;
+  padding: 40px 0px;
   justify-content: space-around;
 }
+
+.card-show-profile {
+
+}
+
+.card-show-details {
+  padding: 40px 0px;
+}
+
+.card-show-details h3{
+  padding: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
