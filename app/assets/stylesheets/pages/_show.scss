@@ -4,12 +4,13 @@
   margin: 30px auto;
   width: 900px;
   text-align: center;
-  background-color: red;
+  float: center;
   margin-top: 110px;
   padding: 50px;
   background: #fff;
   border-radius: 15px;
-  box-shadow: 0 1px 0 0 #d7d8db, 0 0 0 1px #e3e4e8;
+  // box-shadow: 0 1px 0 0 #d7d8db, 0 0 0 1px #e3e4e8;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .card-show .card-show-top {
@@ -35,7 +36,7 @@
   top: 113px;
 }
 
-.card-show-top > img {
+.card-show .uploaded-photo > img {
   height: 300px;
   border-radius: 0px;
   width: 80%;
@@ -86,7 +87,6 @@ h2{
 
 .card-show-details {
   padding: 10px 0px;
-  float: center;
 }
 
 hr.divider-line{
@@ -113,12 +113,14 @@ hr.divider-line{
 
 .card-show-details h2{
   font-size: 30px;
-  font-family: 'Abel', sans-serif
+  font-family: 'Abel', sans-serif;
+  font-style: italic;
 }
 
 .card-show-details h3{
   font-size: 25px;
   padding: 5px;
+  font-weight: bold;
   font-family: 'Abel', sans-serif
 }
 
