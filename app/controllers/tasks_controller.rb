@@ -58,10 +58,10 @@ skip_before_action :authenticate_user!, only: [:index, :show]
     @owner = @task.user
     @owner.coins -= @task.amount_coins
     @owner.save
-    helper = @task.offers.where(state: "booked").first.user
+    @helper = @task.offers.where(state: "booked").first.user
     # Make link unclickable whne state is (not book)
-    helper.coins += @task.amount_coins
-    helper.save
+    @helper.coins += @task.amount_coins
+    @helper.save
 
     redirect_to dashboard_path
 
