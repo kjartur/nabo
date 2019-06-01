@@ -1,12 +1,12 @@
 .card-show-container{
 display: flex;
 justify-content: center;
+margin: 30px auto;
+width: 100%;
 width: 919px;
 text-align: center;
 background-color: red;
 margin-top: 110px;
-margin-bottom: 20px;
-margin-left: 238px;
 padding: 50px;
 background: #fff;
 border-radius: 22px;
@@ -25,6 +25,35 @@ h1{
   object-fit: cover;
 }
 
+.card-show-container .card-search-amount-coins {
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  height: 83px;
+  width: 83px;
+  margin: auto;
+  font-size: 0px;
+  background-color: #212842;
+  color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  border: 3px solid #fff;
+  box-shadow: 1px 1px 1px black;
+  padding: 12px 14px 16px;
+  text-align: center;
+  right: -119px;
+  top: -202px;
+}
+
+p{
+  font-family: 'Abel', sans-serif;
+  font-size: 24px;
+}
+
+h2{
+  font-family: 'Abel', sans-serif;
+  font-size: 64px;
+}
 
 .card-show-container .card-show-buttons{
   display: flex;
