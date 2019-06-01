@@ -1,7 +1,6 @@
 <div class="card-product-one">
   <%= link_to task_path(task) do %>
   <!-- <img src="https://picsum.photos/200"> -->
-  <%end%>
     <div class="card-product-infos">
       <h2><%= task.title %></h2>
       <p><%= task.date.strftime("%A, %d %b %Y %l:%M %p") %></p>
@@ -15,13 +14,18 @@
       </ul>
       <!-- <p><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></p> -->
     </div>
-    <div>
-      <% task.users.each_with_index do |user, i| %>
+
+    <div class = "dashboard_all_offer_on_the_taks_card">
+      <% task.users.take(4).each do |user| %>
       <div id = "avatar_card">
         <%= link_to cl_image_tag(user.avatar), acceptoffer_url , method: patch, data: { confirm: 'Are you sure?'} %>
 
       </div>
       <%end%>
     </div>
+    <!-- <div id ="see_all_offers">
+      <%= link_to 'see_all_offers', task_offers_path(@tasks), method: "get"%>
+    </div> -->
+    <%end %>
 </div>
 </div>

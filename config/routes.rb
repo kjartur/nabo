@@ -9,12 +9,12 @@ Rails.application.routes.draw do
   patch 'offer/:id', to: 'offers#accept', as: 'acceptoffer'
 
   resources :tasks do
-    resources :offers, only: [ :new, :create, :destroy ]
+    resources :offers, only: [ :new, :create, :destroy, :index ]
   end
   resources :offers, only: [ :index, :show, :destroy ] do
     resources :reviews, only: [ :new, :create, :edit, :update, :destroy ]
   end
 
-  resource :dashboard, only: [:show]
+  resource :dashboard, only: [ :show ]
 
 end
