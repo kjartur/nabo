@@ -1,6 +1,7 @@
 class TasksController < ApplicationController
 skip_before_action :authenticate_user!, only: [:index, :show]
 
+
   def index
     @tasks = Task.where.not(latitude: nil, longitude: nil)
 
@@ -44,9 +45,11 @@ skip_before_action :authenticate_user!, only: [:index, :show]
   end
 
   def destroy
+
+
     @task = Task.find(params[:id])
     @task.destroy
-    redirect_to root_path
+    redirect_to dashboard_path
   end
 
   def complete
@@ -60,9 +63,14 @@ skip_before_action :authenticate_user!, only: [:index, :show]
 
   end
 
+
+
   private
 
   def task_params
     params.require(:task).permit(:address, :date, :description, :amount_coins, :title, :post_code, :completed)
   end
+
 end
+
+
