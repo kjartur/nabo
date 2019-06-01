@@ -27,15 +27,18 @@ class OffersController < ApplicationController
     end
   end
 
-    def destroy
-      @offer = Offer.find(params[:id])
-      @offer.destroy
-      redirect_to dashboard_path
-    end
+  def destroy
+    @offer = Offer.find(params[:id])
+    @offer.destroy
+    redirect_to dashboard_path
+  end
+
+  def accept
+    @offer = Offer.find(:offer).permit(:comments)
+
+  end
 
 
-
-  private
 
   def offer_params
     params.require(:offer).permit(:comments)
