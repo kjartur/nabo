@@ -18,52 +18,40 @@
   align-items: center;
   flex-direction: column;
   padding: 10px;
+  margin-left: 78px;
+  margin-right: 78px;
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   background-color: #ddb096;
 }
 
-.card-show-top .avatar-dashboard{
-  position: absolute;
+.card-show-icons {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 120px;
+  margin-left: 78px;
+  margin-right: 78px;
+  border-radius: 5px;
+}
+
+.card-show-icons .avatar-dashboard{
   text-align: center;
-  left: 270px;
-  height: 130px;
-  width: 130px;
+  height: 100px;
+  width: 100px;
   margin: auto;
   border: 3px solid #fff;
   box-shadow: 1px 1px 1px black;
   height: 150px;
   width: 150px;
   border-radius: 50%;
-  top: 113px;
 }
 
-.card-show .uploaded-photo > img {
-  height: 300px;
-  border-radius: 0px;
-  width: 80%;
-  border-radius: 5px;
-  object-fit: cover;
-}
-
-.card-show-top h1{
-  font-size: 45px;
-  font-color: white;
-  font-family: 'Abel', sans-serif
-}
-
-.card-show-top h2{
-  font-size: 30px;
-  font-family: 'Abel', sans-serif
-}
-
-.card-show-top .card-show-amount-coins {
-  position: absolute;
+.card-show-icons .card-show-amount-coins {
   text-align: center;
   left: 50%;
-  height: 130px;
-  width: 130px;
-  margin: auto;
+  height: 146px;
+  width: 146px;
+  margin: 0;
   font-size: 0px;
   background-color: #212842;
   color: #fff;
@@ -87,6 +75,24 @@ h2{
   font-size: 64px;
 }
 
+.card-show .uploaded-photo > img {
+  height: 300px;
+  border-radius: 0px;
+  width: 80%;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.card-show-top h1{
+  font-size: 30px;
+  font-color: white;
+  font-family: 'Abel', sans-serif
+}
+
+.card-show-top h2{
+  font-size: 25px;
+  font-family: 'Abel', sans-serif
+}
 
 .card-show-details {
   padding: 10px 0px;
@@ -111,19 +117,19 @@ hr.divider-line{
 }
 
 .card-show-details h1{
-  font-size: 40px;
+  font-size: 25px;
   padding: 30px;
   font-family: 'Abel', sans-serif
 }
 
 .card-show-details h2{
-  font-size: 30px;
+  font-size: 25px;
   font-family: 'Abel', sans-serif;
   font-style: italic;
 }
 
 .card-show-details h3{
-  font-size: 25px;
+  font-size: 20px;
   padding: 5px;
   font-weight: bold;
   font-family: 'Abel', sans-serif
@@ -141,20 +147,33 @@ hr.divider-line{
   display: flex;
   padding: 20px 0px;
   justify-content: space-around;
-  font-color: white;
+  color: white;
 }
 
-.btn-flat {
+.btn-flat-offer {
   color: white;
   padding: 8px 24px;
   border-radius: 30px;
-  background: #1EDD88;
+  background: #85b9bc;
   transition: background 0.3s ease;
 }
-.btn-flat:hover {
-  background: #1BCB7F;
+.btn-flat-offer:hover {
+  background: #7ca0a3;
   color: white;
 }
+
+.btn-flat-complete {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 30px;
+  background: #75A9D0;
+  transition: background 0.3s ease;
+}
+.btn-flat-complete:hover {
+  background: #6089ad;
+  color: white;
+}
+
 
 
 
