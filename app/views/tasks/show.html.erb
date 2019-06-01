@@ -1,25 +1,61 @@
-<div class="card-show-container">
-  <div class="task">
+<div class="card-show">
+  <div class="card-show-top">
 
-    <br>
+
     <h1><%= @task[:title] %></h1>
-    <br>
-    <p><%= @task[:description] %></p>
-    <br>
-
-    <p><h5>Date:</h5> <%= @task[:date].strftime("%A, %d %b %Y %l:%M %p") %></p>
-    <p><h5>Address:</h5> <%= @task[:address] %></p>
-    <p><h5>Post code:</h5><%= @task[:post_code] %></p>
-    <p><h5>Coins:</h5> <%= @task[:amount_coins] %></p>
-    <p><h5>Status: </h5><%= @task[:completed] %></p>
-
-
-    <div class="btn btn-primary">
-      <%= link_to 'Offer to help', new_task_offer_path(@task), :class => "btn" %>
+<!--     <h2>Status: <%#= @task[:completed] %></h2>
+ -->
+    <div class="avatar_dashboard_pos">
+      <img src="<%=current_user.avatar%>" class ="avatar-dashboard" >
     </div>
 
-     <div class="btn btn-primary">
-      <%= link_to 'Complete task', taskcomplete_path(@task), method: "patch", :class => "btn" %>
+    <div class="card-show-amount-coins">
+      <%= @task[:amount_coins] %>
     </div>
   </div>
+
+    <br>
+    <hr class="divider-line">
+    <br>
+
+    <div class="uploaded-photo">
+      <img src="http://www.selfstoragespecialists.com/blog/wp-content/uploads/2016/03/bigstock-new-home-real-estate-moving-91410869.jpg">
+    </div>
+
+    <div class="card-show-details">
+      <div class="description">
+        <h2><%= @task[:description] %></h2>
+      </div>
+      <h3>
+        <div class="clock-icon"><%= image_tag "clock.svg"%></div>
+        <%= @task[:date].strftime("%A, %d %b %Y at %l:%M %p")%>
+      </h3>
+        <br>
+        <hr class="divider-line">
+        <br>
+      <h3>
+        <div class="map-pin-icon"><%= image_tag "map-pin.svg"%></div>
+        <%=@task[:address]%>, <%= @task[:post_code]%>
+      </h3>
+        <br>
+        <hr class="divider-line">
+        <br>
+    </div>
+      <div class="card-show-buttons">
+        <div class="btn btn-flat">
+          <%= link_to 'Offer to help', new_task_offer_path(@task), :class => "btn" %>
+        </div>
+        <div class="btn btn-flat">
+          <%= link_to 'Complete task', taskcomplete_path(@task), method: "patch", :class => "btn" %>
+        </div>
+      </div>
 </div>
+
+
+
+
+
+
+
+
+
