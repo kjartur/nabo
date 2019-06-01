@@ -1,7 +1,8 @@
 class Task < ApplicationRecord
   belongs_to :user
-  has_many :offers
+  has_many :offers, :dependent => :destroy
   has_many :users, through: :offers
+
 
   validates :address, :date, :description, :amount_coins, presence: true
 
