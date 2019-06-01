@@ -2,12 +2,11 @@
   display: flex;
   flex-direction: column;
   margin: 30px auto;
-  width: 100%;
-  width: 1200px;
+  width: 900px;
   text-align: center;
   background-color: red;
   margin-top: 110px;
-  padding: 15px;
+  padding: 50px;
   background: #fff;
   border-radius: 15px;
   box-shadow: 0 1px 0 0 #d7d8db, 0 0 0 1px #e3e4e8;
@@ -35,14 +34,14 @@
 .card-show-top > img {
   height: 300px;
   border-radius: 0px;
-  width: 40%;
+  width: 80%;
   border-radius: 5px;
   object-fit: cover;
 }
 
 .card-show-top h1{
-  font-size: 40px;
-  padding: 30px;
+  font-size: 45px;
+  padding: px;
   font-family: 'Abel', sans-serif
 }
 
@@ -80,18 +79,26 @@ h2{
   font-size: 64px;
 }
 
-.card-show .card-show-buttons {
-  display: flex;
-  padding: 40px 0px;
-  justify-content: space-around;
-}
-
-.card-show-profile {
-
-}
 
 .card-show-details {
-  padding: 40px 0px;
+  padding: 10px 0px;
+  float: center;
+}
+
+hr.divider-line{
+  height: 10px;
+  width: 80%;
+  margin: 10px 80px;
+  border: 0;
+  box-shadow: 0 8px 8px -9px #dbdbdb inset;
+}
+
+.card-show-details .description {
+  align-items: center;
+  padding: 20px 0px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  background-color: #f8f8f8;
 }
 
 .card-show-details h1{
@@ -106,8 +113,23 @@ h2{
 }
 
 .card-show-details h3{
-  padding: 15px;
+  font-size: 25px;
+  padding: 5px;
   font-family: 'Abel', sans-serif
+}
+
+.clock-icon {
+  padding-bottom: 5px;
+}
+
+.map-pin-icon {
+  padding-bottom: 5px;
+}
+
+.card-show .card-show-buttons {
+  display: flex;
+  padding: 20px 0px;
+  justify-content: space-around;
 }
 
 
