@@ -59,6 +59,7 @@ skip_before_action :authenticate_user!, only: [:index, :show]
     @owner.coins -= @task.amount_coins
     @owner.save
     helper = @task.offers.where(state: "booked").first.user
+    # Make link unclickable whne state is (not book)
     helper.coins += @task.amount_coins
     helper.save
 
@@ -80,5 +81,3 @@ skip_before_action :authenticate_user!, only: [:index, :show]
   end
 
 end
-
-
