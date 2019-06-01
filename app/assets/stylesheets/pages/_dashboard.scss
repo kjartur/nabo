@@ -1,22 +1,34 @@
 .main-container{
+
+  display: flex;
+  justify-content: center;
+  color: #444444;
+  width: 90%;
+  background-color: #6d6d6d5e;
+  margin: auto;
+  border-radius: 4px;
+  box-shadow: 0 0 0 0 #d7d8db, 0 0 0 0px #e3e4e8;
+  margin-bottom: 120px;
+
+}
+
+.main-container-headers{
 display: flex;
 justify-content: center;
 width: 90%;
-background-color: red;
 margin: auto;
-background: #89BEE6;
-border-radius: 4px;
-box-shadow: 0 1px 0 0 #d7d8db, 0 0 0 1px #e3e4e8;
-margin-bottom: 120px;
+margin-bottom: 45px;
 }
 
 .tasks{
  margin: auto;
+ width: 100%;
 
 }
 
 .offers{
  margin: auto;
+ background-color: #F9D060;
 }
 
 .bio{
@@ -30,9 +42,9 @@ margin-bottom: 120px;
 }
 
 .bio_word_pos{
-   display: flex;
-justify-content: center;
-  margin: auto;
+ display: flex;
+ justify-content: center;
+ margin: auto;
 }
 
 .favorite_tasks{
@@ -81,10 +93,10 @@ h2{
 }
 
 .dashboard_background{
-width: 100%;
-height: 120px;
-background-color:#2C3E52;
-border-bottom: 1px solid white;
+  width: 100%;
+  height: 120px;
+  background-color:#2C3E52;
+  border-bottom: 1px solid white;
 }
 
 .avatar-dashboard{
@@ -97,3 +109,152 @@ border-bottom: 1px solid white;
 
 .vatar_dashboard_pos{
 }
+
+.card-product-one {
+  position: relative;
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  width: 600px;
+  height: 120px;
+  border-radius: 4px;
+  margin: auto;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.card-product-two {
+  position: relative;
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  width: 600px;
+  height: 120px;
+  border-radius: 4px;
+  margin: auto;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+
+.card-product-one img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.card-product-two img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.card-product-one h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-product-two h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-product-one p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-product-two p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-product-one .card-product-infos {
+  padding: 16px;
+}
+
+.card-product-two .card-product-infos {
+  padding: 16px;
+}
+
+.dashboard_all_cards{
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-gap: 0px;
+}
+
+h1{
+  font-family: 'Abel', sans-serif;
+  font-size: 64px;
+  color: white;
+}
+
+span{
+  color: #212742 ;
+}
+
+body {
+  width: 100wh;
+  height: 90vh;
+  color: #fff;
+  background: linear-gradient(-45deg, #527597, #85BAE4);
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 30s ease infinite;
+  -moz-animation: Gradient 30s ease infinite;
+  animation: Gradient 30s ease infinite;
+}
+
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@-moz-keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+
+
