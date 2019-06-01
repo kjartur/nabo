@@ -8,19 +8,21 @@
 
 </div>
 
+<div class = "heartbeat">
 <div class ="coins_pos">
   <div class = "coins">
     <h2><%=current_user.coins%> coins</h2>
   </div>
 </div>
+</div>
 
 <div class="dashboard_all_cards">
   <div class = "main-container-headers">
-    <h1>You have created <span class = "heartbeat"><%= @tasks.count %></span> task(s):</h1>
+    <h1>You have created <i class = "heartbeat"><span><%= @tasks.count %></span></i> task(s):</h1>
   </div>
 
   <div class = "main-container-headers">
-    <h1>You have created <span><%= @offers.count %></span> offer(s): </h1>
+    <h1>You have created <i class = "heartbeat"><span><%= @offers.count %></span></i> offer(s): </h1>
   </div>
 </div>
 
