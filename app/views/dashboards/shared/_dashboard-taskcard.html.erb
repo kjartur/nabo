@@ -4,8 +4,8 @@
   <%end%>
     <div class="card-product-infos">
       <h2><%= task.title %></h2>
-
       <p><%= task.date.strftime("%A, %d %b %Y %l:%M %p") %></p>
+      <p>Coins: <%= task.amount_coins %></p>
       <div id ="dashboard_tasks_buttons">
         <ul class="list-inline">
           <li class="list-item"><%= link_to 'Complete', taskcomplete_path(task), method: "patch"%></li>
