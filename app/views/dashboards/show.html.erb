@@ -14,17 +14,19 @@
   </div>
 </div>
 
-<!-- <div class ="bio_word_pos">
-  <h3>Bio:</h3>
+<div class="dashboard_all_cards">
+  <div class = "main-container-headers">
+    <h1>You have created <span><%= @tasks.count %></span> task(s):</h1>
+  </div>
+
+  <div class = "main-container-headers">
+    <h1>You have created <span><%= @offers.count %></span> offer(s): </h1>
+  </div>
 </div>
-<div class = "bio">
-<p><%=current_user.bio%></p>
-<%= link_to 'Edit your profile(bio)', edit_user_registration_path(@user) %>
-</div> -->
+
 <div class="dashboard_all_cards">
   <div class = "main-container">
     <div class = "tasks">
-      <h1>My tasks:</h1>
       <% @tasks.each do |task| %>
           <div class="card-product-one">
             <%= link_to task_path(task) do %>
@@ -56,7 +58,6 @@
   </div>
   <div class = "main-container">
     <div class = "tasks">
-      <h1>My offers:</h1>
       <% @offers.each do |offer| %>
         <div class="card-product-two">
           <div class="card-product-infos">

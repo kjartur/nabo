@@ -2,12 +2,18 @@
 display: flex;
 justify-content: center;
 width: 90%;
-background-color: red;
 margin: auto;
-background: #89BEE6;
 border-radius: 4px;
 box-shadow: 0 1px 0 0 #d7d8db, 0 0 0 1px #e3e4e8;
 margin-bottom: 120px;
+}
+
+.main-container-headers{
+display: flex;
+justify-content: center;
+width: 90%;
+margin: auto;
+margin-bottom: 45px;
 }
 
 .tasks{
@@ -115,7 +121,7 @@ border-bottom: 1px solid white;
   border-radius: 4px;
   margin: auto;
   margin-bottom: 30px;
-  margin-top: 10px;
+  margin-top: 30px;
 }
 
 .card-product-two {
@@ -132,7 +138,7 @@ border-bottom: 1px solid white;
   border-radius: 4px;
   margin: auto;
   margin-bottom: 30px;
-  margin-top: 10px;
+  margin-top: 30px;
 }
 
 
@@ -190,3 +196,12 @@ grid-template-columns: 1fr 1fr;
 grid-gap: 8px;
 }
 
+h1{
+  font-family: 'Abel', sans-serif;
+  font-size: 64px;
+  color: white;
+}
+
+span{
+  color: #212742 ;
+}
