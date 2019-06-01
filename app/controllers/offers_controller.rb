@@ -11,6 +11,9 @@ class OffersController < ApplicationController
   def new
     @user = current_user
     @task = Task.find(params[:task_id])
+    if (@task.user_id === @user.id)
+      redirect_to dashboard_path
+    end
     @offer = Offer.new
   end
 
