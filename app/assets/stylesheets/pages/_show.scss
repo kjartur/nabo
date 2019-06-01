@@ -21,14 +21,18 @@
 }
 
 .card-show-top .avatar-dashboard{
-  right: -397px;
+  position: absolute;
+  text-align: center;
+  left: 270px;
+  height: 130px;
+  width: 130px;
+  margin: auto;
   border: 3px solid #fff;
   box-shadow: 1px 1px 1px black;
-  margin-left: 60px;
-  margin-top: 50px;
   height: 150px;
   width: 150px;
   border-radius: 50%;
+  top: 113px;
 }
 
 .card-show-top > img {
@@ -41,7 +45,6 @@
 
 .card-show-top h1{
   font-size: 45px;
-  padding: px;
   font-family: 'Abel', sans-serif
 }
 
@@ -66,7 +69,8 @@
   box-shadow: 1px 1px 1px black;
   padding: 12px 14px 16px;
   text-align: center;
-  right: -130px;
+  right: -29px;
+  top: 118px;
 }
 
 p{
