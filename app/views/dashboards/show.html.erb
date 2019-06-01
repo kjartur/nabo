@@ -1,15 +1,15 @@
 
 
-<div style="padding-top: 75px;"">
+<div style="padding-top: 75px">
 <div class = "dashboard_background">
-<div class = "avatar_dashboard_pos">
-  <img src="<%=current_user.avatar%>" class ="avatar-dashboard" >
-</div>
+  <div class = "avatar_dashboard_pos">
+    <img src="<%=current_user.avatar%>" class ="avatar-dashboard" >
+  </div>
+  <div class = "my_name">
+    <h1> <span><%=current_user.first_name%> <%=current_user.last_name%><span>, welcome to your dashboard!</h1>
+  </div>
 </div>
 
-<div class = "my_name">
-  <h1><%=current_user.first_name%> <%=current_user.last_name%></h1>
-</div>
 
 <div class = "heartbeat">
 <div class ="coins_pos">
