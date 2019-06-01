@@ -17,8 +17,10 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  border-color: black;
   padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  background-color: #ddb096;
 }
 
 .card-show-top .avatar-dashboard{
@@ -46,6 +48,7 @@
 
 .card-show-top h1{
   font-size: 45px;
+  font-color: white;
   font-family: 'Abel', sans-serif
 }
 
@@ -101,7 +104,9 @@ hr.divider-line{
   align-items: center;
   padding: 20px 0px;
   margin-top: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+  margin-left: 78px;
+  margin-right: 78px;
   background-color: #f8f8f8;
 }
 
@@ -136,11 +141,20 @@ hr.divider-line{
   display: flex;
   padding: 20px 0px;
   justify-content: space-around;
+  font-color: white;
 }
 
-
-
-
+.btn-flat {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 30px;
+  background: #1EDD88;
+  transition: background 0.3s ease;
+}
+.btn-flat:hover {
+  background: #1BCB7F;
+  color: white;
+}
 
 
 
