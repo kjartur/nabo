@@ -298,3 +298,14 @@ grid-gap: 0px;
           animation: heartbeat 15s ease-in-out infinite both;
 }
 
+.dashboard_all_offer_on_the_taks_card{
+  display: flex;
+  flex-direction: row;
+      box-sizing: border-box;
+}
+
+#see_all_offers{
+ position:absolute;
+ right: 240px;
+ bottom: 25px;
+}
