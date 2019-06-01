@@ -1,6 +1,9 @@
 <div class="card-show">
   <div class="card-show-top">
-    <img src="http://www.selfstoragespecialists.com/blog/wp-content/uploads/2016/03/bigstock-new-home-real-estate-moving-91410869.jpg">
+    <div class = "avatar">
+      <img src="<%=current_user.avatar%>" class ="avatar-dashboard" >
+    </div>
+
     <h1><%= @task[:title] %></h1>
     <br>
     <h2>Status: <%= @task[:completed] %></h2>
@@ -9,9 +12,8 @@
       <%= @task[:amount_coins] %>
     </div>
 
-    <div class = "avatar">
-      <img src="<%=current_user.avatar%>" class ="avatar-dashboard" >
-    </div>
+
+    <img src="http://www.selfstoragespecialists.com/blog/wp-content/uploads/2016/03/bigstock-new-home-real-estate-moving-91410869.jpg">
   </div>
 
 
