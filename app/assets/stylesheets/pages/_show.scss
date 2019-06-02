@@ -1,7 +1,7 @@
 .main-container-show {
   display:flex;
   justify-content: space-around;
-  margin: 30px auto;
+  margin: 5px auto;
   width: 90%;
 }
 
@@ -10,7 +10,7 @@
   flex-direction: column;
   margin-top: 30px;
   margin-bottom: 30px;
-  margin-left: 0;
+  margin-left: -514px;
   width: 750px;
   text-align: center;
   float: center;
@@ -27,7 +27,7 @@
   align-items: center;
   flex-direction: column;
   padding: 10px;
-  margin: 20px 76px 23px 76px;
+  margin: 12px 76px 15px 76px;
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   background-color: #ddb096;
@@ -117,7 +117,7 @@ hr.divider-line{
 .card-show-details .description {
   align-items: center;
   padding: 20px 0px;
-  margin-top: 15px;
+  margin-top: 5px;
   margin-bottom: 40px;
   margin-left: 78px;
   margin-right: 78px;
@@ -161,11 +161,12 @@ hr.divider-line{
 .nav-container {
   display: flex;
   flex-direction: column;
+  position: fixed;
+  z-index: 2000;
   margin-top: 30px;
   margin-bottom: 30px;
-  margin-left: 0;
+  margin-left: 400px;
   width: 450px;
-  height: 400px;
   float: center;
   margin-top: 110px;
   padding: 20px;
@@ -178,6 +179,7 @@ hr.divider-line{
 .nav-container .offers {
   display: flex;
   flex-direction: row;
+  background-color: white;
 }
 
 .nav-container .offers .offer-avatars {
