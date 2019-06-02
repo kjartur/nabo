@@ -34,12 +34,6 @@ span{
 }
 }
 
-.tasks{
- margin: auto;
- width: 100%;
-
-}
-
 .offers{
  margin: auto;
  background-color: #F9D060;
@@ -224,9 +218,17 @@ h2{
 }
 
 .dashboard_all_cards{
-display: grid;
-grid-template-columns: 1fr 1fr;
-grid-gap: 0px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0px;
+
+.tasks{
+  position: absolute;
+ margin: auto;
+ width: 100%;
+
+}
 }
 
 
