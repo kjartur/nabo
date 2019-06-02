@@ -166,7 +166,6 @@ hr.divider-line{
   margin-left: 0;
   width: 450px;
   height: 400px;
-  text-align: center;
   float: center;
   margin-top: 110px;
   padding: 20px;
@@ -176,14 +175,20 @@ hr.divider-line{
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
+.nav-container .offers {
+  display: flex;
+  flex-direction: row;
+}
+
 .nav-container .offers .offer-avatars {
   display: flex;
   flex-direction: column;
   margin-left: 0;
   text-align: left;
+  padding-right: 0;
 }
 
-.offer-avatars .avatar-show-nav img{
+.nav-container .offers .offer-avatars .avatar-show-nav img{
   height: 80px;
   width: 80px;
   border-radius: 50%;
@@ -191,15 +196,19 @@ hr.divider-line{
   padding-left: 0;
 }
 
-.offers .offer-comments {
+.nav-container .offers .offer-comments {
   padding: 0px 0px;
 }
 
-.offer-comments .comments-boxes {
+.offers .offer-comments .comments-boxes {
+  height: 80px;
+  width: 300px;
   background-color: #f8f8f8;
+  border-width: 5px;
+  border-color: black;
 }
 
-.offer-comments .comments-boxes h3{
+.offers .offer-comments .comments-boxes h3{
   font-size: 10px;
   padding: 0px;
   font-family: 'Abel', sans-serif

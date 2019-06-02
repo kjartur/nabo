@@ -50,23 +50,24 @@
   </div>
 
   <div class="nav-container">
-    <div class="offer-avatars">
-      <% @task.users.each do |user| %>
-      <div class="avatar-show-nav">
-        <%= cl_image_tag(user.avatar) %>
+    <div class="offers">
+      <div class="offer-avatars">
+        <% @task.users.each do |user| %>
+        <div class="avatar-show-nav">
+          <%= cl_image_tag(user.avatar) %>
+        </div>
+        <%end%>
       </div>
-      <%end%>
-    </div>
-    <div>
-    <div class="offer-comments">
-      <% @task.users.each do |user| %>
-      <div class="comments-boxes">
-        <%= @task.offers %>
+      <div>
+      <div class="offer-comments">
+        <% @task.users.each do |user| %>
+        <div class="comments-boxes">
+          <%= @task.offers %>
+        </div>
+        <%end%>
       </div>
-      <%end%>
     </div>
   </div>
-
     <div class="card-show-buttons">
       <div class="btn btn-flat-offer">
         <%= link_to 'Offer to help', new_task_offer_path(@task), :class => "btn" %>
