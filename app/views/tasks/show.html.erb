@@ -1,22 +1,22 @@
 <div class="card-show">
-  <div class="card-show-top">
+
+  <div class="card-show-icons">
+    <div class="avatar_dashboard_pos">
+    <img src="<%=current_user.avatar%>" class ="avatar-dashboard" >
+  </div>
+
+  <div class="card-show-amount-coins">
+    <h2>Coins:</h2>
+    <br>
+    <h2><%= @task[:amount_coins] %><h2>
+   </div>
+  </div>
+
+   <div class="card-show-top">
     <h1> <%= @task[:title] %></h1>
 <!--     <h2>Status: <%#= @task[:completed] %></h2>
  -->
   </div>
-
-   <div class="card-show-icons">
-      <div class="avatar_dashboard_pos">
-       <img src="<%=current_user.avatar%>" class ="avatar-dashboard" >
-     </div>
-
-     <div class="card-show-amount-coins">
-       <%= @task[:amount_coins] %>
-     </div>
-   </div>
-
-    <hr class="divider-line">
-    <br>
 
     <div class="uploaded-photo">
       <img src="http://www.selfstoragespecialists.com/blog/wp-content/uploads/2016/03/bigstock-new-home-real-estate-moving-91410869.jpg">
@@ -27,8 +27,15 @@
         <h2><%= @task[:description] %></h2>
       </div>
       <h3>
+        <div class="calendar-icon"><%= image_tag "calendar.svg"%></div>
+        <%= @task[:date].strftime("%A, %d %b %Y")%>
+      </h3>
+        <br>
+        <hr class="divider-line">
+        <br>
+      <h3>
         <div class="clock-icon"><%= image_tag "clock.svg"%></div>
-        <%= @task[:date].strftime("%A, %d %b %Y at %l:%M %p")%>
+        <%= @task[:date].strftime("%l:%M %p")%>
       </h3>
         <br>
         <hr class="divider-line">

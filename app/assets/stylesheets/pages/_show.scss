@@ -18,8 +18,7 @@
   align-items: center;
   flex-direction: column;
   padding: 10px;
-  margin-left: 78px;
-  margin-right: 78px;
+  margin: 20px 76px 23px 76px;
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   background-color: #ddb096;
@@ -59,7 +58,7 @@
   display: inline-block;
   border: 3px solid #fff;
   box-shadow: 1px 1px 1px black;
-  padding: 12px 14px 16px;
+  padding: 17px 16px 17px;
   text-align: center;
   right: -29px;
   top: 118px;
@@ -72,7 +71,7 @@ p{
 
 h2{
   font-family: 'Abel', sans-serif;
-  font-size: 64px;
+  font-size: 40px;
 }
 
 .card-show .uploaded-photo > img {
@@ -84,7 +83,7 @@ h2{
 }
 
 .card-show-top h1{
-  font-size: 30px;
+  font-size: 40px;
   font-color: white;
   font-family: 'Abel', sans-serif
 }
@@ -133,6 +132,10 @@ hr.divider-line{
   padding: 5px;
   font-weight: bold;
   font-family: 'Abel', sans-serif
+}
+
+.calendar-icon {
+  padding-bottom: 5px;
 }
 
 .clock-icon {
