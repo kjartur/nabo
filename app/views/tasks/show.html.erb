@@ -62,13 +62,13 @@
       <div class="offer-comments">
         <% @task.users.each do |user| %>
         <div class="comments-boxes">
-          <%= @task.offers %>
+          <%= @task.offers.first.comments %>
         </div>
         <%end%>
       </div>
     </div>
   </div>
-    <div class="card-show-buttons">
+    <div class="nav-container-buttons">
       <div class="btn btn-flat-offer">
         <%= link_to 'Offer to help', new_task_offer_path(@task), :class => "btn" %>
       </div>
