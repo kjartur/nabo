@@ -20,9 +20,11 @@
         <%= link_to cl_image_tag(user.avatar) %>
       </div>
       <% end %>
+      <%= link_to task_path(task) do %>
       <div class = "button">
         <h1>+</h1>
       </div>
+      <% end %>
     </div>
   </div>
 

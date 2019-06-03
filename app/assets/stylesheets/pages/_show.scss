@@ -165,8 +165,8 @@ hr.divider-line{
   z-index: 2000;
   margin-top: 30px;
   margin-bottom: 30px;
-  margin-left: 400px;
-  width: 450px;
+  margin-left: 450px;
+  width: 550px;
   float: center;
   margin-top: 110px;
   padding: 20px;
@@ -206,20 +206,26 @@ hr.divider-line{
 
 .offers .offer-comments .comments-boxes {
   height: 70px;
-  width: 300px;
-  padding: 19px;
+  width: 400px;
+  padding: 10px;
   margin: 20px 11px;
   background-color: #f8f8f8;
   border-width: 5px;
   border-color: black;
 }
 
-.offers .offer-comments .comments-boxes h3{
+.offers .offer-comments .comments-boxes{
+  h3{
   font-size: 10px;
   padding: 0px;
   font-family: 'Abel', sans-serif
-}
+  }
 
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
 .nav-container .nav-container-buttons {
   display: flex;
   justify-content: space-between;

@@ -1,7 +1,6 @@
 class TasksController < ApplicationController
 skip_before_action :authenticate_user!, only: [:index, :show]
 
-
   def index
     @tasks = Task.where.not(latitude: nil, longitude: nil)
 
@@ -45,8 +44,6 @@ skip_before_action :authenticate_user!, only: [:index, :show]
   end
 
   def destroy
-
-
     @task = Task.find(params[:id])
     @task.destroy
     redirect_to dashboard_path
@@ -58,13 +55,13 @@ skip_before_action :authenticate_user!, only: [:index, :show]
     @owner = @task.user
     @owner.coins -= @task.amount_coins
     @owner.save
-    @helper = @task.offers.where(state: "booked").first.user
+    @offer = Offer.where(id: params[:id]).first
+    @helper = User.find(@offer.user_id)
     # Make link unclickable when state is (not book)
     @helper.coins += @task.amount_coins
     @helper.save
 
     redirect_to dashboard_path
-
   end
 
 
