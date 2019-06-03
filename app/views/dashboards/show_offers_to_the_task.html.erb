@@ -1,0 +1,5 @@
+show_offers_to_the_task.html.erb
+
+<% task.users.each do |user| %>
+<%= link_to cl_image_tag(user.avatar) %>
+<% end %>
