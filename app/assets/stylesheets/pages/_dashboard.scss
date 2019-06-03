@@ -34,12 +34,6 @@ span{
 }
 }
 
-.tasks{
- margin: auto;
- width: 100%;
-
-}
-
 .offers{
  margin: auto;
  background-color: #F9D060;
@@ -224,9 +218,17 @@ h2{
 }
 
 .dashboard_all_cards{
-display: grid;
-grid-template-columns: 1fr 1fr;
-grid-gap: 0px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0px;
+
+.tasks{
+  position: absolute;
+ margin: auto;
+ width: 100%;
+
+}
 }
 
 
@@ -305,4 +307,43 @@ grid-gap: 0px;
   font-family: 'Abel', sans-serif;
   font-size: 32px;
   }
+}
+
+#dashboard_tasks_buttons{
+.list-inline {
+  list-style: none;
+  padding-left: 0px;
+  position: relative;
+}
+
+.list-inline > li {
+  padding: 0px 20px;
+  font-size: 1.5em;
+}
+.fa-pen {
+  color: #fff;
+}
+
+.fa-pen:hover{
+  color: #202842;
+}
+
+.fa-check-circle{
+  color: #fff;
+}
+
+.fa-check-circle:hover{
+  color: #1ADD89;
+}
+
+.fa-trash{
+  color: #fff;
+  position: absolute;
+  top: 80px;
+  right: 49px;
+}
+
+.fa-trash:hover{
+  color: #D35B42;
+}
 }

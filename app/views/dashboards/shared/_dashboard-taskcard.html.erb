@@ -8,9 +8,9 @@
 
       <div id ="dashboard_tasks_buttons">
         <ul class="list-inline">
-          <li class="list-item"><%= link_to 'Complete', taskcomplete_path(task), method: "patch"%></li>
-          <li class="list-item"><%= link_to 'Edit',edit_task_path(task) %></li>
-          <li class="list-item"><%= link_to 'Delete', task, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+          <li class="list-item"><%= link_to taskcomplete_path(task), method: "patch" do%><i class="far fa-check-circle"></i><% end %></li>
+          <li class="list-item"><%= link_to edit_task_path(task) do %><i class="fas fa-pen"></i><% end %></li>
+          <li class="list-item"><%= link_to task, method: :delete, data: { confirm: 'Are you sure?' } do %> <i class="fas fa-trash"></i><% end %></li>
       </ul>
       <!-- <p><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></p> -->
     </div>
@@ -29,3 +29,5 @@
     <%end %>
 </div>
 </div>
+
+

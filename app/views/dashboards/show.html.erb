@@ -21,11 +21,11 @@
 
 <div class="dashboard_all_cards">
   <div class = "main-container-headers">
-    <h1>You have created <i class = "heartbeat"><span><%= @tasks.count %></span></i> task(s):</h1>
+    <h1>You have created <span><%= @tasks.count %></span> task<%if @tasks.count > 1%><%= 's'%><%else%><%= '' %><%end%>:</h1>
   </div>
 
   <div class = "main-container-headers">
-    <h1>You have created <i class = "heartbeat"><span><%= @offers.count %></span></i> offer(s): </h1>
+    <h1>You have created <span><%= @offers.count %></span> offer<%if @offers.count > 1%><%= 's'%><%else%><%= '' %><%end%>: </h1>
   </div>
 </div>
 

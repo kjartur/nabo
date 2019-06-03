@@ -1,37 +1,56 @@
-.card-show-container{
-display: flex;
-justify-content: center;
-margin: 30px auto;
-width: 100%;
-width: 919px;
-text-align: center;
-background-color: red;
-margin-top: 110px;
-padding: 50px;
-background: #fff;
-border-radius: 22px;
-box-shadow: 0 1px 0 0 #d7d8db, 0 0 0 1px #e3e4e8;
-
+.card-show {
+  display: flex;
+  flex-direction: column;
+  margin: 30px auto;
+  width: 900px;
+  text-align: center;
+  float: center;
+  margin-top: 110px;
+  padding: 50px;
+  background: #fff;
+  border-radius: 15px;
+  // box-shadow: 0 1px 0 0 #d7d8db, 0 0 0 1px #e3e4e8;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-h1{
-  font-size: 30px;
+.card-show .card-show-top {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  margin: 20px 76px 23px 76px;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  background-color: #ddb096;
 }
 
-.card-show-container > img {
-  height: 200px;
-  width: 100%;
-  border-radius: 0px;
-  object-fit: cover;
+.card-show-icons {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 120px;
+  margin-left: 78px;
+  margin-right: 78px;
+  border-radius: 5px;
 }
 
-.card-show-container .card-search-amount-coins {
-  position: absolute;
+.card-show-icons .avatar-dashboard{
+  text-align: center;
+  height: 100px;
+  width: 100px;
+  margin: auto;
+  border: 3px solid #fff;
+  box-shadow: 1px 1px 1px black;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+
+.card-show-icons .card-show-amount-coins {
   text-align: center;
   left: 50%;
-  height: 83px;
-  width: 83px;
-  margin: auto;
+  height: 146px;
+  width: 146px;
+  margin: 0;
   font-size: 0px;
   background-color: #212842;
   color: #fff;
@@ -39,10 +58,10 @@ h1{
   display: inline-block;
   border: 3px solid #fff;
   box-shadow: 1px 1px 1px black;
-  padding: 12px 14px 16px;
+  padding: 17px 16px 17px;
   text-align: center;
-  right: -119px;
-  top: -202px;
+  right: -29px;
+  top: 118px;
 }
 
 p{
@@ -52,11 +71,122 @@ p{
 
 h2{
   font-family: 'Abel', sans-serif;
-  font-size: 64px;
+  font-size: 40px;
 }
 
-.card-show-container .card-show-buttons{
-  display: flex;
-  padding-bottom: 5px;
-  justify-content: space-around;
+.card-show .uploaded-photo > img {
+  height: 300px;
+  border-radius: 0px;
+  width: 80%;
+  border-radius: 5px;
+  object-fit: cover;
 }
+
+.card-show-top h1{
+  font-size: 40px;
+  font-color: white;
+  font-family: 'Abel', sans-serif
+}
+
+.card-show-top h2{
+  font-size: 25px;
+  font-family: 'Abel', sans-serif
+}
+
+.card-show-details {
+  padding: 10px 0px;
+}
+
+hr.divider-line{
+  height: 10px;
+  width: 80%;
+  margin: 10px 80px;
+  border: 0;
+  box-shadow: 0 8px 8px -9px #dbdbdb inset;
+}
+
+.card-show-details .description {
+  align-items: center;
+  padding: 20px 0px;
+  margin-top: 15px;
+  margin-bottom: 40px;
+  margin-left: 78px;
+  margin-right: 78px;
+  background-color: #f8f8f8;
+}
+
+.card-show-details h1{
+  font-size: 25px;
+  padding: 30px;
+  font-family: 'Abel', sans-serif
+}
+
+.card-show-details h2{
+  font-size: 25px;
+  font-family: 'Abel', sans-serif;
+  font-style: italic;
+}
+
+.card-show-details h3{
+  font-size: 20px;
+  padding: 5px;
+  font-weight: bold;
+  font-family: 'Abel', sans-serif
+}
+
+.calendar-icon {
+  padding-bottom: 5px;
+}
+
+.clock-icon {
+  padding-bottom: 5px;
+}
+
+.map-pin-icon {
+  padding-bottom: 5px;
+}
+
+.card-show .card-show-buttons {
+  display: flex;
+  padding: 20px 0px;
+  justify-content: space-around;
+  color: white;
+}
+
+.btn-flat-offer {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 30px;
+  background: #85b9bc;
+  transition: background 0.3s ease;
+}
+.btn-flat-offer:hover {
+  background: #7ca0a3;
+  color: white;
+}
+
+.btn-flat-complete {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 30px;
+  background: #75A9D0;
+  transition: background 0.3s ease;
+}
+.btn-flat-complete:hover {
+  background: #6089ad;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
