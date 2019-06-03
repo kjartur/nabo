@@ -76,7 +76,7 @@
           <p><%= offer.comments%></p>
 
       <div class = "choose_me_btn">
-        <p> Choose me! </p>
+        <%= link_to 'Choose me!', acceptoffer_path, method: "patch" %>
       </div>
         </div>
           <%end%>
