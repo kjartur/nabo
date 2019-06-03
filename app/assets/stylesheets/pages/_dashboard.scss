@@ -218,6 +218,17 @@ h2{
 }
 }
 
+.card-product-infos{
+  h2:hover{
+    color: #597EA1;
+    transition: 0.5s;
+  }
+  p:hover{
+    color: #597EA1;
+    transition: 0.5s;
+  }
+}
+
 
 
 
@@ -287,15 +298,30 @@ h2{
   bottom: 25px;
 }
 
+#avatar_card:hover{
+  transition: 0.3s;
+  transform: scale(1.2);
+}
+
 .button{
   position: absolute;
   right: 25px;
   top: 60px;
   height: 40px;
   width: 40px;
-  background-color: #7CA0A3;
+  background-color: #1F2742;
   border-radius: 50%;
   display: inline-block;
+
+  p{
+    color: white;
+  }
+}
+
+.button:hover{
+  transition: 0.5s;
+  transform: scale(1.2);
+
 }
 
 
