@@ -10,4 +10,18 @@
         </ul>
       </div>
     </div>
+    <!-- Defening the state of the offer: -->
+     <%if offer.state == 'pending' %>
+     <span class="dot-offer" style= "background-color: yellow">
+      </span>
+     <%elsif offer.state == 'booked' %>
+     <span class="dot-offer" style= "background-color: green">
+      </span>
+      <%elsif offer.state == 'done' %>
+      <span class="dot-offer" style= "background-color: black">
+      <%elsif offer.state == 'rejected' %>
+      <span class="dot-offer" style= "background-color: blue">
+      <%else%>
+      <span class="dot-offer" style= "background-color: red">
+     <%end%>
 </div>

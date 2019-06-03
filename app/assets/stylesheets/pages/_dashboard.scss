@@ -319,6 +319,90 @@ h2{
   transform: scale(1.2);
 
 }
+.dot-offer {
+  position:absolute;
+  right: 0px;
+  top: 0px;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+}
+
+.dot-task {
+  position:absolute;
+  right: 0px;
+  top: 0px;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+}
+
+.dot-info-pink {
+  position:absolute;
+  left: 200px;
+  top: 555px;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+}
+.dot-info-orange {
+  position:absolute;
+  left: 230px;
+  top: 555px;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+}
+
+.dot-info-red-task {
+  position:absolute;
+  left: 260px;
+  top: 555px;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+}
+
+.dot-info-yellow {
+  position:absolute;
+  right: 320px;
+  top: 555px;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+}
+.dot-info-green {
+  position:absolute;
+  top: 555px;
+  right: 290px;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+}
+.dot-info-black {
+  position:absolute;
+  top: 555px;
+  right: 260px;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+}
+.dot-info-blue {
+  position:absolute;
+  top: 555px;
+  right: 230px;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+}
+.dot-info-red-offer {
+  position:absolute;
+  top: 555px;
+  right: 200px;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+}
 
 
 
@@ -389,4 +473,17 @@ h2{
 
 .dashboard-headers {
   display: flex;
+}
+
+.info{
+  display: flex;
+  justify-content: space-between;
+}
+
+.tasks_info{
+
+}
+
+.offers_info{
+
 }
