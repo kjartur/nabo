@@ -37,7 +37,8 @@ class OffersController < ApplicationController
   end
 
   def accept
-    @offer = Offer.find(:offer).permit(:comments)
+    @offer = Offer.find(params[:id])
+    @offer.state = "booked"
 
   end
 
