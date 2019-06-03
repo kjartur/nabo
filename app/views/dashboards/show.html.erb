@@ -2,30 +2,24 @@
 
 <div style="padding-top: 75px">
 <div class = "dashboard_background">
+  <div class = "my_name">
+    <h1 class="color-dark-blue coin-number"> <%= current_user.coins %> <span>Coins</span></h1>
+    <h1 class="color-mute"> <span><%=current_user.first_name%> <%=current_user.last_name%><span>, welcome to your dashboard!</h1>
+  </div>
   <div class = "avatar_dashboard_pos">
     <img src="<%=current_user.avatar%>" class ="avatar-dashboard" >
   </div>
-  <div class = "my_name">
-    <h1> <span><%=current_user.first_name%> <%=current_user.last_name%><span>, welcome to your dashboard!</h1>
-  </div>
 </div>
 
 
-<div class = "heartbeat">
-<div class ="coins_pos">
-  <div class = "coins">
-    <h2><%=current_user.coins%> coins</h2>
-  </div>
-</div>
-</div>
 
 <div class="dashboard-headers">
   <div class = "main-container-headers">
-    <h1>You have created <span><%= @tasks.count %></span> task<%if @tasks.count > 1%><%= 's'%><%else%><%= '' %><%end%>:</h1>
+    <h1 class="color-blue">You have created <span class="color-dark-blue"><%= @tasks.count %></span> task<%if @tasks.count > 1%><%= 's'%><%else%><%= '' %><%end%>:</h1>
   </div>
 
   <div class = "main-container-headers">
-    <h1>You have created <span><%= @offers.count %></span> offer<%if @offers.count > 1%><%= 's'%><%else%><%= '' %><%end%>: </h1>
+    <h1 class="color-blue">You have created <span class="color-dark-blue"><%= @offers.count %></span> offer<%if @offers.count > 1%><%= 's'%><%else%><%= '' %><%end%>: </h1>
   </div>
 </div>
 

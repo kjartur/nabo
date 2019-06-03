@@ -8,3 +8,15 @@ $orange: #E67E22;
 $green: #1EDD88;
 $gray: #0E0000;
 $light-gray: #F4F4F4;
+
+.color {
+  &-blue {
+    color: #2f7bb7 !important;
+  }
+   &-dark-blue {
+   color: #202742 !important;
+  }
+  &-mute {
+    opacity: .5  !important;
+  }
+}

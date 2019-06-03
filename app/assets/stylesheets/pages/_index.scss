@@ -4,3 +4,16 @@
 @import "show";
 
 @import url('https://use.fontawesome.com/releases/v5.8.1/css/all.css');
+
+
+.title-section {
+  padding: 72px 10px;
+  padding-bottom: 5px;
+  b {
+    color: #89bee8;
+    font-weight: 900;
+  }
+  h2 {
+    font-size: 31px;
+  }
+}
