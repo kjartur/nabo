@@ -1,6 +1,7 @@
 class TasksController < ApplicationController
 skip_before_action :authenticate_user!, only: [:index, :show]
 
+
   def index
     @tasks = Task.where.not(latitude: nil, longitude: nil)
 
@@ -55,8 +56,8 @@ skip_before_action :authenticate_user!, only: [:index, :show]
     @owner = @task.user
     @owner.coins -= @task.amount_coins
     @owner.save
-    @offer = Offer.where(id: params[:id]).first
-    @helper = User.find(@offer.user_id)
+    @offer = @task.booked_offer
+    @helper = @offer.user
     # Make link unclickable when state is (not book)
     @helper.coins += @task.amount_coins
     @helper.save
@@ -74,7 +75,7 @@ skip_before_action :authenticate_user!, only: [:index, :show]
   private
 
   def task_params
-    params.require(:task).permit(:address, :date, :description, :amount_coins, :title, :photo, :post_code, :completed)
+    params.require(:task).permit(:address, :date, :description, :amount_coins, :title, :post_code, :completed)
   end
 
 end
