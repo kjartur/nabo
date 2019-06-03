@@ -3,6 +3,7 @@ class Task < ApplicationRecord
   has_many :offers, :dependent => :destroy
   has_many :users, through: :offers
 
+  mount_uploader :photo, TaskPhotosUploader 
 
   validates :address, :date, :description, :amount_coins, presence: true
 
