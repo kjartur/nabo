@@ -127,42 +127,57 @@ h2{
 .card-product-one {
   position: relative;
   overflow: hidden;
-  height: 120px;
-  background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
-  margin: 10px;
-  width: 600px;
-  height: 120px;
+  width: 720px;
+  height: 150px;
   border-radius: 4px;
   margin: auto;
   margin-bottom: 30px;
   margin-top: 30px;
+  background-color:#DDB097;
+
+  img {
+    height: 100%;
+    width: 120px;
+    object-fit: cover;
+  }
+
+  h2 {
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  p {
+    color: white;
+    font-size: 21px;
+    line-height: 1.4;
+    opacity: .7;
+    margin-bottom: 0;
+    margin-top: 8px;
+  }
+
+  .card-product-infos {
+    padding: 16px;
+  }
 }
 
 .card-product-two {
   position: relative;
   overflow: hidden;
-  height: 120px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
-  margin: 10px;
-  width: 600px;
-  height: 120px;
+  width: 720px;
+  height: 150px;
   border-radius: 4px;
   margin: auto;
   margin-bottom: 30px;
   margin-top: 30px;
-}
-
-
-.card-product-one img {
-  height: 100%;
-  width: 120px;
-  object-fit: cover;
 }
 
 .card-product-two img {
@@ -171,12 +186,6 @@ h2{
   object-fit: cover;
 }
 
-.card-product-one h2 {
-  color: white;
-  font-size: 32px;
-  font-weight: bold;
-  margin: 0;
-}
 
 .card-product-two h2 {
   color: white;
@@ -185,14 +194,6 @@ h2{
   margin: 0;
 }
 
-.card-product-one p {
-  color: white;
-  font-size: 21px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
-}
 
 .card-product-two p {
   color: white;
@@ -203,13 +204,6 @@ h2{
   margin-top: 8px;
 }
 
-.card-product-one .card-product-infos {
-  width: 100%;
-  height: 100%;
-  padding: 16px;
-  background-color:#DDB097
-}
-
 .card-product-two .card-product-infos {
   width: 100%;
   height: 100%;
@@ -218,16 +212,13 @@ h2{
 }
 
 .dashboard_all_cards{
-  position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 .tasks{
   position: absolute;
  margin: auto;
- width: 100%;
-
 }
 }
 
@@ -271,26 +262,47 @@ h2{
   }
 }
 
-
-.heartbeat {
-  -webkit-animation: heartbeat 15s ease-in-out infinite both;
-          animation: heartbeat 15s ease-in-out infinite both;
+.dashboard_all_offer_on_the_task_card{
+  text-align: center;
+  position: absolute;
+  right: 120px;
+  top: 0px;
+  width: 240px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-family: 'Abel', sans-serif;
+  font-size: 16px;
 }
 
-.dashboard_all_offer_on_the_taks_card{
-  position: absolute;
-  right: 180px;
-  top: 10px;
+#card-text{
+  padding-bottom: 20px;
+}
+
+.avatars_position{
+  justify-content: center;
   display: flex;
   flex-direction: row;
-      box-sizing: border-box;
 }
 
-#see_all_offers{
- position:absolute;
- right: 240px;
- bottom: 25px;
+#avatar_card{
+  right: 240px;
+  bottom: 25px;
 }
+
+.button{
+  position: absolute;
+  right: 25px;
+  top: 60px;
+  height: 40px;
+  width: 40px;
+  background-color: #7CA0A3;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+
 
 .my_name{
   position: absolute;
@@ -310,10 +322,18 @@ h2{
 }
 
 #dashboard_tasks_buttons{
+  text-align: center;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  background-color: #8a8a8adb;
+  width: 120px;
+  height: 100%;
 .list-inline {
   list-style: none;
   padding-left: 0px;
   position: relative;
+  padding-top: 20px;
 }
 
 .list-inline > li {
@@ -339,7 +359,7 @@ h2{
 .fa-trash{
   color: #fff;
   position: absolute;
-  top: 80px;
+  top: 100px;
   right: 49px;
 }
 
@@ -347,3 +367,11 @@ h2{
   color: #D35B42;
 }
 }
+
+// Restyling
+
+.dashboard-headers {
+  display: flex;
+}
+
+
