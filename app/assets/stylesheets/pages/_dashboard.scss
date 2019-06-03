@@ -115,7 +115,6 @@ h2{
 }
 
 .coin-number {
-    text-align: center;
     font-size: 56px !important;
     font-weight: 900;
 
@@ -314,10 +313,9 @@ h2{
 
 
 .my_name{
-  position: absolute;
-  top: 80px;
-  left: 240px;
-
+    position: absolute;
+    bottom: 50px;
+    left: 30px;
   span{
   color: white;
   font-family: 'Abel', sans-serif;
