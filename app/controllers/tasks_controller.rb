@@ -77,7 +77,7 @@ skip_before_action :authenticate_user!, only: [:index, :show]
   private
 
   def task_params
-    params.require(:task).permit(:address, :date, :description, :amount_coins, :title, :post_code, :completed)
+    params.require(:task).permit(:address, :date, :description, :amount_coins, :title, :photo, :post_code, :completed)
   end
 
 end
