@@ -17,12 +17,14 @@
     <div class = "avatars_position">
     <% task.users.take(2).each do |user| %>
       <div id="avatar_card">
-        <%= link_to cl_image_tag(user.avatar) %>
+        <%= link_to profile_path(user) do %>
+          <%= cl_image_tag(user.avatar) %>
+        <% end %>
       </div>
       <% end %>
       <%= link_to task_path(task) do %>
       <div class = "button">
-        <h1>+</h1>
+        <p>all</p>
       </div>
       <% end %>
     </div>
