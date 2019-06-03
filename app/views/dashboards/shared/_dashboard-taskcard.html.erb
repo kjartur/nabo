@@ -18,7 +18,7 @@
     <div class = "dashboard_all_offer_on_the_taks_card">
       <% task.users.take(3).each do |user| %>
       <div id = "avatar_card">
-        <%= link_to cl_image_tag(user.avatar), acceptoffer_url , method: patch, data: { confirm: 'Are you sure?'} %>
+        <%= link_to cl_image_tag(user.avatar) %>
 
       </div>
       <%end%>
