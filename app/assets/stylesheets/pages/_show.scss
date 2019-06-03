@@ -166,7 +166,7 @@ hr.divider-line{
   margin-top: 30px;
   margin-bottom: 30px;
   margin-left: 450px;
-  width: 550px;
+  width: 650px;
   float: center;
   margin-top: 110px;
   padding: 20px;
@@ -205,8 +205,9 @@ hr.divider-line{
 }
 
 .offers .offer-comments .comments-boxes {
+  position: relative;
   height: 70px;
-  width: 400px;
+  width: 450px;
   padding: 10px;
   margin: 20px 11px;
   background-color: #f8f8f8;
@@ -258,7 +259,29 @@ hr.divider-line{
   color: white;
 }
 
+.choose_me_btn{
+  position: absolute;
+  bottom: 5px;
+  right: -50px;
+  padding: 2px 12px;
+  background-color: #57a957;
+  border-color: #57a957;
+  color: white;
+  height: 30px;
+  border-radius: 7px;
 
+  p{
+  font-family: 'Abel', sans-serif;
+  font-size: 8px;
+  text-align: center;
+
+  }
+}
+
+.choose_me_btn:hover{
+  background-color: #62c462;
+
+}
 
 
 
