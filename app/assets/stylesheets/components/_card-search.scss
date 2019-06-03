@@ -6,10 +6,9 @@
   background-position: center;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-  background: #d6d6d6;
+
+  border: solid 1px lightgrey;
   text-align: left;
-  padding: 6px;
   border-radius: 7px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   &:hover {
@@ -75,11 +74,11 @@
 }
 
 .card-search-infos .card-search-amount-coins {
-  position: absolute;
+ position: absolute;
   text-align: center;
   left: 50%;
-  height: 83px;
-  width: 83px;
+  height: 73px;
+  width: 73px;
   margin: auto;
   font-size: 0px;
   background-color: #212842;
@@ -90,8 +89,8 @@
   box-shadow: 1px 1px 1px black;
   padding: 12px 14px 16px;
   text-align: center;
-  right: -119px;
-  top: -202px;
+  right: -169px;
+  top: -222px;
 }
 
 p{

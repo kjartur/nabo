@@ -103,7 +103,8 @@ h2{
 .dashboard_background{
   position: relative;
   width: 100%;
-  height: 120px;
+  height: 340px;
+  margin-bottom: 134px;
   background-color:#2C3E52;
   border-bottom: 1px solid white;
    background: linear-gradient(-45deg, #527597, #85BAE4);
@@ -113,12 +114,19 @@ h2{
   animation: Gradient 30s ease infinite;
 }
 
+.coin-number {
+    font-size: 56px !important;
+    font-weight: 900;
+
+}
+
 .avatar-dashboard{
-  margin-left: 60px;
-  margin-top: 50px;
-  height: 150px;
-  width: 150px;
-  border-radius: 50%;
+    bottom: -42px;
+    position: absolute;
+    right: 42%;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
 }
 
 .vatar_dashboard_pos{
@@ -305,10 +313,9 @@ h2{
 
 
 .my_name{
-  position: absolute;
-  top: 80px;
-  left: 240px;
-
+    position: absolute;
+    bottom: 50px;
+    left: 30px;
   span{
   color: white;
   font-family: 'Abel', sans-serif;

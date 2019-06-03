@@ -3,6 +3,9 @@
 <div style="padding-top: 75px;">
 <div class="d-flex justify-content-between">
   <div class="results col">
+  <div class="title-section">
+    <h2>We found <b><%= Task.all.count %></b> you can Help with!</h2>
+  </div>
     <div class ="greeds_card">
       <%= render 'shared/task-card-small', tasks: @tasks %>
     </div>
