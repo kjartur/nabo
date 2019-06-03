@@ -1,7 +1,7 @@
 <div style="padding-top: 75px;">
  <div class="container">
   <h1><%= @user.first_name %> <%= @user.last_name %>'s Profile</h1>
-  <div class = "Avatar">
+  <div class = "profile_avatar">
     <%= cl_image_tag(@user.avatar) %>
   </div>
   email: <%= @user.email %><br>
