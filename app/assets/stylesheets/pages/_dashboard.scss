@@ -263,25 +263,30 @@ h2{
 }
 
 .dashboard_all_offer_on_the_task_card{
+  text-align: center;
+  position: absolute;
+  right: 120px;
+  top: 0px;
+  width: 240px;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  // position: absolute;
-  right: 180px;
-  top: 10px;
-  display: flex;
-  // flex-direction: row;
-      box-sizing: border-box;
   color: white;
   font-family: 'Abel', sans-serif;
   font-size: 16px;
-
 }
-  #card-text{
-  }
 
-  #avatar_card{
+#card-text{
+  padding-bottom: 20px;
+}
+
+.avatars_position{
+  justify-content: center;
   display: flex;
-  position:absolute;
+  flex-direction: row;
+}
+
+#avatar_card{
   right: 240px;
   bottom: 25px;
 }
@@ -306,6 +311,13 @@ h2{
 }
 
 #dashboard_tasks_buttons{
+  text-align: center;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  background-color: #8a8a8adb;
+  width: 120px;
+  height: 100%;
 .list-inline {
   list-style: none;
   padding-left: 0px;

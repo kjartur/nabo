@@ -12,13 +12,15 @@
 
   <div class="dashboard_all_offer_on_the_task_card">
     <div id="card-text">
-      <p><%= task.users.count %> offer(s):</p>
+      <p>You have <%= task.users.count %> offer<%if task.users.count == 1 %><%= ''%><%else%><%= 's' %><%end%>:</p>
     </div>
+    <div class = "avatars_position">
     <% task.users.take(3).each do |user| %>
-    <div id="avatar_card">
-      <%= link_to cl_image_tag(user.avatar) %>
+      <div id="avatar_card">
+        <%= link_to cl_image_tag(user.avatar) %>
+      </div>
+      <% end %>
     </div>
-    <% end %>
   </div>
 
   <div id ="dashboard_tasks_buttons">
