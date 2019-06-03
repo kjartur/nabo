@@ -13,14 +13,21 @@
      </div>
     </div>
 
-     <div class="card-show-top">
+    <div class="card-show-top">
       <h1> <%= @task[:title] %></h1>
-  <!--     <h2>Status: <%#= @task[:completed] %></h2>
-   -->
+      <!--     <h2>Status: <%#= @task[:completed] %></h2>  -->
     </div>
 
     <div class="uploaded-photo">
-      <img src="http://www.selfstoragespecialists.com/blog/wp-content/uploads/2016/03/bigstock-new-home-real-estate-moving-91410869.jpg">
+
+      <% if (@task[:photo] == nil) %>
+        <img src="http://www.selfstoragespecialists.com/blog/wp-content/uploads/2016/03/bigstock-new-home-real-estate-moving-91410869.jpg">
+      <% else %>
+        <%= cl_image_tag(@task.photo) %>
+      <% end %>
+
+
+
     </div>
 
     <div class="card-show-details">
@@ -79,12 +86,3 @@
   </div>
 
 </div>
-
-
-
-
-
-
-
-
-
