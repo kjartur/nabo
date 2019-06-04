@@ -34,16 +34,7 @@
   font-weight: 900;
 }
 
-.card-show-icons {
-  display: flex;
-  justify-content: space-around;
-  padding: 10px 120px;
-  margin-left: 78px;
-  margin-right: 78px;
-  border-radius: 5px;
-}
-
-.card-show-icons .avatar-dashboard{
+.card-show-top .avatar-dashboard{
   position: absolute;
   top: -573px;
   left: -632px;
@@ -51,9 +42,16 @@
   height: 50px;
   width: 50px;
   margin: auto;
-  height: 150px;
-  width: 150px;
   border-radius: 50%;
+}
+
+.card-show-icons {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 120px;
+  margin-left: 78px;
+  margin-right: 78px;
+  border-radius: 5px;
 }
 
 .card-show-icons .card-show-amount-coins {
@@ -94,6 +92,25 @@ h2{
   object-fit: cover;
 }
 
+.description {
+  position: absolute;
+  align-items: center;
+  top: 514px;
+  left: 41px;
+  width: 646px;
+  padding: 20px 0px;
+  margin-top: 5px;
+  margin-bottom: 40px;
+  margin-left: 78px;
+  margin-right: 78px;
+  border-radius: 5px;
+  color: white;
+  letter-spacing: -1px;
+  // background-color: #f8f8f8;
+  background: rgb(0, 0, 0); /* fallback color */
+  background: rgba(0, 0, 0, 0.4);
+}
+
 .card-show-top h1{
   font-size: 35px;
   font-color: white;
@@ -115,25 +132,6 @@ hr.divider-line{
   margin: -16px 80px;
   border: 0;
   box-shadow: 0 8px 8px -9px #dbdbdb inset;
-}
-
-.card-show-details .description {
-  position: absolute;
-  align-items: center;
-  top: 514px;
-  left: 41px;
-  width: 646px;
-  padding: 20px 0px;
-  margin-top: 5px;
-  margin-bottom: 40px;
-  margin-left: 78px;
-  margin-right: 78px;
-  border-radius: 5px;
-  color: white;
-  letter-spacing: -1px;
-  // background-color: #f8f8f8;
-  background: rgb(0, 0, 0); /* fallback color */
-  background: rgba(0, 0, 0, 0.4);
 }
 
 .card-show-details h1{
