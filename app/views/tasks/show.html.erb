@@ -84,12 +84,14 @@
       <div class="nav-container-buttons">
         <% if (current_user.id == @task.user_id) %>
         <div class="btn btn-flat-complete">
-          <%= link_to 'Complete task', taskcomplete_path(@task), method: "patch", :class => "btn" %>
+          <%= link_to 'Complete task', taskcomplete_path(@task), method: "patch", :class => "btn btn-flat-complete" %>
         </div>
           <% else %>
-        <div class="btn btn-flat-offer">
-          <%= link_to 'Offer to help', new_task_offer_path(@task), :class => "btn" %>
-        </div>
+
+          <%= simple_form_for [@task, @offer] do |f| %>
+            <%= f.input :comments, label: 'I want to offer my help on this task:', placeholder: "Leave a comment" %>
+            <%= f.submit "Submit Offer", class: "btn btn-flat-offer" %>
+          <% end %>
         <% end %>
       </div>
 <!-- end current user logic -->
@@ -97,3 +99,16 @@
     </div>
 
   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+

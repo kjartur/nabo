@@ -77,12 +77,12 @@
 }
 
 p{
-  font-family: 'Abel', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 24px;
 }
 
 h2{
-  font-family: 'Abel', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 25px;
 }
 
@@ -97,12 +97,12 @@ h2{
 .card-show-top h1{
   font-size: 35px;
   font-color: white;
-  font-family: 'Abel', sans-serif
+  font-family: 'Open Sans', sans-serif
 }
 
 .card-show-top h2{
   font-size: 25px;
-  font-family: 'Abel', sans-serif
+  font-family: 'Open Sans', sans-serif
 }
 
 .card-show-details {
@@ -120,7 +120,7 @@ hr.divider-line{
 .card-show-details .description {
   position: absolute;
   align-items: center;
-  top: 505px;
+  top: 514px;
   left: 41px;
   width: 646px;
   padding: 20px 0px;
@@ -139,18 +139,18 @@ hr.divider-line{
 .card-show-details h1{
   font-size: 25px;
   padding: 30px;
-  font-family: 'Abel', sans-serif
+  font-family: 'Open Sans', sans-serif
 }
 
 .card-show-details h2{
   font-size: 30px;
-  font-family: 'Abel', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .card-show-details h3{
   font-size: 20px;
   padding: 0px;
-  font-family: 'Abel', sans-serif
+  font-family: 'Open Sans', sans-serif
 }
 
 .calendar-icon {
@@ -229,7 +229,7 @@ hr.divider-line{
   h3{
   font-size: 10px;
   padding: 0px;
-  font-family: 'Abel', sans-serif
+  font-family: 'Open Sans', sans-serif
   }
 
   p {
@@ -237,17 +237,24 @@ hr.divider-line{
     line-height: 24px;
   }
 }
+
 .nav-container .nav-container-buttons {
   display: flex;
-  justify-content: space-between;
-  padding: 20px 0px;
-  color: white;
+  justify-content: center;
+  width: 100%;
+  padding: 53px 0px 20px 0px;
+  color: #2f7bb7;
+  font-size: 30px;
+  font-family: 'Open Sans', sans-serif
 }
 
 .btn-flat-offer {
+  font-size: 24px;
+  justify-content: center;
   color: white;
-  padding: 8px 24px;
-  border-radius: 30px;
+  padding: 18px 49px;
+  margin-left: 109px;
+  border-radius: 38px;
   background: #85b9bc;
   transition: background 0.3s ease;
 }
@@ -257,9 +264,11 @@ hr.divider-line{
 }
 
 .btn-flat-complete {
+  font-size: 24px;
+  justify-content: center;
   color: white;
   padding: 8px 24px;
-  border-radius: 30px;
+  border-radius: 38px;
   background: #75A9D0;
   transition: background 0.3s ease;
 }
@@ -281,7 +290,7 @@ hr.divider-line{
   border-radius: 7px;
 
   p{
-  font-family: 'Abel', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 8px;
   text-align: center;
 
