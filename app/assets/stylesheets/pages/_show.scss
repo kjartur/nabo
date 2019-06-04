@@ -237,17 +237,24 @@ hr.divider-line{
     line-height: 24px;
   }
 }
+
 .nav-container .nav-container-buttons {
   display: flex;
-  justify-content: space-between;
-  padding: 20px 0px;
-  color: white;
+  justify-content: center;
+  width: 100%;
+  padding: 53px 0px 20px 0px;
+  color: #2f7bb7;
+  font-size: 30px;
+  font-family: 'Abel', sans-serif
 }
 
 .btn-flat-offer {
+  font-size: 24px;
+  justify-content: center;
   color: white;
-  padding: 8px 24px;
-  border-radius: 30px;
+  padding: 18px 49px;
+  margin-left: 109px;
+  border-radius: 38px;
   background: #85b9bc;
   transition: background 0.3s ease;
 }

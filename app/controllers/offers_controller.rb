@@ -6,7 +6,7 @@ class OffersController < ApplicationController
 
   def show
     @offer = Offer.find(params[:id])
-    @task = Task.find(params[:id])
+    @task = @offer.task
   end
 
   def new
@@ -20,7 +20,7 @@ class OffersController < ApplicationController
 
   def create
     @task = Task.find(params[:task_id])
-    @offer = Offer.new(offer_params)
+    @offer = Offer.new(check_params)
     @offer.user = current_user
     @offer.task = @task
     @offer.state = "pending"
@@ -53,7 +53,8 @@ private
     @myoffers = current_user.incoming_offers
   end
 
-  def offer_params
+  def check_params
     params.require(:offer).permit(:comments, :id)
   end
+
 end
