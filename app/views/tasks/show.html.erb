@@ -2,8 +2,8 @@
   <div class="card-show">
 
     <div class="card-show-icons">
-      <div class="avatar">
-        <img src="<%=@task.user.avatar%>" class ="avatar" >
+      <div class="avatar-large">
+        <img src="<%=@task.user.avatar%>" class="avatar-dashboard" >
       </div>
 
       <div class="card-show-amount-coins">
@@ -84,14 +84,12 @@
       <div class="nav-container-buttons">
         <% if (current_user.id == @task.user_id) %>
         <div class="btn btn-flat-complete">
-          <%= link_to 'Complete task', taskcomplete_path(@task), method: "patch", :class => "btn btn-flat-complete" %>
+          <%= link_to 'Complete task', taskcomplete_path(@task), method: "patch", :class => "btn" %>
         </div>
           <% else %>
-
-          <%= simple_form_for [@task, @offer] do |f| %>
-            <%= f.input :comments, label: 'I want to offer my help on this task:', placeholder: "Leave a comment" %>
-            <%= f.submit "Submit Offer", class: "btn btn-flat-offer" %>
-          <% end %>
+        <div class="btn btn-flat-offer">
+          <%= link_to 'Offer to help', new_task_offer_path(@task), :class => "btn" %>
+        </div>
         <% end %>
       </div>
 <!-- end current user logic -->
@@ -99,16 +97,3 @@
     </div>
 
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
