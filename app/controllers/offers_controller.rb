@@ -47,7 +47,11 @@ class OffersController < ApplicationController
 
   end
 
+private
 
+  def myoffers
+    @myoffers = current_user.incoming_offers
+  end
 
   def offer_params
     params.require(:offer).permit(:comments, :id)
