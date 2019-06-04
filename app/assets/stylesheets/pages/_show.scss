@@ -24,10 +24,10 @@
 
 .card-show .card-show-top {
   display: flex;
-  align-items: center;
+  text-align: left;
   flex-direction: column;
   padding: 10px;
-  margin: 12px 76px 2px 76px;
+  margin: 12px 133px 11px 156px;
 }
 
 .card-show .card-show-top h1{
@@ -44,12 +44,13 @@
 }
 
 .card-show-icons .avatar-dashboard{
+  position: absolute;
+  top: -573px;
+  left: -632px;
   text-align: center;
-  height: 100px;
-  width: 100px;
+  height: 50px;
+  width: 50px;
   margin: auto;
-  border: 3px solid #fff;
-  box-shadow: 1px 1px 1px black;
   height: 150px;
   width: 150px;
   border-radius: 50%;
