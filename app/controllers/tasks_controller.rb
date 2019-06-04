@@ -38,7 +38,7 @@ skip_before_action :authenticate_user!, only: [:index, :show]
     @task = Task.new(task_params)
     @task.user = current_user
     if @task.save
-      redirect_to root_path
+      redirect_to dashboard_path
     else
       render 'tasks/new'
     end

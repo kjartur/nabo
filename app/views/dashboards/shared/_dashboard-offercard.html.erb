@@ -12,13 +12,11 @@
     </div>
     <!-- Defening the state of the offer: -->
      <%if offer.state == 'pending' %>
-     <span class="dot-offer" style= "background-color: yellow">
-      </span>
+     <span class="badge badge-warning">Pending</span>
      <%elsif offer.state == 'booked' %>
-     <span class="dot-offer" style= "background-color: green">
-      </span>
+     <span class="badge badge-success">Booked</span>
       <%elsif offer.state == 'done' %>
-      <span class="dot-offer" style= "background-color: black">
+      <span class="badge badge-info">Done</span>
       <%elsif offer.state == 'rejected' %>
       <span class="dot-offer" style= "background-color: blue">
       <%else%>

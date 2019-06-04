@@ -1,44 +1,3 @@
-
-
-
-
-
-.main-container{
-
-  display: flex;
-  justify-content: center;
-  color: #444444;
-  width: 90%;
-  background-color: #6d6d6d5e;
-  margin: auto;
-  border-radius: 4px;
-  box-shadow: 0 0 0 0 #d7d8db, 0 0 0 0px #e3e4e8;
-  margin-bottom: 120px;
-
-}
-
-.main-container-headers{
-display: flex;
-justify-content: center;
-width: 90%;
-margin: auto;
-margin-bottom: 45px;
-h1{
-  font-family: 'Abel', sans-serif;
-  font-size: 32px;
-  color: white;
-}
-
-span{
-  color: #22d634 ;
-}
-}
-
-.offers{
- margin: auto;
- background-color: #F9D060;
-}
-
 .bio{
   margin: auto;
   width: 960px;
@@ -63,7 +22,6 @@ span{
   box-shadow: 0 1px 0 0 #d7d8db, 0 0 0 1px #e3e4e8;
   padding-bottom: 30px;
   margin-top: 30px;
-
 }
 
 .coins{
@@ -104,7 +62,6 @@ h2{
   position: relative;
   width: 100%;
   height: 340px;
-  margin-bottom: 134px;
   background-color:#2C3E52;
   border-bottom: 1px solid white;
    background: linear-gradient(-45deg, #527597, #85BAE4);
@@ -117,7 +74,6 @@ h2{
 .coin-number {
     font-size: 56px !important;
     font-weight: 900;
-
 }
 
 .card-product-one {
@@ -126,13 +82,14 @@ h2{
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
-  width: 720px;
-  height: 150px;
+  width: 70%;
+  height: 225px;
   border-radius: 4px;
   margin: auto;
   margin-bottom: 30px;
   margin-top: 30px;
-  background-color:#DDB097;
+  background-color:white;
+  color: black;
 
   img {
     height: 100%;
@@ -141,14 +98,14 @@ h2{
   }
 
   h2 {
-    color: white;
+    color: #1E2742;
     font-size: 32px;
     font-weight: bold;
     margin: 0;
   }
 
   p {
-    color: white;
+    color: black;
     font-size: 21px;
     line-height: 1.4;
     opacity: .7;
@@ -159,6 +116,9 @@ h2{
   .card-product-infos {
     padding: 16px;
   }
+  b{
+    color: red;
+  }
 }
 
 .card-product-two {
@@ -168,7 +128,7 @@ h2{
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
-  width: 720px;
+  width: 90%;
   height: 150px;
   border-radius: 4px;
   margin: auto;
@@ -181,7 +141,6 @@ h2{
   width: 120px;
   object-fit: cover;
 }
-
 
 .card-product-two h2 {
   color: white;
@@ -207,17 +166,6 @@ h2{
   background-color: #7CA0A3;
 }
 
-.dashboard_all_cards{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-.tasks{
-  position: absolute;
- margin: auto;
-}
-}
-
 .card-product-infos{
   h2:hover{
     color: #597EA1;
@@ -228,10 +176,6 @@ h2{
     transition: 0.5s;
   }
 }
-
-
-
-
 
 @-webkit-keyframes Gradient {
   0% {
@@ -269,76 +213,27 @@ h2{
   }
 }
 
-.dashboard_all_offer_on_the_task_card{
-  text-align: center;
-  position: absolute;
-  right: 120px;
+.badge-warning{
+  position:absolute;
+  right: 0px;
   top: 0px;
-  width: 240px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+  width: 120px;
+}
+
+.badge-success{
+  position:absolute;
+  right: 0px;
+  top: 0px;
   color: white;
-  font-family: 'Abel', sans-serif;
-  font-size: 16px;
+  width: 120px;
 }
 
-#card-text{
-  padding-bottom: 20px;
-}
 
-.avatars_position{
-  justify-content: center;
-  display: flex;
-  flex-direction: row;
-}
-
-#avatar_card{
-  right: 240px;
-  bottom: 25px;
-}
-
-#avatar_card:hover{
-  transition: 0.3s;
-  transform: scale(1.2);
-}
-
-.button{
-  position: absolute;
-  right: 25px;
-  top: 60px;
-  height: 40px;
-  width: 40px;
-  background-color: #1F2742;
-  border-radius: 50%;
-  display: inline-block;
-
-  p{
-    color: white;
-  }
-}
-
-.button:hover{
-  transition: 0.5s;
-  transform: scale(1.2);
-
-}
-.dot-offer {
+.badge-danger{
   position:absolute;
   right: 0px;
   top: 0px;
-  height: 25px;
-  width: 25px;
-  border-radius: 50%;
-}
-
-.dot-task {
-  position:absolute;
-  right: 0px;
-  top: 0px;
-  height: 25px;
-  width: 25px;
-  border-radius: 50%;
+  width: 120px;
 }
 
 .dot-info-pink {
@@ -408,8 +303,6 @@ h2{
   border-radius: 50%;
 }
 
-
-
 .my_name{
     position: absolute;
     bottom: 50px;
@@ -426,68 +319,116 @@ h2{
   }
 }
 
-#dashboard_tasks_buttons{
-  text-align: center;
-  position: absolute;
-  right: 0px;
-  top: 0px;
-  background-color: #8a8a8adb;
-  width: 120px;
-  height: 100%;
-.list-inline {
-  list-style: none;
-  padding-left: 0px;
-  position: relative;
-  padding-top: 20px;
+#complete_buttom_dashboard{
+ height: 100%;
+ width: 180px;
+ position: absolute;
+ right: 0px;
+
+  .transfer {
+    height: 185px;
+    width: 100%;
+    background-color: #89BEE8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+     p{
+    color: white;
+    position: absolute;
+    bottom: 50px;
+    right: 40px;
+  }
+
+    .t-icon {
+    margin-bottom: 20px;
+    width: 122px;
+    height: 122px;
+    border-radius: 50%;
+    background-color: #89BEE8;
+    box-shadow: 0px 0px 10px 10px rgba(25, 25, 25, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    }
+    .fa-exchange-alt {
+    font-size: 4em;
+    color: white;
+    }
+  }
+
+  .completed {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(225, 225, 225, 0.7);
+
+    .c-icon {
+    margin-top: 15%;
+    width: 122px;
+    height: 122px;
+    border-radius: 50%;
+    background-color: rgba(200, 200, 200, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .fa-smile {
+    // position: absolute;
+    // top: 10px;
+    // right: 35px;
+    font-size: 5em;
+    color: white;
+    // background-color: rgba(200, 200, 200, 0.7);
+    // padding: 10px;
+    // border-radius: 50%;
+    }
+     p{
+    color: white;
+    position: absolute;
+    bottom: 50px;
+    right: 47px;
+  }
+  }
 }
 
-.list-inline > li {
-  padding: 0px 20px;
-  font-size: 1.5em;
-}
-.fa-pen {
-  color: #fff;
-}
 
-.fa-pen:hover{
-  color: #202842;
-}
 
-.fa-check-circle{
-  color: #fff;
-}
 
-.fa-check-circle:hover{
-  color: #1ADD89;
-}
 
-.fa-trash{
-  color: #fff;
-  position: absolute;
-  top: 100px;
-  right: 49px;
-}
 
-.fa-trash:hover{
-  color: #D35B42;
-}
-}
-
-// Restyling
-
-.dashboard-headers {
-  display: flex;
-}
 
 .info{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
-.tasks_info{
-
+.daashboard{
+  display:flex;
+  justify-content: space between;
 }
 
-.offers_info{
+.tasks_dashboard_position{
+width: 65%;
+}
 
+.offers_dashboard_position{
+width: 35%;
+box-shadow: 0px 14px 14px 15px rgba(0,0,0,0.15);
+}
+
+.see_all_offers{
+  background-color: #1F2742;
+  width: 100%;
+  height: 20%;
+ position: absolute;
+ bottom: 0px;
+ text-align: center;
+ h4{
+  margin-top: 7px;
+  color: white;
+ }
 }
