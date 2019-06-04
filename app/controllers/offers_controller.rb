@@ -5,6 +5,7 @@ class OffersController < ApplicationController
   end
 
   def show
+
     @offer = Offer.find(params[:id])
     @task = @offer.task
   end
@@ -38,13 +39,10 @@ class OffersController < ApplicationController
   end
 
   def accept
-
     @offer_accept = Offer.find(params[:id])
     @offer_accept.state = "booked"
     @offer_accept.save
-
     redirect_to dashboard_path
-
   end
 
 private

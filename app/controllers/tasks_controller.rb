@@ -45,8 +45,6 @@ skip_before_action :authenticate_user!, only: [:index, :show]
   end
 
   def destroy
-
-
     @task = Task.find(params[:id])
     @task.destroy
     redirect_to dashboard_path
@@ -62,17 +60,12 @@ skip_before_action :authenticate_user!, only: [:index, :show]
     # Make link unclickable when state is (not book)
     @helper.coins += @task.amount_coins
     @helper.save
-
     # @offer = Offer.find(params[:id])
     # @offer.state = "done"
     # @offer.save
-
+    
     redirect_to dashboard_path
-
-
-
   end
-
 
   def completed?
 
