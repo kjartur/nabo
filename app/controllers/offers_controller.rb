@@ -46,7 +46,17 @@ class OffersController < ApplicationController
 
   end
 
+private
 
+  def myoffers
+    @user = current_user
+    @tasks = Task.where(user_id: @user.id)
+    @offers = []
+    @tasks.each do |task|
+      @offers << Offer.where(task_id: task.id)
+    end
+    raise
+  end
 
   def offer_params
     params.require(:offer).permit(:comments, :id)
