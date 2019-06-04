@@ -59,6 +59,10 @@ skip_before_action :authenticate_user!, only: [:index, :show]
     # Make link unclickable when state is (not book)
     @helper.coins += @task.amount_coins
     @helper.save
+    # @offer = Offer.find(params[:id])
+    # @offer.state = "done"
+    # @offer.save
+    
     redirect_to dashboard_path
   end
 
