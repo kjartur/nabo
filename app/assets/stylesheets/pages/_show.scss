@@ -120,7 +120,7 @@ hr.divider-line{
 .card-show-details .description {
   position: absolute;
   align-items: center;
-  top: 505px;
+  top: 514px;
   left: 41px;
   width: 646px;
   padding: 20px 0px;
@@ -264,9 +264,11 @@ hr.divider-line{
 }
 
 .btn-flat-complete {
+  font-size: 24px;
+  justify-content: center;
   color: white;
   padding: 8px 24px;
-  border-radius: 30px;
+  border-radius: 38px;
   background: #75A9D0;
   transition: background 0.3s ease;
 }

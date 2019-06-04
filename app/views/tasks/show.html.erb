@@ -84,7 +84,7 @@
       <div class="nav-container-buttons">
         <% if (current_user.id == @task.user_id) %>
         <div class="btn btn-flat-complete">
-          <%= link_to 'Complete task', taskcomplete_path(@task), method: "patch", :class => "btn" %>
+          <%= link_to 'Complete task', taskcomplete_path(@task), method: "patch", :class => "btn btn-flat-complete" %>
         </div>
           <% else %>
 
