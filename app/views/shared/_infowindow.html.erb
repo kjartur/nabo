@@ -4,8 +4,12 @@
     <strong><%=task.user.first_name %></strong>
   </div>
 
-  <div class="col infowindowtext">
-    <%= task.title %><br><br>
-    <%= task.description %>
+  <div class="col infoWindowtext">
+    <div class="">
+      <strong><%= task.title %></strong>
+    </div>
+    <div class="description">
+      <%= task.description %>
+    </div>
   </div>
 </div>
