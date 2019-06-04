@@ -9,7 +9,7 @@
 
   border: solid 1px lightgrey;
   text-align: left;
-  border-radius: 7px;
+  border-radius: 25px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   &:hover {
     opacity: 0.6;
@@ -20,7 +20,7 @@
 .card-search > img {
   height: 200px;
   width: 100%;
-  border-radius: 0px;
+  border-radius: 25px;
   object-fit: cover;
 }
 
@@ -81,25 +81,24 @@
   width: 73px;
   margin: auto;
   font-size: 0px;
-  background-color: #212842;
+  background-color: #8cb2c9;
   color: #fff;
   border-radius: 50%;
   display: inline-block;
-  border: 3px solid #fff;
   box-shadow: 1px 1px 1px black;
   padding: 12px 14px 16px;
   text-align: center;
-  right: -169px;
-  top: -222px;
+  right: -105px;
+  top: -54px;
 }
 
 p{
-  font-family: 'Abel', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 24px;
 }
 
 h2{
-  font-family: 'Abel', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 64px;
 }
 
