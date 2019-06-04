@@ -19,6 +19,6 @@ Rails.application.routes.draw do
 
   resource :dashboard, only: [ :show ]
 
-  resources :offers, only: :accept
+resources :offers, only: :accept
 
 end
