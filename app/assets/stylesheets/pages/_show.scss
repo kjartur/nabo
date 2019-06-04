@@ -10,12 +10,12 @@
   flex-direction: column;
   margin-top: 30px;
   margin-bottom: 30px;
-  margin-left: -514px;
+  margin-left: -700px;
   width: 750px;
   text-align: center;
   float: center;
   margin-top: 110px;
-  padding: 30px 20px 60px 20px;
+  padding: 17px 0px 30px 0px;
   background: #fff;
   border-radius: 15px;
   // box-shadow: 0 1px 0 0 #d7d8db, 0 0 0 1px #e3e4e8;
@@ -27,10 +27,11 @@
   align-items: center;
   flex-direction: column;
   padding: 10px;
-  margin: 12px 76px 15px 76px;
-  border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  background-color: #ddb096;
+  margin: 12px 76px 2px 76px;
+}
+
+.card-show .card-show-top h1{
+  font-weight: 900;
 }
 
 .card-show-icons {
@@ -55,10 +56,11 @@
 }
 
 .card-show-icons .card-show-amount-coins {
+  position: absolute;
   text-align: center;
-  left: 50%;
-  height: 146px;
-  width: 146px;
+  left: 44%;
+  height: 100px;
+  width: 100px;
   margin: 0;
   font-size: 0px;
   background-color: #212842;
@@ -70,7 +72,7 @@
   padding: 17px 16px 17px;
   text-align: center;
   right: -29px;
-  top: 118px;
+  top: 196px;
 }
 
 p{
@@ -80,13 +82,13 @@ p{
 
 h2{
   font-family: 'Abel', sans-serif;
-  font-size: 40px;
+  font-size: 25px;
 }
 
 .card-show .uploaded-photo > img {
-  height: 300px;
+  height: 358px;
   border-radius: 0px;
-  width: 80%;
+  width: 86%;
   border-radius: 5px;
   object-fit: cover;
 }
@@ -109,19 +111,28 @@ h2{
 hr.divider-line{
   height: 10px;
   width: 80%;
-  margin: 10px 80px;
+  margin: -16px 80px;
   border: 0;
   box-shadow: 0 8px 8px -9px #dbdbdb inset;
 }
 
 .card-show-details .description {
+  position: absolute;
   align-items: center;
+  top: 505px;
+  left: 41px;
+  width: 646px;
   padding: 20px 0px;
   margin-top: 5px;
   margin-bottom: 40px;
   margin-left: 78px;
   margin-right: 78px;
-  background-color: #f8f8f8;
+  border-radius: 5px;
+  color: white;
+  letter-spacing: -1px;
+  // background-color: #f8f8f8;
+  background: rgb(0, 0, 0); /* fallback color */
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .card-show-details h1{
@@ -131,15 +142,13 @@ hr.divider-line{
 }
 
 .card-show-details h2{
-  font-size: 25px;
+  font-size: 30px;
   font-family: 'Abel', sans-serif;
-  font-style: italic;
 }
 
 .card-show-details h3{
   font-size: 20px;
-  padding: 5px;
-  font-weight: bold;
+  padding: 0px;
   font-family: 'Abel', sans-serif
 }
 
@@ -165,7 +174,7 @@ hr.divider-line{
   z-index: 2000;
   margin-top: 30px;
   margin-bottom: 30px;
-  margin-left: 450px;
+  margin-left: 400px;
   width: 650px;
   float: center;
   margin-top: 110px;

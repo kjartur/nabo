@@ -49,19 +49,38 @@
 
   </div>
 
-  <div class="nav-container">
-    <div class="offers">
-      <div class="offer-avatars">
-        <% @offer.task.users.each do |user| %>
-        <div class="avatar-show-nav">
-          <%= cl_image_tag(user.avatar) %>
+    <div class="nav-container">
+      <div class="offers">
+        <div class="offer-avatars">
+          <% @offer.task.users.each do |user| %>
+          <div class="avatar-show-nav">
+            <%= cl_image_tag(user.avatar) %>
+          </div>
+          <%end%>
         </div>
-        <%end%>
-      </div>
 
+    <div class="offer-comments">
+          <% @offers.each do |offer| %>
+          <div class="comments-boxes">
+            <p><%= offer.comments%></p>
+          </div>
+          <%end%>
+    </div>
     </div>
   </div>
-
   </div>
-
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
