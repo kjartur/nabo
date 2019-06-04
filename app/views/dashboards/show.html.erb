@@ -6,44 +6,9 @@
     <h1 class="color-dark-blue coin-number"> <%= current_user.coins %> <span>Coins</span></h1>
     <h1 class="color-mute"> <span><%=current_user.first_name%> <%=current_user.last_name%><span>, welcome to your dashboard!</h1>
   </div>
-  <div class = "avatar_dashboard_pos">
-    <img src="<%=current_user.avatar%>" class ="avatar-dashboard" >
-  </div>
 </div>
 
-  <div class="info">
-    <div class="offers_info">
-      <p>Info for the tasks:</p>
-      <span class="dot-info-pink" style= "background-color: pink">
-      </span>
-      <span class="dot-info-orange" style= "background-color: orange">
-      </span>
-      <span class="dot-info-red-task" style= "background-color: red">
-      </span>
-      <p>Pink dot means that the task <b>is not</b> completed.</p>
-      <p>Orange dot means that the task <b>is</b> completed.</p>
-      <p>Red dot means that this is something else. </p>
-    </div>
 
-    <div class="tasks_info">
-      <p>Info for the offers:</p>
-      <span class="dot-info-yellow" style= "background-color: yellow">
-      </span>
-      <span class="dot-info-green" style= "background-color: green">
-      </span>
-      <span class="dot-info-black" style= "background-color: black">
-      </span>
-      <span class="dot-info-blue" style= "background-color: blue">
-      </span>
-      <span class="dot-info-red-offer" style= "background-color: red">
-      </span>
-      <p>Yellow dot means that the state for this offer is 'pending'.</p>
-      <p>Green dot means that the state for this offer is 'booked'.</p>
-      <p>Black dot means that the state for this offer is 'done'.</p>
-      <p>Blue dot means that the state for this offer is 'rejected'.</p>
-      <p>Red dot means that the state for this offer is something else.</p>
-    </div>
-  </div>
 
 
 <div class="dashboard-headers">
