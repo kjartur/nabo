@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'pages/show'
   get 'profiles/edit'
   get 'profiles/update'
+  get 'myoffers', to: 'offers#myoffers', as: 'myoffers'
   resources :profiles, only: :show
 
   patch 'task/:id/complete', to: 'tasks#complete', as: 'taskcomplete'
