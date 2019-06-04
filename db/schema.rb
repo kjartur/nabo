@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 2019_06_03_101933) do
     t.datetime "updated_at", null: false
     t.text "title"
     t.integer "post_code"
-    t.boolean "completed"
+    t.boolean "completed", default: false
     t.float "latitude"
     t.float "longitude"
     t.string "photo"

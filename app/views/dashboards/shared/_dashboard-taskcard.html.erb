@@ -37,7 +37,13 @@
       <li class="list-item"><%= link_to task, method: :delete, data: { confirm: 'Are you sure?' } do %> <i class="fas fa-trash"></i><% end %></li>
     </ul>
   </div>
-
+  <%if task.completed == true %>
+      <span class="dot-task" style= "background-color: orange"></span>
+  <%elsif task.completed == false%>
+      <span class="dot-task" style= "background-color: pink"></span>
+  <%else%>
+      <span class="dot-task" style= "background-color: red"></span>
+  <%end%>
 </div>
 
 

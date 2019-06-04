@@ -37,14 +37,18 @@ class OffersController < ApplicationController
   end
 
   def accept
-    @offer = Offer.find(params[:id])
-    @offer.state = "booked"
+
+    @offer_accept = Offer.find(params[:id])
+    @offer_accept.state = "booked"
+    @offer_accept.save
+
+    redirect_to dashboard_path
 
   end
 
 
 
   def offer_params
-    params.require(:offer).permit(:comments)
+    params.require(:offer).permit(:comments, :id)
   end
 end
