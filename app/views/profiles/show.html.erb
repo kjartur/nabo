@@ -1,8 +1,6 @@
+<%= render 'shared/profile', user: @user %>
 
-
-  <%= render 'shared/profile', user: @user %>
-
-<div class="container d-flex">
+<div class="d-flex" style="margin-left: 50px;">
     <% @tasks.each do |task| %>
       <%= render 'shared/task-card-small', task: task %>
     <% end %>
