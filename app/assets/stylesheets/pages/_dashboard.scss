@@ -58,17 +58,15 @@ h2{
   margin: auto;
 }
 
-.dashboard_background{
+.dashboard_background {
   position: relative;
   width: 100%;
+  background-position: center;
+  background-size: cover;
   height: 340px;
   background-color:#2C3E52;
   border-bottom: 1px solid white;
-   background: linear-gradient(-45deg, #527597, #85BAE4);
-  background-size: 400% 400%;
-  -webkit-animation: Gradient 30s ease infinite;
-  -moz-animation: Gradient 30s ease infinite;
-  animation: Gradient 30s ease infinite;
+
 }
 
 .coin-number {
@@ -78,8 +76,8 @@ h2{
 
 .card-product-one {
   position: relative;
+  padding: 0 27px;
   left: 50px;
-  overflow: hidden;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
@@ -106,7 +104,7 @@ h2{
 
   p {
     color: black;
-    font-size: 21px;
+    font-size: 19px;
     line-height: 1.4;
     opacity: .7;
     margin-bottom: 0;
@@ -144,7 +142,7 @@ h2{
 
 .card-product-two h2 {
   color:#1E2742;
-  font-size: 32px;
+  font-size: 26px;
   font-weight: bold;
   margin: 0;
 }
@@ -152,11 +150,9 @@ h2{
 
 .card-product-two p {
   color: #6A95BA;
-  font-size: 21px;
+  font-size: 17px;
   line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
+  margin-bottom: 5px;
 }
 
 .card-product-two .card-product-infos {
@@ -221,6 +217,7 @@ h2{
   color: white;
   font-family: 'Abel', sans-serif;
   font-size: 32px;
+  text-shadow: 1px 1px 10px #070707
   }
   h1{
   color: white;
@@ -338,15 +335,22 @@ width: 65%;
 .offers_dashboard_position{
 width: 35%;
 box-shadow: 0px 14px 14px 15px rgba(0,0,0,0.15);
+h1 {
+  margin-top: 29px;
+  font-family: 'Abel', sans-serif;
+    font-size: 32px;
+}
 
 }
 
 .see_all_offers{
   background-color: #1F2742;
   width: 100%;
+  left: 0;
   height: 20%;
  position: absolute;
- bottom: 0px;
+     bottom: -49px;
+
  text-align: center;
  h4{
   margin-top: 7px;
@@ -379,11 +383,40 @@ box-shadow: 0px 14px 14px 15px rgba(0,0,0,0.15);
 
 .tasks_dashboard{
  margin-left: 50px;
+ margin-top: 30px;
+ h1 {
+    font-family: 'Abel', sans-serif;
+    font-size: 32px;
+ }
 }
 
 .offers_dashboard{
   margin-left: 25px;
 }
 
+.text-warning {
+  background: #E67E22;
+  color: white !important;
+  padding: 3px 19px;
+  border-radius: 3px;
+  font-size: 19px !important;
+}
 
+.date-offer-card {
+  margin-bottom: 15px !important;
+}
 
+.card-product-infos {
+  a {
+    text-decoration: none;
+    }
+}
+.new-label-card  {
+    font-size: 17px;
+    text-transform: uppercase;
+    opacity: .5 !important;
+    margin-bottom: 21px !important;
+    /* margin-right: 54px; */
+    letter-spacing: 1px;
+
+}

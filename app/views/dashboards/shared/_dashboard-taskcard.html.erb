@@ -3,6 +3,7 @@
   <!-- <img src="https://picsum.photos/200"> -->
   <div class="card-product-infos">
     <%= link_to task_path(task) do %>
+      <p class="new-label-card">The Task:</p>
       <h2><%= task.title %></h2>
       <%if task.completed == true %>
        <div class =colorful_dashboard>
