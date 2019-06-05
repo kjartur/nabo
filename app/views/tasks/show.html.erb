@@ -14,7 +14,10 @@
             <img src="https://via.placeholder.com/150" >
           <% end %>
         </div>
-      <h1 class="color-blue"><%= @task[:title] %></h1>
+      <div class="title-container">
+          <p>Task:</p>
+          <h1 class="color-blue"><%= @task[:title] %></h1>
+      </div>
       </div>
 
 
@@ -34,7 +37,10 @@
         <% end %>
       </div>
 
+
       <div class="card-show-details">
+        <h1>Task Details</h1>
+             <hr class="divider-line">
         <div class="container">
           <div class="row">
 
@@ -66,32 +72,39 @@
 
     </div>
     </div>
-    <div class="col-6">
+
+    <div class="col-6" style="padding-right: 0;">
       <div class="nav-container">
+        <h1>These Are The Offers</h1>
       <div class="offers">
         <div class="offer-avatars">
           <% @task.users.each do |user| %>
           <div class="avatar-show-nav">
             <%= link_to profile_path(user) do %>
-            <%= cl_image_tag(user.avatar) %>
+              <% if user.avatar? %>
+                <%= cl_image_tag(user.avatar) %>
+              <% else %>
+                 <img src="https://via.placeholder.com/120" >
+              <% end %>
             <% end %>
           </div>
           <%end%>
         </div>
-        <div>
           <div class="offer-comments">
             <% @task.offers.each do |offer| %>
-            <div class="comments-boxes">
-              <p><%= offer.comments%></p>
-
-              <div class = "choose_me_btn">
-                <%= link_to 'Choose me!', acceptoffer_path(offer), method: "patch" %>
-              </div>
-            </div>
+              <div class="offer-lockup">
+                <div class="comments-boxes">
+                  <p><%= offer.comments%></p>
+                </div>
+                  <div class="choose_me_btn">
+                    <%= link_to 'Choose me!', acceptoffer_path(offer), method: "patch" %>
+                  </div>
+                </div>
             <%end%>
-          </div>
         </div>
       </div>
+      <br>
+      <br>
 <!-- current user logic here -->
       <div class="nav-container-buttons">
         <% if (current_user.id == @task.user_id) %>
@@ -99,9 +112,12 @@
           <%= link_to 'Complete task', taskcomplete_path(@task), method: "patch", :class => "btn" %>
         </div>
           <% else %>
-        <div class="btn btn-flat-offer">
-          <%= link_to 'Offer to help', new_task_offer_path(@task), :class => "btn" %>
-        </div>
+
+           <%= simple_form_for [@task, @offer] do |f| %>
+            <%= f.input :comments, label: 'I want to Help With:', placeholder: "Leave a comment or question!" %>
+            <%= f.submit "Create Offer", class: "btn btn-primary" %>
+          <% end %>
+
         <% end %>
       </div>
 <!-- end current user logic -->
