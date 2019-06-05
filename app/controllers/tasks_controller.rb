@@ -19,6 +19,7 @@ skip_before_action :authenticate_user!, only: [:index, :show]
   def show
     @offer = Offer.new
     @task = Task.find(params[:id])
+    @no_offers = @task.offers.where( user_id: current_user.id).empty?
   end
 
   def edit
