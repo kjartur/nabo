@@ -42,6 +42,14 @@ class OffersController < ApplicationController
     @offer_accept = Offer.find(params[:id])
     @offer_accept.state = "booked"
     @offer_accept.save
+
+    @offers_not_accept = Offer.where(state: "pending")
+    @offers_not_accept.each do |offer|
+      offer.state = "rejected"
+      offer.save
+    end
+    # @offers_not_accept = Offer.find(params[:id])
+    # @no_offers = @task.offers.where( user_id: current_user.id).empty?
     redirect_to dashboard_path
   end
 
