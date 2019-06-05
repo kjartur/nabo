@@ -1,0 +1,5 @@
+meta_product_name: "NABO"
+meta_title: "NABO - Creating connected neighborhoods"
+meta_description: "NABO is a social platform that allows people to help each other with small tasks."
+meta_image: "cover.png" # should exist in `app/assets/images/`
+#twitter_account: "@product_twitter_account"   # required for Twitter Cards
