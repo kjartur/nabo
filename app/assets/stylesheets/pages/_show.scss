@@ -302,7 +302,93 @@ hr.divider-line{
 
 
 
+.new-design-show {
+  margin-top:130px;
+  .avatar-show {
+    top: 20px;
+    left: 43px;
+    img {
+      border-radius: 50%;
+    }
+  }
+  .choose_me_btn {
+    position: absolute;
+    bottom: 19px;
+    right: 10px;
+    padding: 2px 12px;
+    background-color: #57a957;
+    border-color: #57a957;
+    color: white;
+    height: 30px;
+    border-radius: 7px;
+    }
+  .row {
+    background: transparent;
+  }
+  .card-show {
+    width: 100%;
+    margin: 0;
+  }
+  .nav-container {
+    z-index: 0;
+    margin: 0;
+    width: 100%;
+    position: relative;
+  }
+  .uploaded-photo {
+    position: relative;
+  }
+  .description-new {
+       position: absolute;
+    align-items: center;
+    left: 7%;
+    width: 86%;
+    bottom: 0px;
+    border-radius: 5px;
+    color: white;
+    letter-spacing: -1px;
+    margin: 0;
+    background: black;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  .card-show-icons {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+    /* font-size: 13px; */
+    margin-right: 0;
+    padding-right: 0;
+    border-radius: 5px;
 
+  }
+    .card-show-amount-coins {
+      position: absolute;
+      text-align: center;
+      right: 22px;
+      height: 100px;
+      width: 100px;
+      margin: 0;
+      font-size: 0px;
+      background-color: #212842;
+      color: #fff;
+      border-radius: 50%;
+      display: inline-block;
+      border: 3px solid #fff;
+      box-shadow: 1px 1px 1px black;
+      padding: 17px 16px 17px;
+      text-align: center;
+      /* right: -29px; */
+      top: -44px;
+    }
+    .card-show-details {
+      padding: 21px;
+      margin-top: 34px;
+      img {
+        margin-bottom: 25px;
+        width: 45px;
+      }
+    }
+}
 
 
 

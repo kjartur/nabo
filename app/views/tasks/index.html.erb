@@ -9,7 +9,7 @@
     <div class ="greeds_card">
       <div class="task-container">
         <div class="column">
-          <h1><%= @user.name %>'s tasks:</h1>
+        <!--   <h1><%#= @user.name %>'s tasks:</h1> -->
           <% @tasks.each do |task| %>
             <%= render 'shared/task-card-small', task: task %>
           <% end %>
