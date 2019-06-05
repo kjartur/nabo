@@ -1,7 +1,7 @@
 <div class="card-product-two">
   <%= link_to offer_path(offer) do %>
     <div class="card-product-infos">
-      <p><%= offer.task.date.strftime("%F") %></p>
+      <p class="date-offer-card"><%= offer.task.date.strftime("%A, %b %d") %></p>
       <h2><%= offer.task.title %></h2>
   <%end %>
     </div>
