@@ -201,7 +201,7 @@ hr.divider-line{
 .nav-container .offers .offer-avatars .avatar-show-nav img{
   height: 80px;
   width: 80px;
-  border-radius: 50%;
+  border-radius: 8%;
   margin-top: 14px;
   margin-bottom: 17px;
   margin-left: 5px;
@@ -267,10 +267,11 @@ hr.divider-line{
   font-size: 24px;
   justify-content: center;
   color: white;
-  padding: 8px 24px;
+  padding: 15px 24px;
   border-radius: 38px;
   background: #75A9D0;
   transition: background 0.3s ease;
+  box-shadow: 1px 1px 10px lightgrey;
 }
 
 .btn-flat-complete:hover {
@@ -341,7 +342,7 @@ hr.divider-line{
     position: relative;
     h1 {
         font-size: 21px;
-        padding: 30px;
+        padding: 54px 30px 30px 30px;
         text-align: center;
         text-transform: uppercase;
         font-family: 'Open Sans', sans-serif;
@@ -441,6 +442,7 @@ hr.divider-line{
       display: block;
       padding: 19px;
       justify-content: center;
+      text-align: center;
       width: 100%;
       color: #2f7bb7;
       font-size: 30px;
