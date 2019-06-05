@@ -6,10 +6,10 @@
       <h2><%= task.title %></h2>
       <%if task.completed == true %>
        <div class =colorful_dashboard>
-        <p>The transfer is complited.</p>
+        <p>The transfer is completed.</p>
         <% helper = task&.offers.where(state: "booked").first&.user %>
         <% if helper %>
-        <p> <%= helper.first_name %> received <%=task.amount_coins%> coin<%if task.amount_coins > 1 %><%="s"%> <%else%><%=""%><%end%></p>
+        <p> <%= helper.first_name %> has received <%=task.amount_coins%> coin<%if task.amount_coins > 1 %><%="s"%> <%else%><%=""%><%end%> from you</p>
         <% end %>
       </div>
       <%else%>
@@ -39,12 +39,13 @@
   <% end %>
 
   </div>
-
-  <div class = "see_all_offers">
-     <%= link_to task_path(task) do %>
-    <h4>View All Offers</h4>
-    <% end %>
-  </div>
+  <% if task.offers.present? || task.completed = false %>
+    <div class = "see_all_offers">
+       <%= link_to task_path(task) do %>
+      <h4>View All Offers</h4>
+      <% end %>
+    </div>
+  <% end %>
 </div>
 
 
