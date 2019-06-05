@@ -87,12 +87,13 @@
   animation-duration: 4s;
   // -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+  min-width: 35%;
 }
 
 .bannertagline {
   font-family: "Open Sans", sans-serif;
   font-size: 26px;
-  color: rgb(39,70,99);
+  color: #f7f7f7;
   text-shadow: 0 0 5px rgba(44,255,149,0.3);
   animation: fade-in 1.2s ease-in 4.1s both;
   top: 200px;
