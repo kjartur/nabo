@@ -39,7 +39,7 @@
   <% end %>
 
   </div>
-  <% if task.offers.present? || task.completed = false %>
+  <% if task.offers.present? && task.completed = false %>
     <div class = "see_all_offers">
        <%= link_to task_path(task) do %>
       <h4>View All Offers</h4>

@@ -113,14 +113,15 @@
       <div class="nav-container-buttons">
         <% if (current_user.id == @task.user_id) %>
           <%= "You have created this task"%>
-          <% else %>
-
+        <% elsif @no_offers %>
            <%= simple_form_for [@task, @offer] do |f| %>
             <%= f.input :comments, label: 'I want to help!', placeholder: "Leave a comment or question" %>
             <%= f.submit "Create Offer", class: "btn btn-primary" %>
           <% end %>
-
+        <% else %>
+            <%= "You have already sent an offer to this person."%>
         <% end %>
+
       </div>
 <!-- end current user logic -->
     </div>
