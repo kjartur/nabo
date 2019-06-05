@@ -7,7 +7,10 @@
       <%if task.completed == true %>
        <div class =colorful_dashboard>
         <p>The transfer is complited.</p>
-        <p>User received <%=task.amount_coins%> coin<%if task.amount_coins > 1 %><%="s"%> <%else%><%=""%><%end%></p>
+        <% helper = task&.offers.where(state: "booked").first&.user %>
+        <% if helper %>
+        <p> <%= helper.first_name %> received <%=task.amount_coins%> coin<%if task.amount_coins > 1 %><%="s"%> <%else%><%=""%><%end%></p>
+        <% end %>
       </div>
       <%else%>
         <p>You have <b><%= task.users.count %></b> people want to help you<%if task.users.count > 0 %><%="!"%> <%else%><%="."%><%end%></p>
@@ -18,20 +21,23 @@
   </div>
 
   <div id ="complete_buttom_dashboard">
-    <%if task.completed == true %>
+    <% if task.completed == true %>
       <div class="completed">
         <div class="c-icon"><i class="far fa-smile"></i></div>
         <p>Completed</p>
       </div>
-  <%else%>
-  <%= link_to taskcomplete_path(task), :method => :patch do %>
-      <div class="transfer">
-        <div class="t-icon"><i class="fas fa-exchange-alt"></i></div>
-        <p style="margin-left: 10px;">Transfer Now</p>
-       <!--  <span class="tooltiptext">Tooltip text</span> -->
-      </div>
+  <% else %>
+    <% if task.offers.present? %>
+      <%= link_to taskcomplete_path(task), :method => :patch do %>
+        <div class="transfer">
+          <div class="t-icon"><i class="fas fa-exchange-alt"></i></div>
+          <p style="margin-left: 10px;">Transfer Now</p>
+         <!--  <span class="tooltiptext">Tooltip text</span> -->
+        </div>
       <% end %>
-  <%end%>
+    <% end %>
+  <% end %>
+
   </div>
 
   <div class = "see_all_offers">
