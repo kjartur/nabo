@@ -1,8 +1,8 @@
-<div class="profile_bg" style="padding-top: 100px; height: 550px">
+<div class="profile_bg" style="padding-top: 100px; height: 510px">
   <div class="profile-container">
     <div class="row">
 
-      <div class="col-md-6 img">
+      <div class="col-md-3 img">
         <div class="avatar-square">
           <%= cl_image_tag(user.avatar, class: 'avatar-square', crop: 'crop',  gravity: :face) %>
         </div>
@@ -12,13 +12,15 @@
         <h6><%= user.rating %></h6>
       </div>
 
-      <div class="col-md-6 details">
-        <p>
-          <%= user.bio %>
-        </p>
-        <blockquote>
-          <cite title="Quote"><%= user.quote %><i class="icon-map-marker"></i></cite>
-        </blockquote>
+      <div class="col-md-9 details d-flex align-items-center">
+        <div class="">
+          <p>
+            <%= user.bio %>
+            <blockquote>
+                <cite title="Quote"><%= user.quote %><i class="icon-map-marker"></i></cite>
+            </blockquote>
+          </p>
+        </div>
       </div>
 
     </div>

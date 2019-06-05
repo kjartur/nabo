@@ -1,33 +1,32 @@
 
 
 <div style="padding-top: 75px">
-<div class = "dashboard_background">
+<div class = "dashboard_background" style="background-image: linear-gradient(-45deg, #52759778, #85bae478), url(<%= image_path "berlin.jpg" %>);">
   <div class = "my_name">
     <h1 class="color-dark-blue coin-number"> <%= current_user.coins %> <span>Coins</span></h1>
-    <h1 class="color-mute"> <span><%=current_user.first_name%> <%=current_user.last_name%><span>, welcome to your dashboard!</h1>
+    <h1> <span><%=current_user.first_name%> <%=current_user.last_name%><span>, welcome to your dashboard!</h1>
   </div>
 </div>
 
 
 <div class = "daashboard">
   <div class = "tasks_dashboard_position">
-    <h1 class="color-blue" style = "left:50px">Your Tasks</h1>
-      <p>Things you have asked for help with.</p>
-      <div class = "tasks_dashboard">
+    <div class = "tasks_dashboard">
+      <h1 class="color-blue" style = "left:50px">Your Tasks:</h1>
+      <p class="color-mute">Things you have asked for help with</p>
+    </div>
         <% @tasks.each do |task| %>
           <%= render 'dashboards/shared/dashboard-taskcard', task: task %>
         <% end %>
-      </div>
   </div>
 
 
   <div class = "offers_dashboard_position">
-    <h1 class="color-blue">You Have Offered Your Help To:</h1>
-
     <div class = "offers_dashboard">
+      <h1 class="color-blue">Your Offers:</h1>
+    </div>
       <% @offers.each do |offer| %>
         <%= render 'dashboards/shared/dashboard-offercard', offer: offer %>
       <% end %>
-    </div>
   </div>
 </div>

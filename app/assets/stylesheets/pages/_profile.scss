@@ -6,20 +6,24 @@
 
 .profile-container {
   width: 50%;
-  margin-left: 20%;
+  margin-left: 70px;
   color: white;
   font-weight: 500;
   box-shadow: 0px 7px 7px 1px rgba(0,0,0,0.20);
+
+  & .details {
+
+  }
 }
 
 .profile_bg {
   height: 60vh;
-  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("bannerv1.svg") !important;
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), image-url("bannerv1.svg") !important;
   background-size: cover;
 }
 
 .row {
-  background-color: rgba(0,0,0,.2)
+  background-color: rgba(0,0,0,.5)
 }
 
 .profilephotobig {
