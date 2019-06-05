@@ -1,7 +1,7 @@
 <div class="container-fluid new-design-show">
 <% content_for :meta_title, "#{@task.title} is on #{DEFAULT_META["meta_product_name"]}" %>
 <% content_for :meta_description, @task.description %>
-<!-- #< content_for :meta_image, cl_image_path(@task.photo) %> -->
+<!-- #< content_for :meta_image, cl_image_tag(@task.photo) %> -->
 
   <div class="row">
   <div class="col-6">
@@ -16,8 +16,8 @@
           <% end %>
         </div>
       <div class="title-container">
-          <p>Task:</p>
-          <h1 class="color-blue"><%= @task[:title] %></h1>
+          <h1 class="color-blue"><%= @task[:title] %></h1><br>
+          <p><%=@task[:address]%>, <%= @task[:post_code]%></p>
       </div>
       </div>
 
@@ -26,11 +26,7 @@
           <div class="description-new">
             <h2><%= @task[:description] %></h2>
           </div>
-          <div class="card-show-amount-coins">
-          <h2>Coins:</h2>
-          <br>
-          <h2><%= @task[:amount_coins] %><h2>
-        </div>
+
         <% if (@task[:photo] == nil) %>
         <img src="http://www.selfstoragespecialists.com/blog/wp-content/uploads/2016/03/bigstock-new-home-real-estate-moving-91410869.jpg">
         <% else %>
@@ -40,8 +36,6 @@
 
 
       <div class="card-show-details">
-        <h1>Task Details</h1>
-             <hr class="divider-line">
         <div class="container">
           <div class="row">
 
@@ -60,10 +54,11 @@
               </h3>
             </div>
 
+
             <div class="col-4">
               <h3>
-                <div class="map-pin-icon"><%= image_tag "map-pin.svg"%></div>
-                <%=@task[:address]%>, <%= @task[:post_code]%>
+                <div class="coin-icon"><%= image_tag "coin-icon.svg"%></div>
+                <%= @task[:amount_coins] %> credits
               </h3>
             </div>
 

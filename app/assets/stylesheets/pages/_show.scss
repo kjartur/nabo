@@ -298,11 +298,12 @@ hr.divider-line{
 
 .new-design-show {
   margin-top:70px;
+  font-size: 6px;
   .avatar-show {
     top: 61px;
     left: 53px;
     img {
-      width: 120px;
+      width: 100px;
       border-radius: 50%;
     }
   }
@@ -360,7 +361,7 @@ hr.divider-line{
     position: relative;
   }
   .description-new {
-       position: absolute;
+    position: absolute;
     align-items: center;
     left: 7%;
     width: 86%;
@@ -404,12 +405,12 @@ hr.divider-line{
     .card-show-details {
       padding: 21px;
       h1 {
-        font-size: 21px;
+        font-size: 15px;
         text-transform: uppercase;
         padding: 20px;
         padding-top: 3px;
         font-family: 'Open Sans', sans-serif;
-        color: #2631419c;
+        color: #8c8c8c !important;
         letter-spacing: 2px;
       }
       img {
@@ -422,12 +423,18 @@ hr.divider-line{
       width: 100%;
       text-align: left;
       p {
-        font-size: 21px;
-        text-transform: uppercase;
+        font-size: 19px;
         padding-top: 3px;
         font-family: 'Open Sans', sans-serif;
         color: #2631419c;
         letter-spacing: 2px;
+      }
+      h5 {
+        font-size: 15px;
+        padding-top: 3px;
+        font-family: 'Open Sans', sans-serif;
+
+
       }
     }
     .divider-line {
