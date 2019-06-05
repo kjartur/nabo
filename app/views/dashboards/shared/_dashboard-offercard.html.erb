@@ -4,7 +4,6 @@
       <p><%= offer.task.date.strftime("%F") %></p>
       <h2><%= offer.task.title %></h2>
   <%end %>
-
     </div>
   <div class = "dashboard_offers_state">
      <%if offer.state == 'pending' %>
@@ -20,7 +19,8 @@
      <%end%>
   </div>
   <div class = "offers_pictures">
-    <%= @task.user_id%>
-
+    <% avatar_url = offer&.task&.user&.avatar_url %>
+    <% placeholder = "https://source.unsplash.com/iJ2IG8ckCpA/150x200" %>
+    <%= image_tag( avatar_url.present? ? avatar_url : placeholder ) %>
   </div>
 </div>
