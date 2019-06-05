@@ -19,7 +19,8 @@ Rails.application.routes.draw do
   end
 
   resource :dashboard, only: [ :show ]
+  get 'find_profile_pic', to: 'dashboards#find_profile_pic', as: 'find_profile_pic'
 
-resources :offers, only: :accept
+  resources :offers, only: :accept
 
 end
