@@ -23,7 +23,11 @@
       autofocus: true,
       input_html: { autocomplete: "email" }%>
       <%= f.input :bio, as: :text,
-      :input_html => { :cols => 5, :rows => 10 },
+      :input_html => { :cols => 3, :rows => 10 },
+      required: true,
+      autofocus: true %>
+      <%= f.input :quote, as: :text,
+      :input_html => { :cols => 3, :rows => 10 },
       required: true,
       autofocus: true %>
       <%= f.input :avatar %>

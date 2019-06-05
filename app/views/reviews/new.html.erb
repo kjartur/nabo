@@ -1,5 +1,9 @@
-<%= simple_form_for [@offer, @review] do |f| %>
-  <%= f.input :description %>
-  <%= f.input :rating %>
-  <%= f.submit "Create a Review", class: "btn btn-primary" %>
-<% end %>
+<div class="profile_bg" style="padding-top: 100px; height: 550px">
+  <div class="profile-container">
+    <%= simple_form_for [@offer, @review] do |f| %>
+      <%= f.input :description %>
+      <%= f.input :rating %>
+      <%= f.submit "Create a Review", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

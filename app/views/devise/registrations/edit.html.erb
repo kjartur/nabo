@@ -24,6 +24,10 @@
                   :input_html => { :cols => 5, :rows => 10 },
                   required: true,
                   autofocus: true %>
+      <%= f.input :quote, as: :text,
+                  :input_html => { :cols => 3, :rows => 10 },
+                  required: true,
+                  autofocus: true %>
       <%= f.input :avatar %>
       <%= f.input :avatar_cache, as: :hidden %>
       <%= f.input :password,
