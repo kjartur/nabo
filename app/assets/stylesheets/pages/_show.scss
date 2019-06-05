@@ -203,7 +203,7 @@ hr.divider-line{
   width: 80px;
   border-radius: 50%;
   margin-top: 14px;
-  margin-bottom: -4px;
+  margin-bottom: 17px;
   margin-left: 5px;
   padding-left: 0;
 }
@@ -214,13 +214,15 @@ hr.divider-line{
 
 .offers .offer-comments .comments-boxes {
   position: relative;
-  height: 70px;
-  width: 450px;
-  padding: 10px;
-  margin: 20px 11px;
-  background-color: #f8f8f8;
-  border-width: 5px;
-  border-color: black;
+    height: 70px;
+    width: 450px;
+    padding: 10px;
+    margin: 20px 11px;
+    background-color: #f8f8f8;
+    border-radius: 2px;
+    box-shadow: 1px 1px 20px #80808069;
+    border-width: 5px;
+    border-color: black;
 }
 
 .offers .offer-comments .comments-boxes{
@@ -277,15 +279,6 @@ hr.divider-line{
 }
 
 .choose_me_btn{
-  position: absolute;
-  bottom: 5px;
-  right: -50px;
-  padding: 2px 12px;
-  background-color: #57a957;
-  border-color: #57a957;
-  color: white;
-  height: 30px;
-  border-radius: 7px;
 
   p{
   font-family: 'Open Sans', sans-serif;
@@ -303,37 +296,58 @@ hr.divider-line{
 
 
 .new-design-show {
-  margin-top:130px;
+  margin-top:70px;
   .avatar-show {
-    top: 20px;
-    left: 43px;
+    top: 61px;
+    left: 53px;
     img {
+      width: 120px;
       border-radius: 50%;
     }
   }
+  .offer-lockup {
+    display: flex;
+  }
   .choose_me_btn {
-    position: absolute;
-    bottom: 19px;
-    right: 10px;
-    padding: 2px 12px;
-    background-color: #57a957;
-    border-color: #57a957;
-    color: white;
-    height: 30px;
-    border-radius: 7px;
+      padding: 2px 12px;
+      background-color: #57a957;
+      border-color: #57a957;
+      text-align: center;
+      color: white;
+      height: 69px;
+      margin-top: 21px;
+      display: flex;
+      border-radius: 7px;
+      align-items: center;
+      a {
+        text-decoration: none;
+        color: white;
+      }
     }
   .row {
     background: transparent;
   }
   .card-show {
     width: 100%;
+    box-shadow: none;
     margin: 0;
   }
   .nav-container {
     z-index: 0;
     margin: 0;
+    border-radius: 0;
+    height: 110%;
     width: 100%;
     position: relative;
+    h1 {
+        font-size: 21px;
+        padding: 30px;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: 'Open Sans', sans-serif;
+        color: #2631419c;
+        letter-spacing: 2px;
+      }
   }
   .uploaded-photo {
     position: relative;
@@ -373,8 +387,8 @@ hr.divider-line{
       color: #fff;
       border-radius: 50%;
       display: inline-block;
-      border: 3px solid #fff;
-      box-shadow: 1px 1px 1px black;
+      /* border: 3px solid #fff; */
+      box-shadow: 1px 1px 21px #0000009c;
       padding: 17px 16px 17px;
       text-align: center;
       /* right: -29px; */
@@ -382,10 +396,81 @@ hr.divider-line{
     }
     .card-show-details {
       padding: 21px;
-      margin-top: 34px;
+      h1 {
+        font-size: 21px;
+        text-transform: uppercase;
+        padding: 20px;
+        padding-top: 3px;
+        font-family: 'Open Sans', sans-serif;
+        color: #2631419c;
+        letter-spacing: 2px;
+      }
       img {
         margin-bottom: 25px;
         width: 45px;
+      }
+    }
+    .title-container {
+      margin-left: 119px;
+      width: 100%;
+      text-align: left;
+      p {
+        font-size: 21px;
+        text-transform: uppercase;
+        padding-top: 3px;
+        font-family: 'Open Sans', sans-serif;
+        color: #2631419c;
+        letter-spacing: 2px;
+      }
+    }
+    .divider-line {
+      height: 20px;
+      width: 100%;
+      margin: 36px 0;
+      margin-top: 0;
+      border: 0;
+      box-shadow: 0 8px 8px -9px #dbdbdb inset;
+    }
+    .divider-line-q {
+      width: 100%;
+      margin-top: 10px;
+      margin-bottom: 0px;
+      border: solid 3px #254afc;
+    }
+    .nav-container-buttons {
+      display: block;
+      padding: 19px;
+      justify-content: center;
+      width: 100%;
+      color: #2f7bb7;
+      font-size: 30px;
+      font-family: 'Open Sans', sans-serif;
+      /* background: #e3e3e3; */
+      box-shadow: 1px 1px 10px lightgrey;
+      border-radius: 4px;
+      label {
+        font-size: 21px;
+        padding: 30px;
+        text-align: center;
+        width: 100%;
+        text-transform: uppercase;
+        font-family: 'Open Sans', sans-serif;
+        color: #2631419c;
+        letter-spacing: 2px;
+        padding-top: 0;
+      }
+      textarea {
+         height: 130px;
+         /* max-width: 410px; */
+         font-size: 23px;
+         padding: 30px;
+      }
+      input {
+        height: 60px;
+        font-size: 21px;
+      }
+      .btn-primary {
+        width: 100%;
       }
     }
 }
