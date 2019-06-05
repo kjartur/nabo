@@ -1,19 +1,20 @@
-<div style="padding-top: 75px;">
+<div class="banner" style="background-image: url( <%= image_path "bannerv1.svg" %>);">
   <div class='container'>
-    <h1>Add a new task</h1>
-    <%= simple_form_for @task do |f| %>
-    <%= f.input :title, placeholder: 'Enter a simple title, max 4 words'%>
-    <%= f.input :address, label: 'Address:', placeholder: 'Checkpoint Charlie, Berlin, Germany'%>
-    <%= f.input :post_code, placeholder: 'Post code'%>
-    <%= f.input :date, placeholder: 'When will the event start?'%>
-    <%= f.input :description, placeholder: 'Enter a simple description' %>
-    <%= f.input :photo %>
-    <%= f.input :photo_cache, as: :hidden %>
-    <%= f.input :amount_coins, placeholder: '1 credit = 15 min'%>
-    <%= f.button :submit, class: "btn btn-book" %>
-    <br>
-    <br>
-
-    <% end %>
+    <div class="frostedback01" style="overflow-y: scroll; height:500px;">
+      <h1>Add a new task</h1>
+      <%= simple_form_for @task do |f| %>
+      <%= f.input :title, placeholder: 'Enter a simple title, max 4 words'%>
+      <%= f.input :address, label: 'Address:', placeholder: 'Checkpoint Charlie, Berlin, Germany'%>
+      <%= f.input :post_code, placeholder: 'Post code'%>
+      <%= f.input :date, placeholder: 'When will the event start?'%>
+      <%= f.input :description, placeholder: 'Enter a simple description' %>
+      <%= f.input :photo %>
+      <%= f.input :photo_cache, as: :hidden %>
+      <%= f.input :amount_coins, placeholder: '1 credit = 15 min'%>
+      <%= f.button :submit, class: "btn btn-book" %>
+      <br>
+      <br>
+      <% end %>
+    </div>
   </div>
 </div>
