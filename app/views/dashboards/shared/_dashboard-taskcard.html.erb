@@ -28,7 +28,7 @@
         <p>Completed</p>
       </div>
   <% else %>
-    <% if task.offers.present? %>
+    <% if task.offers.present?  %>
       <%= link_to taskcomplete_path(task), :method => :patch do %>
         <div class="transfer">
           <div class="t-icon"><i class="fas fa-exchange-alt"></i></div>
