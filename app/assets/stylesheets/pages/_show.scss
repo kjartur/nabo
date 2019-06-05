@@ -283,8 +283,14 @@ hr.divider-line{
 
   p{
   font-family: 'Open Sans', sans-serif;
-  font-size: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  width: 100px;
   text-align: center;
+  padding-top: 10px;
+  padding: 10px;
+  margin-top: 10px;
+
 
   }
 }
@@ -359,6 +365,7 @@ hr.divider-line{
   }
   .uploaded-photo {
     position: relative;
+    top: -40px;
   }
   .description-new {
     position: absolute;
@@ -372,6 +379,7 @@ hr.divider-line{
     margin: 0;
     background: black;
     background: rgba(0, 0, 0, 0.4);
+
   }
   .card-show-icons {
     display: flex;
@@ -458,7 +466,7 @@ hr.divider-line{
       text-align: center;
       width: 100%;
       color: #2f7bb7;
-      font-size: 30px;
+      font-size: 24px;
       font-family: 'Open Sans', sans-serif;
       /* background: #e3e3e3; */
       box-shadow: 1px 1px 10px lightgrey;
