@@ -97,9 +97,12 @@
                 <div class="comments-boxes">
                   <p><%= offer.comments%></p>
                 </div>
+                <% if @task.user == current_user %>
                   <div class="choose_me_btn">
                     <%= link_to 'Choose me!', acceptoffer_path(offer), method: "patch" %>
                   </div>
+
+                <% end %>
                 </div>
             <%end%>
         </div>
@@ -109,7 +112,7 @@
 <!-- current user logic here -->
       <div class="nav-container-buttons">
         <% if (current_user.id == @task.user_id) %>
-          <%= link_to 'Complete task', taskcomplete_path(@task), method: "patch", :class => "btn-flat-complete" %>
+          <%= "You have created this task"%>
           <% else %>
 
            <%= simple_form_for [@task, @offer] do |f| %>
