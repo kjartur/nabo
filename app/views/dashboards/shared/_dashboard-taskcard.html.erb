@@ -7,7 +7,7 @@
       <%if task.completed == true %>
        <div class =colorful_dashboard>
         <p>The transfer is complited.</p>
-        <p><%=task.offer.user.first_name%> received <%=task.amount_coins%> coin<%if task.amount_coins > 1 %><%="s"%> <%else%><%=""%><%end%></p>
+        <p>User received <%=task.amount_coins%> coin<%if task.amount_coins > 1 %><%="s"%> <%else%><%=""%><%end%></p>
       </div>
       <%else%>
         <p>You have <b><%= task.users.count %></b> people want to help you<%if task.users.count > 0 %><%="!"%> <%else%><%="."%><%end%></p>
