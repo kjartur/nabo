@@ -1,3 +1,9 @@
+<%= render 'shared/profile', user: @user %>
 <div class="container">
-  <%= render 'shared/profile', user: @user %>
+  <%= link_to 'Edit your profile', edit_user_registration_path(@user) %>
+</div>
+<div class="container d-flex">
+    <% @tasks.each do |task| %>
+      <%= render 'shared/task-card-small', task: task %>
+    <% end %>
 </div>
