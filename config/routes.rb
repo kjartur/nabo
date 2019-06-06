@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get 'myoffers', to: 'offers#myoffers', as: 'myoffers'
   resources :profiles, only: :show
 
-  patch 'task/:id/complete', to: 'tasks#complete', as: 'taskcomplete'
+  # patch 'task/:id/complete', to: 'tasks#complete', as: 'taskcomplete'
   patch 'offer/:id', to: 'offers#accept', as: 'acceptoffer'
 
   resources :tasks do
@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   resource :dashboard, only: [ :show ]
   get 'find_profile_pic', to: 'dashboards#find_profile_pic', as: 'find_profile_pic'
 
-  resources :offers, only: :accept
+  resources :offers, only: [ :accept]
+  patch 'tasks/:task_id/offers/:id/done', to: 'offers#done', as: 'offerdone'
 
 end

@@ -15,7 +15,7 @@
           <% end %>
         </div>
       <% elsif task.offer_booked? %>
-        <p>Finished this task? Click "Transfer Now".</p>
+        <p>Finished this task? Click "Transfer Now".  </p>
       <% elsif task.offers.empty? %>
         <p>You don't have any offers yet.</p>
       <% elsif task.offers.one? %>
@@ -39,7 +39,8 @@
     <% if task.offers.present? %>
       <% task.offers.each do |off| %>
         <% if (off.state == "booked") %>
-          <%= link_to taskcomplete_path(task), :method => :patch do %>
+          <%= link_to offerdone_path(task, off), :method => :patch do %>
+
           <div class="transfer">
             <div class="t-icon"><i class="fas fa-exchange-alt"></i></div>
             <p style="margin-left: 10px;">Transfer Now</p>
