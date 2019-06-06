@@ -3,7 +3,7 @@
     <div class="frostedback01" style="overflow-y: scroll; height:500px;">
       <h1>What do you need help with?</h1>
       <%= simple_form_for @task do |f| %>
-      <%= f.input :title, placeholder: 'Enter a simple title, maximum 4 words'%>
+      <%= f.input :title, placeholder: 'Enter a simple title, maximum 4 words', input_html: { :size => 10, maxlength: 30 }%>
       <%= f.input :address, label: 'Address:', placeholder: 'Checkpoint Charlie, Berlin, Germany'%>
       <%= f.input :post_code, placeholder: 'Post code'%>
       <%= f.input :date, placeholder: 'When will the event start?'%>
