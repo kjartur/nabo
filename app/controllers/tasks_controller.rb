@@ -38,7 +38,7 @@ skip_before_action :authenticate_user!, only: [:index, :show]
     @task = Task.new(task_params)
     @task.user = current_user
     if @task.save
-      redirect_to dashboard_path
+      redirect_to task_path(@task)
     else
       render 'tasks/new'
     end
@@ -60,6 +60,8 @@ skip_before_action :authenticate_user!, only: [:index, :show]
     # Make link unclickable when state is (not book)
     @helper.coins += @task.amount_coins
     @helper.save
+
+
     # @offer = Offer.find(params[:id])
     # @offer.state = "done"
     # @offer.save
