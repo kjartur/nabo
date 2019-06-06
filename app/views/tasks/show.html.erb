@@ -113,14 +113,16 @@
       </div>
       <br>
       <br>
+
 <!-- current user logic here -->
       <div class="nav-container-buttons">
+        <%= "There are currently no offers." if (current_user.id == @task.user_id && @task.offers.present? == false)%>
         <%= "Choose the offer for your task." if (current_user.id == @task.user_id && @task.offers.where(state: "pending").present?)%>
-        <% @task.offers.each do |offer| %>
+
           <% if (current_user.id == @task.user_id) %>
-            <% if offer.state == "pending" %>
-            <% elsif offer.state == "booked"%>
-            <p><%= offer.user.first_name%> has been accepted!</p>
+            <% if @task.offers.where(state: "booked").present? == false %>
+            <% else%>
+            <p><%= "User has been accepted!" %></p>
             <% end %>
           <% elsif @no_offers %>
              <%= simple_form_for [@task, @offer] do |f| %>
@@ -130,7 +132,7 @@
           <% else %>
               <%= "You have already sent an offer to this person."%>
           <% end %>
-        <% end %>
+
       </div>
 <!-- end current user logic -->
     </div>
