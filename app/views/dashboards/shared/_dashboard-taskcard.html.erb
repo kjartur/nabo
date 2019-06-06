@@ -3,7 +3,7 @@
   <!-- <img src="https://picsum.photos/200"> -->
   <div class="card-product-infos">
     <%= link_to task_path(task) do %>
-      <p class="date-task-card"><%= task.date.strftime("%A, %d %b %Y %l:%M %p") %></p>
+      <h3 class="date-task-card"><%= task.date.strftime("%A, %d %b %Y") %></h3>
       <h2><%= task.title %></h2>
       <%if task.completed == true %>
        <div class =colorful_dashboard>
