@@ -11,11 +11,11 @@
         <p>The transfer is completed.</p>
           <% user_helper = task&.offers.where(state: "booked").first&.user %>
           <% if user_helper %>
-            <p><%= user_helper.first_name %> has received <%= task.amount_coins %> coin<%= task.amount_coins > 1 ? "s" : "" %> from you</p>
+            <p><%= user_helper.first_name %> has received <%= task.amount_coins %> coin<%= task.amount_coins > 1 ? "s" : "" %> from you.</p>
           <% end %>
         </div>
       <% elsif task.offer_booked? %>
-        <p>Finish the task</p>
+        <p>Finished this task? Click "Transfer Now".</p>
       <% elsif task.offers.empty? %>
         <p>You don't have any offers yet.</p>
       <% elsif task.offers.one? %>
