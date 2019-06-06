@@ -373,10 +373,6 @@ h1 {
   position: absolute;
   bottom: 10px;
   left: 10px;
-
-  p{
-    width: 350px;
-  }
 }
 
 .offers_pictures{
@@ -410,8 +406,26 @@ h1 {
   font-size: 19px !important;
 }
 
+.text-success {
+  background: #1EDD88;
+  color: white !important;
+  padding: 3px 19px;
+  border-radius: 3px;
+  font-size: 19px !important;
+}
+
 .date-offer-card {
   margin-bottom: 15px !important;
+}
+
+.date-task-card {
+  color: #6A95BA;
+  font-size: 17px;
+  text-transform: uppercase;
+  opacity: .5 !important;
+  margin-bottom: 21px !important;
+  /* margin-right: 54px; */
+  letter-spacing: 1px;
 }
 
 .card-product-infos {
