@@ -14,7 +14,7 @@
         <% end %>
       </div>
       <%else%>
-        <p>You have <b><%= task.users.count %></b> people want to help you<%if task.users.count > 0 %><%="!"%> <%else%><%="."%><%end%></p>
+        <p>You have <b><%= task.users.count %></b> people want to help you<%if task.users.count > 0 %><%="!"%> <%else%><%="."%><%end%> Choose</p>
       <% end %>
       <!-- <p><%= task.date.strftime("%A, %d %b %Y %l:%M %p") %></p> -->
       <p>Coins: <%= task.amount_coins %></p>
@@ -28,26 +28,36 @@
         <p>Completed</p>
       </div>
   <% else %>
-    <% if task.offers.present?  %>
-      <%= link_to taskcomplete_path(task), :method => :patch do %>
-        <div class="transfer">
-          <div class="t-icon"><i class="fas fa-exchange-alt"></i></div>
-          <p style="margin-left: 10px;">Transfer Now</p>
-         <!--  <span class="tooltiptext">Tooltip text</span> -->
-        </div>
+
+    <% if task.offers.present? %>
+      <% task.offers.each do |off| %>
+        <% if (off.state == "booked") %>
+          <%= link_to taskcomplete_path(task), :method => :patch do %>
+          <div class="transfer">
+            <div class="t-icon"><i class="fas fa-exchange-alt"></i></div>
+            <p style="margin-left: 10px;">Transfer Now</p>
+           <!--  <span class="tooltiptext">Tooltip text</span> -->
+          </div>
+        <% end %>
       <% end %>
     <% end %>
   <% end %>
+  <% end %>
 
   </div>
-  <% if task.offers.present? && task.completed = false %>
-    <div class = "see_all_offers">
-       <%= link_to task_path(task) do %>
-      <h4>View All Offers</h4>
-      <% end %>
-    </div>
+  <% if task.offers.present? %>
+  <% task.offers.each do |off| %>
+    <% if ( off.state != "booked" ) %>
+      <div class = "see_all_offers">
+        <%= link_to task_path(task) do %>
+          <h4>View All Offers</h4>
+        <% end %>
+      </div>
+    <% end %>
   <% end %>
-</div>
+<% end %>
 
+
+</div>
 
 
