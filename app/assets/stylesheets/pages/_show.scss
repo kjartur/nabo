@@ -352,6 +352,12 @@ hr.divider-line{
       border-radius: 50%;
     }
   }
+
+  .avatar-show:hover {
+    opacity: 0.6;
+    transition: 0.3s;
+    }
+
   .offer-lockup {
     display: flex;
   }

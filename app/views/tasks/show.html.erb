@@ -8,13 +8,15 @@
     <div class="card-show">
 
     <div class="card-show-icons">
-        <div class="avatar-show">
+      <div class="avatar-show">
+        <%= link_to profile_path(@task.user) do %>
           <% if @task.user.avatar? %>
             <img src="<%=@task.user.avatar%>" >
           <% else %>
             <img src="https://via.placeholder.com/150" >
           <% end %>
-        </div>
+        <% end %>
+      </div>
       <div class="title-container">
           <h1 class="color-blue"><%= @task[:title] %></h1><br>
           <p><%=@task[:address]%>, <%= @task[:post_code]%></p>
