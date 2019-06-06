@@ -99,11 +99,11 @@
                   </div>
                   <% elsif offer.state == "booked" %>
                   <div class="choose_me_btn-booked">
-                    <p class="text-success">booked</p>
+                    <p class="text-success"></i></p>
                   </div>
                   <% else offer.state == "rejected"%>
                   <div class=choose_me_btn-rejected>
-                    <p class="text-danger">rejected</p>
+                    <p class="text-danger"></p>
                   </div>
                   <% end %>
                 <% end %>
@@ -115,17 +115,22 @@
       <br>
 <!-- current user logic here -->
       <div class="nav-container-buttons">
-        <% if (current_user.id == @task.user_id) %>
-          <%= "You have created this task."%>
-        <% elsif @no_offers %>
-           <%= simple_form_for [@task, @offer] do |f| %>
-            <%= f.input :comments, label: 'Do you want to help?', placeholder: "Offer your help to this person" %>
-            <%= f.submit "Send Offer", class: "btn btn-primary" %>
+        <%= "Choose the offer for your task." if (current_user.id == @task.user_id && @task.offers.where(state: "pending").present?)%>
+        <% @task.offers.each do |offer| %>
+          <% if (current_user.id == @task.user_id) %>
+            <% if offer.state == "pending" %>
+            <% elsif offer.state == "booked"%>
+            <p><%= offer.user.first_name%> has been accepted!</p>
+            <% end %>
+          <% elsif @no_offers %>
+             <%= simple_form_for [@task, @offer] do |f| %>
+              <%= f.input :comments, label: 'Do you want to help?', placeholder: "Offer your help to this person" %>
+              <%= f.submit "Send Offer", class: "btn btn-primary" %>
+            <% end %>
+          <% else %>
+              <%= "You have already sent an offer to this person."%>
           <% end %>
-        <% else %>
-            <%= "You have already sent an offer to this person."%>
         <% end %>
-
       </div>
 <!-- end current user logic -->
     </div>
