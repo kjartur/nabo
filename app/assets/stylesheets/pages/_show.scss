@@ -81,7 +81,11 @@ p{
 
 h2{
   font-family: 'Open Sans', sans-serif;
-  font-size: 25px;
+  font-size: 20px;
+  font-weight: 300;
+  text-align: justify;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .card-show .uploaded-photo > img {
@@ -146,22 +150,28 @@ hr.divider-line{
 }
 
 .card-show-details h3{
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #2631419c;
   padding: 0px;
   font-family: 'Open Sans', sans-serif
 }
 
 .calendar-icon {
-  padding-bottom: 0px;
+  padding-bottom: 5px;
 }
 
 .clock-icon {
-  padding-bottom: 5px;
+  padding-bottom: 10px;
 }
 
-.map-pin-icon {
-  padding-bottom: 5px;
-}
+.coin-icon {
+  padding-bottom: 8px;
+
+  }
+
+
+
 
 
 //nav-container on the right side
