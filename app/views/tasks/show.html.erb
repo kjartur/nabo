@@ -67,11 +67,11 @@
             <div class="avatar-show-nav">
               <%= link_to profile_path(user) do %>
               <% if user.avatar? %>
-              <%= cl_image_tag(user.avatar) %>
+                <%= cl_image_tag(user.avatar) %>
               <% else %>
-              <img src="https://via.placeholder.com/120" >
+                <img src="https://via.placeholder.com/120" >
               <% end %>
-              <% end %>
+            <% end %>
             </div>
             <%end%>
           </div>
@@ -103,6 +103,7 @@
           </div>
           <% end %>
         </div>
+
         <br>
         <br>
 
@@ -118,9 +119,9 @@
           <p> You have accepted the offer from <% @task.offers.where(state: "booked").each do |offe| %><%= User.find(offe.user_id).first_name%><% end%>.</p>
           <% end %>
           <% elsif @no_offers %>
-          <%= simple_form_for [@task, @offer] do |f| %>
-          <%= f.input :comments, label: 'Do you want to help?', placeholder: "Offer your help to this person" %>
-          <%= f.submit "Send Offer", class: "btn btn-primary" %>
+            <%= simple_form_for [@task, @offer] do |f| %>
+            <%= f.input :comments, label: 'Do you want to help?', placeholder: "Offer your help to #{@task.user.first_name} here! Tip: Be friendly and straight to the point." %>
+            <%= f.submit "Send Offer", class: "btn btn-primary" %>
           <% end %>
           <% else %>
           <%= "You have already sent an offer to this person."%>
