@@ -71,7 +71,7 @@
 
     <div class="col-6" style="padding-right: 0;">
       <div class="nav-container">
-        <h1>These Are The Offers:</h1>
+        <strong><h1>Offers</h1></strong>
       <div class="offers">
         <div class="offer-avatars">
           <% @task.users.each do |user| %>
@@ -107,11 +107,11 @@
 <!-- current user logic here -->
       <div class="nav-container-buttons">
         <% if (current_user.id == @task.user_id) %>
-          <%= "You have created this task"%>
+          <%= "You have created this task."%>
         <% elsif @no_offers %>
            <%= simple_form_for [@task, @offer] do |f| %>
-            <%= f.input :comments, label: 'I want to help!', placeholder: "Leave a comment or question" %>
-            <%= f.submit "Create Offer", class: "btn btn-primary" %>
+            <%= f.input :comments, label: 'Do you want to help?', placeholder: "Offer your help to this person" %>
+            <%= f.submit "Send Offer", class: "btn btn-primary" %>
           <% end %>
         <% else %>
             <%= "You have already sent an offer to this person."%>
