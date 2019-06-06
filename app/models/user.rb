@@ -19,4 +19,12 @@ class User < ApplicationRecord
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+  def picture_url
+    if avatar_url
+      avatar_url
+    else
+      "default-avatar.png"
+    end
+  end
 end
