@@ -116,13 +116,13 @@
 
 <!-- current user logic here -->
       <div class="nav-container-buttons">
-        <%= "There are currently no offers." if (current_user.id == @task.user_id && @task.offers.present? == false)%>
-        <%= "Choose the offer for your task." if (current_user.id == @task.user_id && @task.offers.where(state: "pending").present?)%>
+        <%= "You currently have no offers." if (current_user.id == @task.user_id && @task.offers.present? == false)%>
+        <%= "Select who you want help from." if (current_user.id == @task.user_id && @task.offers.where(state: "pending").present?)%>
 
           <% if (current_user.id == @task.user_id) %>
             <% if @task.offers.where(state: "booked").present? == false %>
             <% else%>
-            <p><%= "User has been accepted!" %></p>
+            <p> You have accepted the offer from <% @task.offers.where(state: "booked").each do |offe| %><%= User.find(offe.user_id).first_name%><% end%>.</p>
             <% end %>
           <% elsif @no_offers %>
              <%= simple_form_for [@task, @offer] do |f| %>
