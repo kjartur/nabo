@@ -146,13 +146,13 @@ hr.divider-line{
 }
 
 .card-show-details h3{
-  font-size: 20px;
+  font-size: 14px;
   padding: 0px;
   font-family: 'Open Sans', sans-serif
 }
 
 .calendar-icon {
-  padding-bottom: 5px;
+  padding-bottom: 0px;
 }
 
 .clock-icon {
@@ -283,8 +283,14 @@ hr.divider-line{
 
   p{
   font-family: 'Open Sans', sans-serif;
-  font-size: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  width: 100px;
   text-align: center;
+  padding-top: 10px;
+  padding: 10px;
+  margin-top: 10px;
+
 
   }
 }
@@ -298,11 +304,12 @@ hr.divider-line{
 
 .new-design-show {
   margin-top:70px;
+  font-size: 6px;
   .avatar-show {
     top: 61px;
     left: 53px;
     img {
-      width: 120px;
+      width: 100px;
       border-radius: 50%;
     }
   }
@@ -358,9 +365,10 @@ hr.divider-line{
   }
   .uploaded-photo {
     position: relative;
+    top: -40px;
   }
   .description-new {
-       position: absolute;
+    position: absolute;
     align-items: center;
     left: 7%;
     width: 86%;
@@ -371,6 +379,7 @@ hr.divider-line{
     margin: 0;
     background: black;
     background: rgba(0, 0, 0, 0.4);
+
   }
   .card-show-icons {
     display: flex;
@@ -404,12 +413,12 @@ hr.divider-line{
     .card-show-details {
       padding: 21px;
       h1 {
-        font-size: 21px;
+        font-size: 15px;
         text-transform: uppercase;
         padding: 20px;
         padding-top: 3px;
         font-family: 'Open Sans', sans-serif;
-        color: #2631419c;
+        color: #8c8c8c !important;
         letter-spacing: 2px;
       }
       img {
@@ -422,12 +431,18 @@ hr.divider-line{
       width: 100%;
       text-align: left;
       p {
-        font-size: 21px;
-        text-transform: uppercase;
+        font-size: 19px;
         padding-top: 3px;
         font-family: 'Open Sans', sans-serif;
         color: #2631419c;
         letter-spacing: 2px;
+      }
+      h5 {
+        font-size: 15px;
+        padding-top: 3px;
+        font-family: 'Open Sans', sans-serif;
+
+
       }
     }
     .divider-line {
@@ -451,7 +466,7 @@ hr.divider-line{
       text-align: center;
       width: 100%;
       color: #2f7bb7;
-      font-size: 30px;
+      font-size: 24px;
       font-family: 'Open Sans', sans-serif;
       /* background: #e3e3e3; */
       box-shadow: 1px 1px 10px lightgrey;
