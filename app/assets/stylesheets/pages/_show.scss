@@ -294,6 +294,35 @@ hr.divider-line{
 
   }
 }
+.choose_me_btn-booked{
+  p{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  width: 100px;
+  text-align: center;
+  padding-top: 10px;
+  padding: 10px;
+  margin-top: 30px;
+
+
+  }
+}
+
+.choose_me_btn-rejected{
+  p{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  width: 100px;
+  text-align: center;
+  padding-top: 10px;
+  padding: 10px;
+  margin-top: 30px;
+
+
+  }
+}
 
 .choose_me_btn:hover{
   background-color: #62c462;
