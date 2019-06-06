@@ -1,7 +1,7 @@
 .card-search {
-  margin: 30px 10px;
+  margin: 10px 10px;
   width: 400px;
-  height: 300px;
+  // height: 300px;
   background-size: cover;
   background-position: center;
   justify-content: center;
@@ -9,7 +9,7 @@
 
   border: solid 1px lightgrey;
   text-align: left;
-  border-radius: 25px;
+  border-radius: 15px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   &:hover {
     opacity: 0.6;
@@ -20,15 +20,16 @@
 .card-search > img {
   height: 200px;
   width: 100%;
-  border-radius: 25px;
+  border-radius: 15px 15px 0 0;
   object-fit: cover;
 }
 
 .card-search h1 {
-  font-size: 20px;
+  font-size: 23px;
   font-weight: bold;
   margin: 0;
   padding: 5px 0px;
+  color: #205279;
 }
 
 .card-search h2 {
@@ -74,22 +75,15 @@
 }
 
 .card-search-infos .card-search-amount-coins {
- position: absolute;
+  position: absolute;
   text-align: center;
-  left: 50%;
-  height: 73px;
-  width: 73px;
-  margin: auto;
-  font-size: 0px;
-  background-color: #8cb2c9;
-  color: #fff;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
-  display: inline-block;
   box-shadow: 1px 1px 1px black;
-  padding: 12px 14px 16px;
   text-align: center;
-  right: -105px;
-  top: -54px;
+  right: 15px;
+  top: -50px;
 }
 
 p{
@@ -118,3 +112,24 @@ h2{
   color: black;
 }
 
+.card-search-text  .color-mute {
+  color: $gray-500;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+
+.card-search-price {
+  border-radius: 0 0 15px 15px;
+  background: #89bee8;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  padding: 5px 0;
+}
+
+a.card-search-link:hover {
+  text-decoration: none;
+}

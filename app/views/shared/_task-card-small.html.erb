@@ -1,4 +1,4 @@
-<%= link_to task_path(task) do %>
+<%= link_to task_path(task), class: 'card-search-link' do %>
   <div class="card-search">
     <% if (task[:photo] == nil) %>
       <img src="http://www.selfstoragespecialists.com/blog/wp-content/uploads/2016/03/bigstock-new-home-real-estate-moving-91410869.jpg">
@@ -7,14 +7,17 @@
     <% end %>
     <div class="card-search-infos">
       <div class="card-search-text">
-        <h1 class="color-blue"><%= task.title %></h1>
+        <h1 class=""><%= task.title %></h1>
         <h2 class="color-mute"><%= task.date.strftime("%A, %d %b %Y %l:%M %p") %></h2>
       </div>
-      <div class="card-search-amount-coins">
-        <h2>Coins:</h2>
-        <br>
-        <h2><%= task.amount_coins %></h2>
-      </div>
+      <% if task.user.avatar_url.present? %>
+        <%= cl_image_tag(task.user.avatar, width: 200, height: 200, crop: "fill", class: 'card-search-amount-coins')%>
+      <% else %>
+        <%= image_tag(task.user.picture_url, class: 'card-search-amount-coins')%>
+      <% end %>
+    </div>
+    <div class="card-search-price">
+      <span><%= task.amount_coins %> coin<%= 's' if task.amount_coins > 1 %></span>
     </div>
   </div>
 <% end %>
