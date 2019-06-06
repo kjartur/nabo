@@ -19,7 +19,7 @@ skip_before_action :authenticate_user!, only: [:index, :show]
   def show
     @offer = Offer.new
     @task = Task.find(params[:id])
-    @no_offers = @task.offers.where( user_id: current_user.id).empty?
+    @no_offers = @task.offers.where( user_id: current_user.id).empty? unless current_user.nil?
   end
 
   def edit
@@ -50,24 +50,23 @@ skip_before_action :authenticate_user!, only: [:index, :show]
     redirect_to dashboard_path
   end
 
-  def complete
-    @task = Task.find(params[:id])
-    @task.update(completed: true)
-    @owner = @task.user
-    @owner.coins -= @task.amount_coins
-    @owner.save
-    @helper = @task.offers.where(state: "booked").first.user
-    # Make link unclickable when state is (not book)
-    @helper.coins += @task.amount_coins
-    @helper.save
+  # def complete
+  #   @task = Task.find(params[:task_id])
+  #   @task.update(completed: true)
+  #   @owner = @task.user
+  #   @owner.coins -= @task.amount_coins
+  #   @owner.save
+  #   @helper = @task.offers.where(state: "booked").first.user
+  #   # Make link unclickable when state is (not book)
+  #   @helper.coins += @task.amount_coins
+  #   @helper.save
 
+  #   @offer_done = Offer.find(params[:id])
+  #   @offer_done.state = "done"
+  #   @offer_done.save
 
-    # @offer = Offer.find(params[:id])
-    # @offer.state = "done"
-    # @offer.save
-
-    redirect_to dashboard_path
-  end
+  #   redirect_to dashboard_path
+  # end
 
   def completed?
 

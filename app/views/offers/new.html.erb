@@ -7,7 +7,9 @@
     <div class='container'>
       <br>
       <%= simple_form_for [@task, @offer] do |f| %>
-        <%= f.input :comments, label: 'Comment:', placeholder: "Leave a comment or question for the person who's asking for help" %>
+        <%= f.input :comments,
+         label: 'Comment:', placeholder: "Leave a comment or question for the person who's asking for help",
+         input_html: { :size => 10, maxlength: 40 } %>
         <%= f.submit "Create Offer", class: "btn btn-primary" %>
       <% end %>
     </div>

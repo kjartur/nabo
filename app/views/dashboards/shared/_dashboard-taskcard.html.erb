@@ -3,20 +3,27 @@
   <!-- <img src="https://picsum.photos/200"> -->
   <div class="card-product-infos">
     <%= link_to task_path(task) do %>
-      <p class="new-label-card">The Task:</p>
+      <h3 class="date-task-card"><%= task.date.strftime("%A, %d %b %Y") %></h3>
       <h2><%= task.title %></h2>
-      <%if task.completed == true %>
-       <div class =colorful_dashboard>
+
+      <% if task.completed == true %>
+        <div class='colorful_dashboard'>
         <p>The transfer is completed.</p>
-        <% helper = task&.offers.where(state: "booked").first&.user %>
-        <% if helper %>
-        <p> <%= helper.first_name %> has received <%=task.amount_coins%> coin<%if task.amount_coins > 1 %><%="s"%> <%else%><%=""%><%end%> from you</p>
-        <% end %>
-      </div>
-      <%else%>
-        <p>You have <b><%= task.users.count %></b> people want to help you<%if task.users.count > 0 %><%="!"%> <%else%><%="."%><%end%></p>
+          <% user_helper = task&.offers.where(state: "booked").first&.user %>
+          <% if user_helper %>
+            <p><%= user_helper.first_name %> has received <%= task.amount_coins %> coin<%= task.amount_coins > 1 ? "s" : "" %> from you.</p>
+          <% end %>
+        </div>
+      <% elsif task.offer_booked? %>
+        <p>Finished this task? Click "Transfer Now".  </p>
+      <% elsif task.offers.empty? %>
+        <p>You don't have any offers yet.</p>
+      <% elsif task.offers.one? %>
+        <p>You have <b><span style= "color: green;">1</span></b> person who wants to help you.</p>
+      <% elsif task.offers.many? %>
+        <p>There are <b><span style= "color: green;"><%=task.users.count%></span></b> people who wants to help you.</p>
+
       <% end %>
-      <!-- <p><%= task.date.strftime("%A, %d %b %Y %l:%M %p") %></p> -->
       <p>Coins: <%= task.amount_coins %></p>
     <%end %>
   </div>
@@ -28,26 +35,37 @@
         <p>Completed</p>
       </div>
   <% else %>
-    <% if task.offers.present?  %>
-      <%= link_to taskcomplete_path(task), :method => :patch do %>
-        <div class="transfer">
-          <div class="t-icon"><i class="fas fa-exchange-alt"></i></div>
-          <p style="margin-left: 10px;">Transfer Now</p>
-         <!--  <span class="tooltiptext">Tooltip text</span> -->
-        </div>
+
+    <% if task.offers.present? %>
+      <% task.offers.each do |off| %>
+        <% if (off.state == "booked") %>
+          <%= link_to offerdone_path(task, off), :method => :patch do %>
+
+          <div class="transfer">
+            <div class="t-icon"><i class="fas fa-exchange-alt"></i></div>
+            <p style="margin-left: 10px;">Transfer Now</p>
+           <!--  <span class="tooltiptext">Tooltip text</span> -->
+          </div>
+        <% end %>
       <% end %>
     <% end %>
   <% end %>
+  <% end %>
 
   </div>
-  <% if task.offers.present? && task.completed = false %>
-    <div class = "see_all_offers">
-       <%= link_to task_path(task) do %>
-      <h4>View All Offers</h4>
-      <% end %>
-    </div>
+  <% if task.offers.present? %>
+  <% task.offers.each do |off| %>
+    <% if ( off.state != "booked" ) %>
+      <div class = "see_all_offers">
+        <%= link_to task_path(task) do %>
+          <h4>View All Offers</h4>
+        <% end %>
+      </div>
+    <% end %>
   <% end %>
-</div>
+<% end %>
 
+
+</div>
 
 

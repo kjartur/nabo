@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="topspacer">
 </div>
   <div class="container frostedback01 mid">
@@ -26,3 +27,14 @@
       </form>
 </fieldset>
 </div>
+=======
+<div class="profile_bg" style="padding-top: 100px; height: 550px">
+  <div class="profile-container">
+    <%= simple_form_for [@offer, @review] do |f| %>
+      <%= f.input :description %>
+      <%= f.input :rating %>
+      <%= f.submit "Submit review", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+>>>>>>> master

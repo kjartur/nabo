@@ -81,7 +81,11 @@ p{
 
 h2{
   font-family: 'Open Sans', sans-serif;
-  font-size: 25px;
+  font-size: 20px;
+  font-weight: 300;
+  text-align: justify;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .card-show .uploaded-photo > img {
@@ -146,22 +150,28 @@ hr.divider-line{
 }
 
 .card-show-details h3{
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #2631419c;
   padding: 0px;
   font-family: 'Open Sans', sans-serif
 }
 
 .calendar-icon {
-  padding-bottom: 0px;
+  padding-bottom: 5px;
 }
 
 .clock-icon {
-  padding-bottom: 5px;
+  padding-bottom: 10px;
 }
 
-.map-pin-icon {
-  padding-bottom: 5px;
-}
+.coin-icon {
+  padding-bottom: 8px;
+
+  }
+
+
+
 
 
 //nav-container on the right side
@@ -294,6 +304,35 @@ hr.divider-line{
 
   }
 }
+.choose_me_btn-booked{
+  p{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  width: 100px;
+  text-align: center;
+  padding-top: 10px;
+  padding: 10px;
+  margin-top: 30px;
+
+
+  }
+}
+
+.choose_me_btn-rejected{
+  p{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  width: 100px;
+  text-align: center;
+  padding-top: 10px;
+  padding: 10px;
+  margin-top: 30px;
+
+
+  }
+}
 
 .choose_me_btn:hover{
   background-color: #62c462;
@@ -313,6 +352,12 @@ hr.divider-line{
       border-radius: 50%;
     }
   }
+
+  .avatar-show:hover {
+    opacity: 0.6;
+    transition: 0.3s;
+    }
+
   .offer-lockup {
     display: flex;
   }
@@ -471,6 +516,10 @@ hr.divider-line{
       /* background: #e3e3e3; */
       box-shadow: 1px 1px 10px lightgrey;
       border-radius: 4px;
+
+      p{
+        color: green;
+      }
       label {
         font-size: 21px;
         padding: 30px;

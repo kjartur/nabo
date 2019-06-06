@@ -11,9 +11,9 @@
      <%elsif offer.state == 'booked' %>
      <p class="text-success">BOOKED</p>
       <%elsif offer.state == 'done' %>
-      <p class="text-primary">DONE. You have recieved <%=offer.task.amount_coins%> from<%= offer.task.user.first_name %></p>
+      <p class="text-primary">Done! You have recieved <%=offer.task.amount_coins%> coin<% if offer.task.amount_coins == 1  %> <%=""%> <% else %><%= "s" %> <% end %> from <%= offer.task.user.first_name %>!</p>
       <%elsif offer.state == 'rejected' %>
-      <p class="text-danger"><%= offer.task.user.first_name %> has received help from another user. Better luck next time!</p>
+      <p class="text-danger"><%= offer.task.user.first_name %> has picked another user. <br>Better luck next time!</p>
       <%else%>
       <p class="text-secondary">WRONG</p>
      <%end%>

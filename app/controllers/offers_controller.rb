@@ -5,7 +5,6 @@ class OffersController < ApplicationController
   end
 
   def show
-
     @offer = Offer.find(params[:id])
     @task = @offer.task
   end
@@ -43,13 +42,33 @@ class OffersController < ApplicationController
     @offer_accept.state = "booked"
     @offer_accept.save
 
-    @offers_not_accept = Offer.where(state: "pending")
-    @offers_not_accept.each do |offer|
-      offer.state = "rejected"
+    task_id = Offer.find(params[:id]).task_id
+    task = Task.find(task_id)
+    task.offers.each do |offer|
+      offer.state = "rejected" unless offer.state == "booked"
       offer.save
     end
     # @offers_not_accept = Offer.find(params[:id])
     # @no_offers = @task.offers.where( user_id: current_user.id).empty?
+    redirect_to task_path(task)
+  end
+
+  def done
+    @task = Task.find(params[:task_id])
+    @task.update(completed: true)
+    @owner = @task.user
+    @owner.coins -= @task.amount_coins
+    @owner.save
+    @helper = @task.offers.where(state: "booked").first.user
+    # Make link unclickable when state is (not book)
+    @helper.coins += @task.amount_coins
+    @helper.save
+
+
+    @offer_done = Offer.find(params[:id])
+    @offer_done.state = "done"
+    @offer_done.save
+
     redirect_to dashboard_path
   end
 

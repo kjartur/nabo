@@ -15,4 +15,8 @@ class Task < ApplicationRecord
   def booked_offer
     offers.where(state: 'booked').first
   end
+
+  def offer_booked?
+    booked_offer.present?
+  end
 end
