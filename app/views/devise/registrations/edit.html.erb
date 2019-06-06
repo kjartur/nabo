@@ -1,7 +1,7 @@
 <div class="topspacer">
   &nbsp;
 </div>
-<div class="container">
+<div class="container frostedback01">
   <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
@@ -20,8 +20,10 @@
       <%= f.input :city,
                   required: true,
                   autofocus: true %>
-      <%= f.input :bio, as: :text,
-                  :input_html => { :cols => 5, :rows => 10 },
+      <%= f.input :bio,
+                  required: true,
+                  autofocus: true %>
+      <%= f.input :quote,
                   required: true,
                   autofocus: true %>
       <%= f.input :avatar %>
