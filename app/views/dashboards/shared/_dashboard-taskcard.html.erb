@@ -14,7 +14,7 @@
         <% end %>
       </div>
       <%else%>
-        <p>You have <b><%= task.users.count %></b> people want to help you<%if task.users.count > 0 %><%="!"%> <%else%><%="."%><%end%> Choose</p>
+        <p>You have <b><%= task.users.count %></b> people want to help you<%if task.users.count > 0 %><%="!"%> <%else%><%="."%><%end%></p>
       <% end %>
       <!-- <p><%= task.date.strftime("%A, %d %b %Y %l:%M %p") %></p> -->
       <p>Coins: <%= task.amount_coins %></p>
