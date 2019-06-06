@@ -3,8 +3,9 @@
   <!-- <img src="https://picsum.photos/200"> -->
   <div class="card-product-infos">
     <%= link_to task_path(task) do %>
-      <p class="new-label-card">The Task:</p>
+      <h3 class="date-task-card"><%= task.date.strftime("%A, %d %b %Y") %></h3>
       <h2><%= task.title %></h2>
+
       <% if task.completed == true %>
         <div class='colorful_dashboard'>
         <p>The transfer is completed.</p>
@@ -21,6 +22,7 @@
         <p>You have <b><span style= "color: green;">1</span></b> person who wants to help you.</p>
       <% elsif task.offers.many? %>
         <p>There are <b><span style= "color: green;"><%=task.users.count%></span></b> people who wants to help you.</p>
+
       <% end %>
       <p>Coins: <%= task.amount_coins %></p>
     <%end %>
