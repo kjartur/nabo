@@ -213,8 +213,9 @@ hr.divider-line{
   border-radius: 8%;
   margin-top: 14px;
   margin-bottom: 17px;
-  margin-left: 5px;
+  margin-left: 20px;
   padding-left: 0;
+  box-shadow: 1px 1px 5px #80808069;
 }
 
 .nav-container .offers .offer-comments {
@@ -223,13 +224,16 @@ hr.divider-line{
 
 .offers .offer-comments .comments-boxes {
   position: relative;
-    height: 70px;
+    height: 80px;
     width: 65%;
     padding: 10px;
-    margin: 20px 11px;
+    margin-top: 14px;
+    margin-bottom: 17px;
+    margin-left: 11px;
+    margin-right: 11px;
     background-color: #f8f8f8;
     border-radius: 2px;
-    box-shadow: 1px 1px 20px #80808069;
+    box-shadow: 1px 1px 5px #80808069;
     border-width: 5px;
     border-color: black;
 }
@@ -514,7 +518,7 @@ hr.divider-line{
       font-size: 24px;
       font-family: 'Open Sans', sans-serif;
       /* background: #e3e3e3; */
-      box-shadow: 1px 1px 10px lightgrey;
+
       border-radius: 4px;
 
       p{
@@ -527,7 +531,7 @@ hr.divider-line{
         width: 100%;
         text-transform: uppercase;
         font-family: 'Open Sans', sans-serif;
-        color: #2631419c;
+        color: #2F7BB7;
         letter-spacing: 2px;
         padding-top: 0;
       }
@@ -540,12 +544,18 @@ hr.divider-line{
       input {
         height: 60px;
         font-size: 21px;
+        background-color: #89BEE8;
+      } & ::placeholder {
+        color:$gray-400;
+        font-weight: 100;
       }
       .btn-primary {
         width: 100%;
       }
     }
 }
+
+
 
 
 
