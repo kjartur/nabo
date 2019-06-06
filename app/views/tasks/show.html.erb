@@ -93,10 +93,19 @@
                   <p><%= offer.comments%></p>
                 </div>
                 <% if @task.user == current_user %>
+                  <% if offer.state == "pending" %>
                   <div class="choose_me_btn">
                     <p><%= link_to 'Accept', acceptoffer_path(offer), method: "patch" %></p>
                   </div>
-
+                  <% elsif offer.state == "booked" %>
+                  <div class="choose_me_btn-booked">
+                    <p class="text-success">booked</p>
+                  </div>
+                  <% else offer.state == "rejected"%>
+                  <div class=choose_me_btn-rejected>
+                    <p class="text-danger">rejected</p>
+                  </div>
+                  <% end %>
                 <% end %>
                 </div>
             <%end%>
