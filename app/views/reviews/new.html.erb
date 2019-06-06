@@ -1,5 +1,13 @@
-<%= simple_form_for [@offer, @review] do |f| %>
-  <%= f.input :description %>
-  <%= f.input :rating %>
-  <%= f.submit "Submit review", class: "btn btn-primary" %>
-<% end %>
+<div class="topspacer">
+
+</div>
+
+<div class="container frostedback01">
+  <%= simple_form_for [@offer, @review] do |f| %>
+    <%= f.input :description %>
+    <%= f.collection_radio_buttons :rating, [[1], [2], [3], [4], [5]], :first, :last, item_wrapper_tag: false, boolean_style: :inline do |b| %>
+      <%= b.radio_button + b.label {''}, class: "ratingsstars" %>
+    <% end %>
+    <%= f.submit "Submit review", class: "btn btn-primary" %>
+  <% end %>
+</div>
