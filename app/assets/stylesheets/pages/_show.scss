@@ -102,7 +102,7 @@ h2{
   top: 514px;
   left: 41px;
   width: 646px;
-  padding: 20px 0px;
+  padding: 20px;
   margin-top: 5px;
   margin-bottom: 40px;
   margin-left: 78px;
@@ -127,7 +127,7 @@ h2{
 }
 
 .card-show-details {
-  padding: 10px 0px;
+  padding: 17px;
 }
 
 hr.divider-line{
@@ -150,10 +150,9 @@ hr.divider-line{
 }
 
 .card-show-details h3{
-  font-size: 16px;
+  font-size: 19px;
   font-weight: 600;
-  color: #2631419c;
-  padding: 0px;
+  color: #272c329c;
   font-family: 'Open Sans', sans-serif
 }
 
@@ -419,11 +418,12 @@ hr.divider-line{
     width: 86%;
     bottom: 0px;
     border-radius: 5px;
+    padding: 17px;
     color: white;
     letter-spacing: -1px;
     margin: 0;
     background: black;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.5);
 
   }
   .card-show-icons {
