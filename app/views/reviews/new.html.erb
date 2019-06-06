@@ -1,3 +1,33 @@
+<<<<<<< HEAD
+<div class="topspacer">
+</div>
+  <div class="container frostedback01 mid">
+    <label for="description">Write a review:</label><br>
+    <fieldset class="rating">
+      <form action="/restaurants" method="post">
+        <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+        <textarea name="description" rows="4" cols="70">Write your review here!</textarea><br>
+        Ratings: <br>
+          Rating: <br>
+          <div class="starbox">
+            <div class="wrapperstarbox">
+              <input id="rating-star1" type="radio" class="ratingstars" name="rating" value="1">
+              <label for="rating-star1" title="Very bad">1</label>
+              <input id="rating-star2" type="radio" class="ratingstars" name="rating" value="2">
+              <label for="rating-star2" title="Bad">2</label>
+              <input id="rating-star3" type="radio" class="ratingstars" name="rating" value="3">
+              <label for="rating-star3" title="Average">3</label>
+              <input id="rating-star4" type="radio" class="ratingstars" name="rating" value="4">
+              <label for="rating-star4" title="Good">4</label>
+              <input id="rating-star5" type="radio" class="ratingstars" name="rating" value="5">
+              <label for="rating-star5" title="Great">5</label>
+            </div>
+          </div>
+        &nbsp;&nbsp;<input class="btn btn-primary" type="submit">
+      </form>
+</fieldset>
+</div>
+=======
 <div class="profile_bg" style="padding-top: 100px; height: 550px">
   <div class="profile-container">
     <%= simple_form_for [@offer, @review] do |f| %>
@@ -7,3 +37,4 @@
     <% end %>
   </div>
 </div>
+>>>>>>> master
