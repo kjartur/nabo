@@ -3,20 +3,19 @@
   <!-- <img src="https://picsum.photos/200"> -->
   <div class="card-product-infos">
     <%= link_to task_path(task) do %>
-      <p class="new-label-card">The Task:</p>
+      <h3 class="date-task-card"><%= task.date.strftime("%A, %d %b %Y") %></h3>
       <h2><%= task.title %></h2>
       <%if task.completed == true %>
        <div class =colorful_dashboard>
-        <p>The transfer is completed.</p>
+        <p>You already completed this task!</p>
         <% helper = task&.offers.where(state: "booked").first&.user %>
         <% if helper %>
-        <p> <%= helper.first_name %> has received <%=task.amount_coins%> coin<%if task.amount_coins > 1 %><%="s"%> <%else%><%=""%><%end%> from you</p>
+        <p> <%= helper.first_name %> received <%=task.amount_coins%> coin<%if task.amount_coins > 1 %><%="s"%> <%else%><%=""%><%end%> from you.</p>
         <% end %>
       </div>
       <%else%>
-        <p>You have <b><%= task.users.count %></b> people want to help you<%if task.users.count > 0 %><%="!"%> <%else%><%="."%><%end%></p>
+        <p><b><%= task.users.count %></b> people have offered to help you<%if task.users.count > 0 %><%="!"%> <%else%><%="."%><%end%></p>
       <% end %>
-      <!-- <p><%= task.date.strftime("%A, %d %b %Y %l:%M %p") %></p> -->
       <p>Coins: <%= task.amount_coins %></p>
     <%end %>
   </div>
