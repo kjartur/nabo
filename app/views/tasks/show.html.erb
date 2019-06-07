@@ -8,11 +8,11 @@
         <div class="card-show-icons">
           <div class="avatar-show">
             <%= link_to profile_path(@task.user) do %>
-            <% if @task.user.avatar? %>
-            <img src="<%=@task.user.avatar%>" >
-            <% else %>
-            <img src="https://via.placeholder.com/150" >
-            <% end %>
+            <% if @task.user.avatar_url.present? %>
+        <%= cl_image_tag(@task.user.avatar, width: 200, height: 200, crop: "fill", class: 'card-search-amount-coins')%>
+      <% else %>
+        <%= image_tag(@task.user.picture_url, class: 'card-search-amount-coins')%>
+      <% end %>
             <% end %>
           </div>
           <div class="title-container">
@@ -49,7 +49,7 @@
               <div class="col-4">
                 <h3>
                   <div class="coin-icon"><%= image_tag "coin-icon.png" %></div>
-                  <%= @task[:amount_coins] %> coins
+                  <%= @task[:amount_coins] %> <span> coin<%= 's' if @task.amount_coins > 1 %></span>
                 </h3>
               </div>
             </div>
@@ -66,11 +66,11 @@
             <% @task.users.each do |user| %>
             <div class="avatar-show-nav">
               <%= link_to profile_path(user) do %>
-              <% if user.avatar? %>
-                <%= cl_image_tag(user.avatar) %>
-              <% else %>
-                <img src="https://via.placeholder.com/120" >
-              <% end %>
+              <% if @task.user.avatar_url.present? %>
+        <%= cl_image_tag(@task.user.avatar, width: 200, height: 200, crop: "fill", class: 'card-search-amount-coins')%>
+      <% else %>
+        <%= image_tag(@task.user.picture_url, class: 'card-search-amount-coins')%>
+      <% end %>
             <% end %>
             </div>
             <%end%>
@@ -80,7 +80,7 @@
           <div class="offer-comments">
             <% @task.offers.each do |offer| %>
             <div class="offer-lockup">
-              <div class="comments-boxes">
+              <div class="comments-boxes" >
                 <p><%= offer.comments%></p>
               </div>
               <% if @task.user == current_user %>

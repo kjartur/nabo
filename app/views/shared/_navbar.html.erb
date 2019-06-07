@@ -11,7 +11,7 @@
   <% if user_signed_in? && !current_page?('/') %>
     <div class="navbar-coins">
       <span class='navbar-coins-figure'><%= current_user.coins %></span>
-      <span>Coin<%= 's' if current_user.coins > 1 %></span>
+      <span>coin<%= 's' if current_user.coins > 1 %></span>
     </div>
   <% end %>
 
