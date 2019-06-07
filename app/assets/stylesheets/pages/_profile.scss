@@ -5,12 +5,16 @@
 }
 
 .profile-container {
-  width: 50%;
-  margin-left: 70px;
   color: white;
+  height: 100%;
   font-weight: 500;
-  box-shadow: 0px 7px 7px 1px rgba(0,0,0,0.20);
-
+  display: flex;
+  justify-content: center;
+  img {
+    position: absolute;
+    bottom: -100px;
+    z-index: 100;
+  }
   & .details {
 
   }
@@ -18,15 +22,46 @@
 
 .profile_bg {
   height: 60vh;
+  position: relative;
   background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5) ), image-url("bannerv1.svg") !important;
   background-size: cover;
 }
 
-.row {
-  background-color: rgba(0,0,0,.5)
-}
+
 
 .profilephotobig {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+}
+
+.width-limit {
+    max-width: 710px;
+    margin: auto;
+    text-align: center;
+    &.space-top {
+       margin-top: 124px;
+    }
+}
+
+.avatar-square {
+  width: 200px;
+  border-radius: 0px;
+  padding-top: 10px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  .edit-profile-button {
+    position: absolute;
+    bottom: 75px;
+    z-index: 2000;
+    background: #89bee8;
+    padding: 10px 15px;
+    right: -5px;
+    border-radius: 5px;
+  }
+}
+
+.profile-icon {
+  i {
+    color: white;
+    font-size: 20px
+  }
 }

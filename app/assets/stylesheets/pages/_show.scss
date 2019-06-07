@@ -217,7 +217,9 @@ hr.divider-line{
   padding-left: 0;
 
 }
-
+.comments-boxes {
+  overflow: hidden;
+}
 .nav-container .offers .offer-comments {
   width: 100%;
   padding: 0px 0px;
@@ -313,18 +315,7 @@ hr.divider-line{
   }
 }
 .choose_me_btn-booked{
-  p{
-  font-family: 'Open Sans', sans-serif;
-  font-size: 18px;
-  font-weight: 600;
-  width: 100px;
-  text-align: center;
-  padding-top: 10px;
-  padding: 10px;
-  margin-top: 30px;
-
-
-  }
+  display: none;
 }
 
 .choose_me_btn-rejected{
