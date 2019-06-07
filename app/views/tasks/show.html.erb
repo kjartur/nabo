@@ -63,16 +63,16 @@
         <strong><h1>Offers</h1></strong>
         <div class="offers">
           <div class="offer-avatars">
-            <% @task.users.each do |user| %>
-            <div class="avatar-show-nav">
-              <%= link_to profile_path(user) do %>
-              <% if @task.user.avatar_url.present? %>
-        <%= cl_image_tag(@task.user.avatar, width: 200, height: 200, crop: "fill", class: 'card-search-amount-coins')%>
-      <% else %>
-        <%= image_tag(@task.user.picture_url, class: 'card-search-amount-coins')%>
-      <% end %>
-            <% end %>
-            </div>
+            <% @task.offers.each do |offer| %>
+              <div class="avatar-show-nav">
+                <%= link_to profile_path(offer.user) do %>
+                  <% if offer.user.avatar_url.present? %>
+                    <%= cl_image_tag(offer.user.avatar, width: 200, height: 200, crop: "fill", class: 'card-search-amount-coins')%>
+                  <% else %>
+                    <%= image_tag(offer.user.picture_url, class: 'card-search-amount-coins')%>
+                  <% end %>
+                <% end %>
+              </div>
             <%end%>
           </div>
 
