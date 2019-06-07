@@ -83,7 +83,6 @@ h2{
   font-family: 'Open Sans', sans-serif;
   font-size: 20px;
   font-weight: 300;
-  text-align: justify;
   margin-left: 5px;
   margin-right: 5px;
 }
@@ -92,6 +91,7 @@ h2{
   height: 358px;
   border-radius: 0px;
   width: 86%;
+  margin-top: 14px;
   border-radius: 5px;
   object-fit: cover;
 }
@@ -215,9 +215,11 @@ hr.divider-line{
   margin-bottom: 17px;
   margin-left: 20px;
   padding-left: 0;
-  box-shadow: 1px 1px 5px #80808069;
-}
 
+}
+.comments-boxes {
+  overflow: hidden;
+}
 .nav-container .offers .offer-comments {
   width: 100%;
   padding: 0px 0px;
@@ -226,7 +228,7 @@ hr.divider-line{
 .offers .offer-comments .comments-boxes {
   position: relative;
     height: 80px;
-    width: 65%;
+    width: 70%;
     padding: 10px;
     margin-top: 14px;
     margin-bottom: 17px;
@@ -239,6 +241,10 @@ hr.divider-line{
     border-color: black;
 }
 
+.offer-comments, .offer-lockup {
+  width: 100%;
+}
+
 .offers .offer-comments .comments-boxes{
   h3{
   font-size: 10px;
@@ -248,7 +254,7 @@ hr.divider-line{
 
   p {
     font-size: 20px;
-    line-height: 24px;
+    line-height: 60px;
   }
 }
 
@@ -309,18 +315,7 @@ hr.divider-line{
   }
 }
 .choose_me_btn-booked{
-  p{
-  font-family: 'Open Sans', sans-serif;
-  font-size: 18px;
-  font-weight: 600;
-  width: 100px;
-  text-align: center;
-  padding-top: 10px;
-  padding: 10px;
-  margin-top: 30px;
-
-
-  }
+  display: none;
 }
 
 .choose_me_btn-rejected{
@@ -430,6 +425,9 @@ hr.divider-line{
     margin: 0;
     background: black;
     background: rgba(0, 0, 0, 0.5);
+    h2 {
+      text-align: center;
+    }
 
   }
   .card-show-icons {
@@ -481,12 +479,15 @@ hr.divider-line{
       margin-left: 119px;
       width: 100%;
       text-align: left;
+      h1 {
+        color: #1E2742;
+        font-size: 32px;
+        font-weight: bold;
+      }
       p {
         font-size: 19px;
-        padding-top: 3px;
         font-family: 'Open Sans', sans-serif;
         color: #2631419c;
-        letter-spacing: 2px;
       }
       h5 {
         font-size: 15px;

@@ -1,28 +1,43 @@
-<div class="profile_bg" style="padding-top: 100px; height: 510px">
+<div class="profile_bg" style="padding-top: 100px; height: 350px">
   <div class="profile-container">
     <div class="row">
-
-      <div class="col-md-3 img">
-        <div class="avatar-square">
-          <%= cl_image_tag(user.avatar, class: 'avatar-square', crop: 'crop',  gravity: :face) %>
-        </div>
-        <br>
-        <h1><%= user.first_name %></h1>
-        <h5><%= user.city %></h5>
-        <h6><%= user.rating %></h6>
+      <div class="col">
+          <div class="avatar-square">
+            <div class="edit-profile-button">
+              <%= link_to edit_user_registration_path(user) do %>
+                  <span class="profile-icon"><i class="fas fa-cog"></i></i></span>
+              <% end %>
+            </div>
+            <% if user.avatar? %>
+            <%= cl_image_tag(user.avatar, crop: 'crop',  gravity: :face) %>
+            <% else %>
+               <img src="https://via.placeholder.com/200" >
+            <% end %>
+          </div>
       </div>
-
-      <div class="col-md-9 details d-flex align-items-center">
-        <div class="">
-          <p>
-            <%= user.bio %>
-            <blockquote>
-                <cite title="Quote"><%= user.quote %><i class="icon-map-marker"></i></cite>
-            </blockquote>
-          </p>
-        </div>
-      </div>
-
     </div>
   </div>
 </div>
+<div class="col width-limit space-top">
+  <br>
+  <h1 class="color-blue" style="font-family: 'Open Sans', sans-serif;
+    font-size: 32px;"><%= user.first_name %></h1>
+  <h5 style="font-size: 23px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: .5;"><%= user.city %></h5>
+  <h6><%= user.rating %></h6>
+</div>
+
+<div class="col width-limit">
+  <div class="">
+    <p>
+      <%= user.bio %>
+      <blockquote>
+          <cite title="Quote"><%= user.quote %><i class="icon-map-marker"></i></cite>
+      </blockquote>
+    </p>
+  </div>
+</div>
+
+
